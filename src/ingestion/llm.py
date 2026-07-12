@@ -6,10 +6,12 @@ load_dotenv()
 
 
 def llamar_llm(prompt: str, rol: str = "generator") -> str:
-    """Única puerta al LLM. 'rol' elige el modelo en config (generator, judge, ---)."""
+    """Single gateway to the LLM. 'rol' selects the model in config (generator, judge). temperature=0 for max determinism.
+    [ES] Única puerta al LLM. 'rol' elige el modelo en config. temperature=0 máxima trazabilidad/reproducibilidad."""
     respuesta = litellm.completion(
         model = LLM_MODELS[rol],
         messages=[{"role": "user", "content":prompt}],
+        temperature=0,
     )
     return respuesta.choices[0].message.content
 

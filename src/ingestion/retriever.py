@@ -38,6 +38,28 @@ def buscar(pregunta: str, silo: str = None, k: int = RETRIEVAL_TOP_K) -> list[di
             for (si, t,c,f,s) in filas
     ]
 
+def buscar_ruteado(pregunta: str, k: int = RETRIEVAL_TOP_K) -> list[dict]:
+     """Governed router: classify the QUESTION, then retrieve only within the right silo(s).
+     Low uncertainty -> hard-route to the top silo (System 1). High uncertainty -> broaden to
+     the top-2 silos (System 2), so a cross-domain question isn't lost by a wrong hard route.
+     Deterministic. This is S1/S2; buscar() with no silo = S0 (monolithic).
+     [ES] Router gobernado: clasifica la PREGUNTA y recupera solo en el/los silo(s) correcto(s).
+     Baja incertidumbre -> ruteo duro al silo top (S1). Alta -> abre a los 2 silos top (S2), para
+     que una pregunta cross-dominio no se pierda. Determinístico."""
+     from clasificador import clasificar
+     from gate import evaluar_incertidumbre
+     dist = clasificar(pregunta)["silo_scores"]
+     gate = evaluar_incertidumbre(dist)
+     orden = sorted(dist, key=dist.get, reverse=True)
+     silos = orden[:2] if gate["ambiguo"] else orden[:1]
+     print(f"[router] {'S2' if gate['ambiguo'] else 'S1'} silos={silos} "
+           f"(H={gate['entropia']}, margen={gate['margen']})")
+     resultados= []
+     for s in silos:
+          resultados += buscar(pregunta, silo=s, k=k)
+     resultados.sort(key=lambda r: r["similitud"], reverse=True)
+     return resultados[:k]
+
 
 if __name__ == "__main__":
     from config import SILOS

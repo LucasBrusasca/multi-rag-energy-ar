@@ -34,14 +34,14 @@ def generar_respuesta(pregunta: str, chunks: list[dict]) -> str:
 
 if __name__ == "__main__":
     import sys
-    from retriever import buscar
+    from retriever import buscar_ruteado
 
     if len(sys.argv)<2:
         print('Uso: python src/ingestion/generador.py "<tu pregunta>"')
         sys.exit(1)
 
     pregunta = " ".join(sys.argv[1:])
-    chunks = buscar(pregunta)
+    chunks = buscar_ruteado(pregunta)
     respuesta = generar_respuesta(pregunta, chunks)
 
     print(f"PREGUNTA: {pregunta}\n")

@@ -224,3 +224,6 @@ Otras opciones (Para revisar nomas)/
 
 # Docs de tesis (privados: diseño, estrategia, guía de estudio) — no van a GitHub
 docs/
+
+# Corpus: documentos de terceros (PDFs, procesados) — no van al repo público
+data/

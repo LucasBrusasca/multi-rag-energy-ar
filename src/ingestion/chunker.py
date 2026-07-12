@@ -90,3 +90,23 @@ if __name__ == "__main__":
         print(f"--- {c['title']} ---")
         print(c["content"][:200])
         print()
+
+
+def chunk_with_docling(path, source):
+    """Chunk a document with Docling's nativa structure-aware chunker.
+        Returns the project's chunks dicts + the section hierarchy.
+        [ES] Trocea un documento con el chunker nativo de Docling.
+        Devuelve los dicts del proyecto + la jerarquía de sección."""
+    from docling.document_converter import DocumentConverter
+    from docling.chunking import HybridChunker
+    document = DocumentConverter().convert(path).document
+    chunks = []
+    for ch in HybridChunker().chunk(dl_doc=document):
+        headings = ch.meta.headings or []
+        chunks.append({
+            "title": headings[-1] if headings else "",
+            "content": ch.text,
+            "source": source,
+            "hierarchy":headings
+        })
+    return chunks

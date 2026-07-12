@@ -14,11 +14,11 @@ Unlike a traditional monolithic RAG, this architecture:
 
 ## Tech stack
 
-- **Ingestion:** Docling (multimodal); RAPTOR + ColPali → planned (financial silo)
-- **Chunking:** structure-aware by form (configurable)
+- **Ingestion:** Docling (multimodal, all formats); RAPTOR + ColPali → planned (financial silo)
+- **Chunking:** structure-aware via Docling (native section hierarchy; tables kept atomic)
 - **Memory / Vector DB:** PostgreSQL + pgvector (vectors + graph + ledger in a single database)
-- **Embeddings:** sentence-transformers (`paraphrase-multilingual-MiniLM-L12-v2`, 384d)
-- **Generation:** LangChain (swappable model: Claude / Gemini / local via Ollama)
+- **Embeddings:** sentence-transformers (`BAAI/bge-m3`, 1024d)
+- **Generation:** LiteLLM (swappable model: Claude / Gemini / local via Ollama)
 - **Orchestration:** LangGraph (planned)
 - **Evaluation / veto:** RAGAS + conformal prediction (planned)
 
@@ -26,7 +26,7 @@ Unlike a traditional monolithic RAG, this architecture:
 
 🚧 Work in progress — Master's thesis, Data Mining & Knowledge Management, Universidad Austral.
 
-**Base pipeline working** ✅: ingestion → structural chunking → embeddings → PostgreSQL/pgvector → cosine retrieval → **citation-grounded generation** (answers grounded in evidence, citing the source and abstaining when the context is insufficient). **Next:** epistemic veto, 2nd silo, experiment.
+**Base pipeline working** ✅: ingestion → Docling structure-aware chunking → embeddings → PostgreSQL/pgvector → cosine retrieval → **citation-grounded generation** (answers grounded in evidence, citing the source and abstaining when the context is insufficient). **Next:** kNN silo router, multi-signal veto, Golden Dataset + experiment.
 
 ## Notes
 

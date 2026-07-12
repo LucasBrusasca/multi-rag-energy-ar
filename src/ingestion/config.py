@@ -24,6 +24,9 @@ VETO_TAU_FAITHFULNESS = 0.7
 
 JUDGE_MAX_TOKENS = 64000
 
+LETTUCE_MODEL = "KRLabsOrg/lettucedect-v2-mmbert-base"
+
+VETO_TAU_CONFIANZA = 0.5
 
 # Silos (dominios) del sistema
 SILOS = {
