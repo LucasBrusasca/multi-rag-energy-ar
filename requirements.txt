@@ -78,17 +78,15 @@ jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 langchain==0.3.30
 langchain-anthropic==0.3.22
-langchain-classic==1.0.7
 langchain-community==0.3.31
 langchain-core==0.3.86
-langchain-google-genai==4.2.5
 langchain-openai==0.3.35
 langchain-protocol==0.0.18
 langchain-text-splitters==0.3.11
-langgraph==1.2.4
-langgraph-checkpoint==4.1.1
-langgraph-prebuilt==1.1.0
-langgraph-sdk==0.4.2
+langgraph
+langgraph-checkpoint
+langgraph-prebuilt
+langgraph-sdk
 langsmith==0.8.8
 latex2mathml==3.81.0
 litellm==1.89.3
@@ -148,7 +146,7 @@ python-dateutil==2.9.0.post0
 python-docx==1.2.0
 python-dotenv==1.2.2
 python-pptx==1.0.2
-pywin32==311
+pywin32==311; sys_platform == "win32"
 PyYAML==6.0.3
 qdrant-client==1.18.0
 ragas==0.4.3
