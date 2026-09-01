@@ -1,0 +1,68 @@
+{
+  "campos_corregibles": [
+    "emisor_id_corregido",
+    "emisor_nombre_corregido",
+    "tipo_documento_corregido",
+    "dominios_documentales_corregidos"
+  ],
+  "chunks_considerados": 4789,
+  "columnas": [
+    "document_id",
+    "fuente",
+    "titulo_oficial",
+    "archivo_referencia",
+    "emisor_id",
+    "emisor_nombre",
+    "tipo_documento",
+    "dominios_documentales",
+    "jurisdiccion",
+    "fecha_documento",
+    "chunks",
+    "paginas",
+    "evidencia_extracto",
+    "evidencia_por_dominio",
+    "url_origen",
+    "estado_inclusion",
+    "decision_humana",
+    "emisor_id_corregido",
+    "emisor_nombre_corregido",
+    "tipo_documento_corregido",
+    "dominios_documentales_corregidos",
+    "observaciones"
+  ],
+  "columnas_a_completar": [
+    "decision_humana",
+    "emisor_id_corregido",
+    "emisor_nombre_corregido",
+    "tipo_documento_corregido",
+    "dominios_documentales_corregidos",
+    "observaciones"
+  ],
+  "defectos_de_ingesta_detectados": 13,
+  "documentos": 24,
+  "dominios_del_sistema": [
+    "contable",
+    "financiero",
+    "impositivo",
+    "legal"
+  ],
+  "huella_catalogo": "sha256:2ce31fdf4f47eecf7a404f15827a283e89f6342396a4835f6b45ce99a5383b4d",
+  "huella_inventario": "sha256:d87c039ea362878c35f61b98fd2c79d38243a7fb8f7cca72571c2159d4db5c13",
+  "opciones_decision": [
+    "confirmar",
+    "corregir",
+    "dudoso",
+    "excluir_del_corpus"
+  ],
+  "receta": "revision-catalogo-v2",
+  "regla_de_campos_vacios": "un campo de correccion vacio conserva el valor actual del catalogo; vacio significa 'no lo toque', nunca 'borralo'",
+  "salvedades": [
+    "Este instrumento NO cambia ninguna etiqueta ni escribe en el catalogo.",
+    "Las columnas de evidencia senalan donde mirar; no justifican una etiqueta.",
+    "`evidencia_por_dominio` es una busqueda literal de la palabra del dominio, no un lexico de dominio ni un juicio.",
+    "La clasificacion automatica (`chunks.silo`) va en una hoja aparte para no anclar la revision.",
+    "Los caracteres de reemplazo (U+FFFD) se REGISTRAN en su propia hoja y NO se reparan: son defecto de ingesta, no pregunta de etiquetado.",
+    "El ejemplo de llenado es ficticio y vive SOLO en la hoja de instrucciones; no esta entre los 24 documentos.",
+    "Solo lectura: no se modifico PostgreSQL, ni la ingesta, ni los embeddings, ni ningun chunk_uid."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "chunks_considerados": 4789,
+  "columnas": [
+    "document_id",
+    "fuente",
+    "titulo_oficial",
+    "archivo_referencia",
+    "emisor_id",
+    "emisor_nombre",
+    "tipo_documento",
+    "dominios_documentales",
+    "jurisdiccion",
+    "fecha_documento",
+    "chunks",
+    "paginas",
+    "evidencia_extracto",
+    "evidencia_por_dominio",
+    "url_origen",
+    "estado_inclusion",
+    "decision_humana",
+    "correccion_humana",
+    "observaciones"
+  ],
+  "columnas_a_completar": [
+    "decision_humana",
+    "correccion_humana",
+    "observaciones"
+  ],
+  "documentos": 24,
+  "dominios_del_sistema": [
+    "contable",
+    "financiero",
+    "impositivo",
+    "legal"
+  ],
+  "huella_catalogo": "sha256:2ce31fdf4f47eecf7a404f15827a283e89f6342396a4835f6b45ce99a5383b4d",
+  "huella_inventario": "sha256:d87c039ea362878c35f61b98fd2c79d38243a7fb8f7cca72571c2159d4db5c13",
+  "opciones_decision": [
+    "confirmar",
+    "corregir",
+    "dudoso",
+    "excluir_del_corpus"
+  ],
+  "receta": "revision-catalogo-v1",
+  "salvedades": [
+    "Este instrumento NO cambia ninguna etiqueta ni escribe en el catalogo.",
+    "Las columnas de evidencia senalan donde mirar; no justifican una etiqueta.",
+    "`evidencia_por_dominio` es una busqueda literal de la palabra del dominio, no un lexico de dominio ni un juicio.",
+    "La clasificacion automatica (`chunks.silo`) va en una hoja aparte para no anclar la revision.",
+    "Solo lectura: no se modifico PostgreSQL, ni la ingesta, ni los embeddings, ni ningun chunk_uid."
+  ]
+}

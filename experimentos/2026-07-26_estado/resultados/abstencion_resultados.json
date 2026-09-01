@@ -1,0 +1,134 @@
+[
+ {
+  "pregunta": "¿Cuál es la alícuota del impuesto sobre los bienes personales para el período fiscal 2025?",
+  "silos_b0": [
+   "financiero",
+   "financiero",
+   "financiero"
+  ],
+  "silos_seg": [
+   "financiero",
+   "impositivo"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto corresponde a estados financieros consolidados (balance de situación patrimonial al 31 de marzo de 2026 y 31 de diciembre de 2025), y no contiene información sobre alícuotas del impuesto sobre los bienes personales para ningún período fiscal. Para responder esta consulta sería necesario contar con la normativa fiscal aplicable (ley, decreto reglamentario o resolución general de AFIP) que establezca las alícuotas vigentes para el período fiscal 2025.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto corresponde a estados financieros consolidados (balance de situación patrimonial al 31 de marzo de 2026 y 31 de diciembre de 2025), y no contiene información sobre alícuotas del impuesto sobre los bienes personales para ningún período fiscal. Para responder esta consulta sería necesario contar con la normativa fiscal aplicable (ley, decreto o resolución general) que establezca las alícuotas vigentes para el período fiscal 2025."
+ },
+ {
+  "pregunta": "¿Qué requisitos exige el Código Penal para configurar el delito de evasión tributaria agravada?",
+  "silos_b0": [
+   "impositivo",
+   "impositivo",
+   "impositivo"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nLa pregunta refiere a los requisitos del **Código Penal** para configurar el delito de **evasión tributaria agravada**. El contexto provisto no contiene disposiciones del Código Penal ni de la Ley Penal Tributaria (Ley N° 24.769 o su sucesora Ley N° 27.430 en su título penal) que regulen ese tipo delictual.\n\n**Qué contiene el contexto disponible** (que es distinto a lo consultado):\n\n- Las infracciones administrativas de **defraudación fiscal** del artículo 46 de la Ley N° 11.683, que prevén multas de 2 a 6 veces el tributo evadido (ARTÍCULO 46, Decreto\\_821\\_1998\\_TO\\_Ley\\_11683 / Ley\\_11683\\_Procedimiento\\_Fiscal\\_TO), pero estas son **sanciones administrativas**, no penales.\n- Requisitos de incorporación a un régimen de ingreso excepcional (RG\\_AFIP\\_830), materia ajena a la consulta.\n\n**Para responder adecuadamente** se necesitaría el texto de la Ley N° 27.430 (Título IX, régimen penal tributario) o la Ley N° 24.769, que son las normas que tipifican la evasión tributaria agravada como delito penal en Argentina.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nLa pregunta refiere a los requisitos del **Código Penal** para configurar el delito de **evasión tributaria agravada**. El contexto provisto no contiene disposiciones del Código Penal ni de la Ley Penal Tributaria (Ley N° 24.769 o su sucesora, Ley N° 27.430 en su título penal) que regulen ese tipo delictual.\n\n**Qué contiene el contexto disponible** (que es distinto a lo consultado):\n\n- Las infracciones administrativas de **defraudación fiscal** del artículo 46 de la Ley N° 11.683 (T.O. Decreto 821/1998), que prevén multas de 2 a 6 veces el tributo evadido para quien defraude al Fisco mediante declaraciones engañosas u ocultación maliciosa (ARTÍCULO 46, Decreto\\_821\\_1998\\_TO\\_Ley\\_11683 / Ley\\_11683\\_Procedimiento\\_Fiscal\\_TO).\n- Requisitos de incorporación a un régimen de ingreso excepcional (RG\\_AFIP\\_830).\n\n**Qué faltaría para responder:** las disposiciones de la Ley Penal Tributaria que tipifican la evasión simple y agravada, con sus umbrales cuantitativos y elementos típicos específicos."
+ },
+ {
+  "pregunta": "¿Cuál es el cuadro tarifario vigente de EDENOR para usuarios residenciales T1-R1?",
+  "silos_b0": [
+   "impositivo",
+   "impositivo",
+   "legal"
+  ],
+  "silos_seg": [
+   "legal",
+   "contable",
+   "financiero"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene referencias a la existencia del Subanexo 1 \"Régimen Tarifario - Cuadro Tarifario\" de los Contratos de Concesión de EDENOR S.A. y su modificación mediante el Anexo I (IF-2024-85171968-APN-ARYEE#ENRE) de la Resolución ENRE N° 544/2024 (ARTÍCULO 2, ENRE_Resolución_544_2024), pero **el contenido específico de dicho Anexo I —que incluiría los valores tarifarios concretos para la categoría T1 Residencial— no fue provisto en el contexto disponible**.\n\nPara responder esta consulta sería necesario contar con:\n- El texto del **Anexo I (IF-2024-85171968-APN-ARYEE#ENRE)** de la Resolución ENRE N° 544/2024, o\n- El **Subanexo 1 \"Régimen Tarifario - Cuadro Tarifario\"** vigente del Contrato de Concesión de EDENOR S.A. con los valores actualizados de cargos fijos y variables para la categoría Tarifa Nro. 1 (Pequeñas Demandas).",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene el cuadro tarifario vigente de EDENOR para usuarios residenciales T1-R1 ni ningún detalle de valores, cargos o estructura tarifaria para esa categoría.\n\n**Qué información faltaría:** El Subanexo 1 \"Régimen Tarifario - Cuadro Tarifario\" del Contrato de Concesión de EDENOR S.A. (referenciado en los considerandos de la Resolución ENRE N° 85/2024 como documento modificado), o bien las resoluciones tarifarias específicas que fijen los valores vigentes para la categoría T1-R1, ninguno de los cuales forma parte del contexto disponible."
+ },
+ {
+  "pregunta": "¿Qué establece la Ley de Contrato de Trabajo sobre el preaviso en despidos sin causa?",
+  "silos_b0": [
+   "impositivo",
+   "impositivo",
+   "impositivo"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable",
+   "legal"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene ningún fragmento de la Ley de Contrato de Trabajo ni disposición alguna sobre preaviso en despidos sin causa. Los documentos disponibles refieren a: reglamentación del sector de gas natural (Decreto 1738/1992), procedimiento fiscal (Ley 11.683) y notas a estados financieros bajo IFRS. Ninguno de ellos aborda la materia laboral consultada.\n\nPara responder adecuadamente, sería necesario contar con el texto pertinente de la Ley de Contrato de Trabajo (Ley N° 20.744) o normativa laboral complementaria.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene ningún fragmento de la Ley de Contrato de Trabajo ni disposición alguna sobre preaviso en despidos sin causa. Los documentos disponibles refieren a: reglamentación del sector de gas (Decreto 1738/1992), procedimiento fiscal (Ley 11.683) y notas a estados financieros bajo IFRS. Ninguno de ellos aborda la materia laboral consultada.\n\n**Para responder esta pregunta sería necesario contar con** el texto de la Ley de Contrato de Trabajo (Ley N° 20.744), específicamente los artículos referidos al preaviso (arts. 231 y siguientes)."
+ },
+ {
+  "pregunta": "¿Cuáles son los requisitos para inscribirse en el Registro de Generadores de Energía Renovable MATER?",
+  "silos_b0": [
+   "legal",
+   "legal",
+   "legal"
+  ],
+  "silos_seg": [
+   "legal",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene disposiciones de la Res. SE 61/1992 (Los Procedimientos) referidas a:\n- Requisitos de ingreso de generación eólica al MEM (mínimo 1 MW de potencia nominal),\n- Categorías de agentes reconocidos del MEM y procedimientos generales de incorporación (Anexo 17), y\n- Despacho de reserva regulante.\n\nSin embargo, **ninguno de estos fragmentos refiere al Registro de Generadores de Energía Renovable MATER** ni a sus requisitos de inscripción específicos.\n\nPara responder adecuadamente, sería necesario contar con la normativa que regula el MATER, en particular la **Resolución SE 281/2017** y sus modificatorias, o cualquier otro documento regulatorio que establezca las condiciones de registro en dicho mercado.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene disposiciones de la Res. SE 61/1992 (Los Procedimientos) referidas a:\n- Requisitos de ingreso de generación eólica al MEM (mínimo 1 MW de potencia nominal),\n- Agentes reconocidos del MEM y procedimientos generales de incorporación (Anexo 17),\n- Despacho de reserva regulante.\n\n**Qué faltaría:** Para responder sobre el Registro de Generadores de Energía Renovable MATER, sería necesario contar con la normativa específica que lo regula —típicamente resoluciones de la Secretaría de Energía o de CAMMESA vinculadas al Mercado a Término de Energías Renovables (MATER)—, la cual no forma parte del contexto disponible."
+ },
+ {
+  "pregunta": "¿Qué porcentaje de aportes patronales corresponde al régimen de la seguridad social?",
+  "silos_b0": [
+   "financiero",
+   "financiero",
+   "financiero"
+  ],
+  "silos_seg": [
+   "contable",
+   "financiero",
+   "impositivo"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto (Estados Contables de Neuquén / CORMINE) contiene los **montos absolutos** de distintos rubros de deudas sociales y laborales al 31/05/2014 y 31/05/2013, pero **no incluye las alícuotas o porcentajes de contribuciones patronales** aplicables al régimen de la seguridad social.\n\nPara responder esta pregunta sería necesario contar con:\n- La normativa previsional vigente que establezca las alícuotas de contribuciones patronales (por ejemplo, Ley 24.241 y sus modificatorias, o resoluciones de AFIP aplicables al período).\n- O bien, datos de la masa salarial bruta que permitan calcular el porcentaje implícito a partir de los montos registrados.\n\nNinguno de esos elementos figura en el contexto disponible.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto (Estados_Contables_Neuquen) contiene los **montos absolutos** de las distintas cargas sociales al 31/05/2014 y 31/05/2013, pero **no incluye las alícuotas o tasas porcentuales** aplicadas sobre la nómina salarial para determinar qué porcentaje corresponde a aportes patronales al régimen de seguridad social.\n\nPara responder esta pregunta sería necesario contar con:\n- La normativa previsional aplicable que establezca las alícuotas patronales vigentes (por ejemplo, decretos o resoluciones del sistema previsional argentino).\n- O bien, la base de cálculo (masa salarial) que permita inferir la tasa implícita a partir de los montos registrados.\n\nNinguno de esos elementos figura en el contexto disponible."
+ },
+ {
+  "pregunta": "¿Cuál fue el resultado neto de YPF en el ejercicio 2024?",
+  "silos_b0": [
+   "financiero",
+   "financiero",
+   "financiero"
+  ],
+  "silos_seg": [
+   "financiero",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene información de **períodos de tres meses finalizados el 31 de marzo** (trimestres de 2022 a 2026), no estados financieros anuales completos del ejercicio 2024.\n\n**Qué faltaría para responder:** Los estados financieros consolidados anuales al 31 de diciembre de 2024 (Estado de Resultados del ejercicio completo), que no forman parte del contexto disponible.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto corresponde a estados financieros consolidados con períodos de tres meses finalizados el 31 de marzo (trimestres de 2022 a 2026), **no a un ejercicio anual completo de 2024**.\n\nPara responder la pregunta se requeriría contar con los **estados financieros anuales al 31 de diciembre de 2024** (estado de resultados del ejercicio completo), que no forman parte del contexto disponible."
+ },
+ {
+  "pregunta": "¿Qué dispone el Mercosur sobre el comercio transfronterizo de electricidad con Brasil?",
+  "silos_b0": [
+   "legal",
+   "legal",
+   "legal"
+  ],
+  "silos_seg": [
+   "legal",
+   "contable",
+   "impositivo"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene ninguna disposición, acuerdo o referencia al Mercosur ni a regulaciones específicas sobre comercio transfronterizo de electricidad con Brasil.\n\nLa documentación disponible (Res. SE 61/1992 y Res. SE 137/1992) regula las condiciones generales de importación y exportación de energía eléctrica en el MEM —incluyendo principios de reciprocidad, tipos de intercambio y responsabilidades de los agentes— pero no menciona acuerdos bilaterales o regionales con Brasil ni marcos normativos del Mercosur.\n\nPara responder esta pregunta sería necesario contar con los instrumentos específicos del Mercosur en materia energética y/o los acuerdos bilaterales Argentina-Brasil aplicables al sector eléctrico.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene ninguna disposición, acuerdo o referencia al Mercosur ni a condiciones específicas de comercio transfronterizo de electricidad con Brasil.\n\n**Qué información faltaría:** documentos del Mercosur relativos a integración energética eléctrica, acuerdos bilaterales Argentina-Brasil en materia eléctrica, o cualquier norma que vincule el MEM con el sistema eléctrico brasileño bajo marco Mercosur.\n\nLo que el contexto sí establece —de forma general— es que las operaciones de importación/exportación entre agentes del MEM y mercados eléctricos de otros países requieren condiciones mínimas de reciprocidad y simetría, y que el organismo coordinador en el MEM es el OED (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos), pero esto no es específico de Brasil ni del Mercosur."
+ }
+]

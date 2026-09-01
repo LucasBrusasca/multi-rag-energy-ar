@@ -1,0 +1,393 @@
+[
+ {
+  "q": "¿Qué ocurre si una empresa del sector eléctrico incumple las obligaciones del marco regulatorio?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.3716,
+   "impositivo": 0.2254,
+   "contable": 0.2942,
+   "financiero": 0.1088
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Desde cuándo empieza a correr el término para que el fisco reclame un tributo?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "impositivo",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "financiero"
+  ],
+  "dist_cos": {
+   "legal": 0.1142,
+   "impositivo": 0.5359,
+   "contable": 0.1563,
+   "financiero": 0.1935
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué facultades tiene el organismo de control del servicio eléctrico?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.4351,
+   "impositivo": 0.1843,
+   "contable": 0.2726,
+   "financiero": 0.108
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Cómo se determina de oficio la materia imponible cuando no se presenta la declaración?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "impositivo",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.1401,
+   "impositivo": 0.5119,
+   "contable": 0.1959,
+   "financiero": 0.1521
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué porcentaje corresponde retener sobre los pagos alcanzados por el régimen?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "impositivo",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "financiero"
+  ],
+  "dist_cos": {
+   "legal": 0.1908,
+   "impositivo": 0.3165,
+   "contable": 0.2304,
+   "financiero": 0.2624
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Cómo se remunera la energía en el mercado mayorista?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "financiero",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.5416,
+   "impositivo": 0.0913,
+   "contable": 0.1936,
+   "financiero": 0.1735
+  },
+  "ok_llm1": false,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué obligaciones tiene el transportista respecto del sistema de transporte?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "financiero",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.3937,
+   "impositivo": 0.2346,
+   "contable": 0.2462,
+   "financiero": 0.1255
+  },
+  "ok_llm1": false,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Cómo se compone el patrimonio neto al cierre del ejercicio?",
+  "tipo": "mono",
+  "correctos": [
+   "contable"
+  ],
+  "llm1": "contable",
+  "llm2": null,
+  "coseno": [
+   "financiero",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.0723,
+   "impositivo": 0.1366,
+   "contable": 0.3278,
+   "financiero": 0.4632
+  },
+  "ok_llm1": true,
+  "ok_cos": false,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué régimen se aplica a la distribución y comercialización de gas natural?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "contable",
+   "legal"
+  ],
+  "dist_cos": {
+   "legal": 0.3238,
+   "impositivo": 0.217,
+   "contable": 0.3315,
+   "financiero": 0.1276
+  },
+  "ok_llm1": true,
+  "ok_cos": false,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué sucede ante la falta de presentación de la declaración jurada en término?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "impositivo",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.1567,
+   "impositivo": 0.472,
+   "contable": 0.2112,
+   "financiero": 0.1601
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué establece la reglamentación sobre el ente regulador del gas?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.3431,
+   "impositivo": 0.2493,
+   "contable": 0.3164,
+   "financiero": 0.0911
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué recursos puede interponer el contribuyente contra una determinación?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "impositivo",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.154,
+   "impositivo": 0.4893,
+   "contable": 0.1906,
+   "financiero": 0.166
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Cómo se calcula el despacho de cargas en el sistema eléctrico?",
+  "tipo": "mono",
+  "correctos": [
+   "legal"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "financiero"
+  ],
+  "dist_cos": {
+   "legal": 0.5148,
+   "impositivo": 0.1395,
+   "contable": 0.167,
+   "financiero": 0.1787
+  },
+  "ok_llm1": true,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué información contiene el estado de flujo de efectivo?",
+  "tipo": "mono",
+  "correctos": [
+   "contable"
+  ],
+  "llm1": "financiero",
+  "llm2": null,
+  "coseno": [
+   "contable",
+   "financiero"
+  ],
+  "dist_cos": {
+   "legal": 0.1456,
+   "impositivo": 0.2067,
+   "contable": 0.3361,
+   "financiero": 0.3116
+  },
+  "ok_llm1": false,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Qué condiciones tiene la emisión de obligaciones negociables?",
+  "tipo": "mono",
+  "correctos": [
+   "financiero"
+  ],
+  "llm1": "financiero",
+  "llm2": null,
+  "coseno": [
+   "legal",
+   "impositivo"
+  ],
+  "dist_cos": {
+   "legal": 0.3113,
+   "impositivo": 0.2829,
+   "contable": 0.2614,
+   "financiero": 0.1444
+  },
+  "ok_llm1": true,
+  "ok_cos": false,
+  "cob_llm2": null,
+  "cob_cos2": false
+ },
+ {
+  "q": "¿Qué sanciones prevé el régimen para las infracciones formales?",
+  "tipo": "mono",
+  "correctos": [
+   "impositivo"
+  ],
+  "llm1": "legal",
+  "llm2": null,
+  "coseno": [
+   "impositivo",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.1757,
+   "impositivo": 0.4954,
+   "contable": 0.1958,
+   "financiero": 0.1331
+  },
+  "ok_llm1": false,
+  "ok_cos": true,
+  "cob_llm2": null,
+  "cob_cos2": true
+ },
+ {
+  "q": "¿Cómo se valúan los bienes de uso en los estados contables?",
+  "tipo": "mono",
+  "correctos": [
+   "contable"
+  ],
+  "llm1": "contable",
+  "llm2": null,
+  "coseno": [
+   "financiero",
+   "contable"
+  ],
+  "dist_cos": {
+   "legal": 0.1448,
+   "impositivo": 0.2303,
+   "contable": 0.2363,
+   "financiero": 0.3887
+  },
+  "ok_llm1": true,
+  "ok_cos": false,
+  "cob_llm2": null,
+  "cob_cos2": true
+ }
+]

@@ -1,0 +1,166 @@
+[
+ {
+  "pregunta": "¿En qué plazo prescriben las sanciones que aplica el ENRE a una distribuidora eléctrica?",
+  "dom_ctx_b0": [
+   "legal"
+  ],
+  "dom_ctx_seg": [
+   "legal"
+  ],
+  "silos_seg": [
+   "legal",
+   "impositivo",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene disposiciones sobre prescripción de sanciones aplicadas por el ENRE a distribuidoras eléctricas. Los fragmentos disponibles de la Ley N° 24.065 y de la Resolución ENRE N° 544/2024 no abordan ese instituto.\n\nPara responder esta pregunta sería necesario contar, como mínimo, con el capítulo sancionatorio de la Ley N° 24.065 (en particular los artículos referidos a infracciones y sanciones) y/o la reglamentación específica que el ENRE haya dictado en materia de procedimiento sancionatorio.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene disposiciones sobre prescripción de sanciones aplicadas por el ENRE a distribuidoras eléctricas. Los fragmentos disponibles de la Ley N° 24.065 y de la Resolución ENRE N° 544/2024 no abordan ese instituto.\n\nPara responder esta pregunta sería necesario contar, como mínimo, con el capítulo o articulado de la Ley N° 24.065 que regula el régimen sancionatorio (típicamente ubicado en las disposiciones sobre facultades del Ente o en un capítulo de infracciones y penalidades), y/o con la reglamentación específica que el ENRE haya dictado en la materia."
+ },
+ {
+  "pregunta": "¿Qué intereses resarcitorios corresponden por el pago fuera de término de la tasa de fiscalización del ENRE?",
+  "dom_ctx_b0": [
+   "impositivo"
+  ],
+  "dom_ctx_seg": [
+   "impositivo"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable",
+   "financiero"
+  ],
+  "abst_b0": false,
+  "abst_seg": false,
+  "fusion_b0": true,
+  "fusion_seg": true,
+  "resp_b0": "## Respuesta\n\n**No tengo evidencia suficiente para responder** esta consulta en los términos específicos en que fue formulada.\n\n### Fundamento\n\nEl contexto provisto regula exclusivamente los **intereses resarcitorios en materia tributaria** bajo la Ley 11.683 de Procedimiento Fiscal. En ese marco, el Artículo 37 establece que:\n\n- La falta total o parcial de pago de gravámenes, retenciones, percepciones, anticipos y demás pagos a cuenta devenga intereses resarcitorios desde los respectivos vencimientos, sin necesidad de interpelación (ARTÍCULO 37, Ley_11683_Procedimiento_Fiscal_TO).\n- La tasa la fija la Secretaría de Hacienda, con un tope del doble de la mayor tasa vigente del Banco de la Nación Argentina (ARTÍCULO 37, Ley_11683_Procedimiento_Fiscal_TO).\n\nSin embargo, **la tasa de fiscalización del ENRE** (Ente Nacional Regulador de la Electricidad) es un **cargo regulatorio eléctrico**, no un gravamen tributario alcanzado por la Ley 11.683. El régimen de intereses aplicable a obligaciones ante el ENRE por pago fuera de término surgiría de la normativa específica del ENRE (resoluciones, marco regulatorio eléctrico), que **no forma parte del contexto provisto**.\n\n### Qué información faltaría\n\nPara responder correctamente sería necesario contar con:\n- Resoluciones del ENRE que regulen la tasa de fiscalización y su régimen de mora.\n- Normativa del marco regulatorio eléctrico (Ley 24.065 y reglamentaciones) aplicable a incumplimientos de pago ante el organismo.",
+  "resp_seg": "## Respuesta\n\n**No tengo evidencia suficiente para responder** esta consulta en los términos en que está formulada.\n\n### Fundamento\n\nEl contexto provisto regula exclusivamente los **intereses resarcitorios en materia tributaria** bajo la Ley 11.683 de Procedimiento Fiscal. En ese marco, el Artículo 37 establece que la falta total o parcial de pago de gravámenes, retenciones, percepciones, anticipos y demás pagos a cuenta devenga intereses resarcitorios desde los respectivos vencimientos, siendo la tasa fijada por la Secretaría de Hacienda con un tope del doble de la mayor tasa vigente del Banco de la Nación Argentina (ARTÍCULO 37, Ley_11683_Procedimiento_Fiscal_TO).\n\nSin embargo, **la tasa de fiscalización del ENRE** (Ente Nacional Regulador de la Electricidad) es un concepto de naturaleza **regulatoria/administrativa**, no tributaria, y no existe en el contexto provisto ninguna norma del ENRE, resolución tarifaria ni disposición regulatoria que establezca el régimen de intereses aplicable al pago fuera de término de dicha tasa.\n\n### Qué información faltaría\n\nPara responder adecuadamente sería necesario contar con:\n- Resoluciones del ENRE que regulen la tasa de fiscalización y su régimen de mora.\n- Normativa específica del ENRE sobre intereses por pago tardío de obligaciones regulatorias.\n- Eventualmente, la norma que determine si el régimen de la Ley 11.683 resulta supletoriamente aplicable a ese concepto."
+ },
+ {
+  "pregunta": "¿Cuál es el procedimiento de determinación de oficio que aplica el ENRE ante un incumplimiento?",
+  "dom_ctx_b0": [
+   "legal"
+  ],
+  "dom_ctx_seg": [
+   "legal"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "legal",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene información sobre un procedimiento de determinación de oficio aplicado por el ENRE ante incumplimientos. Los fragmentos disponibles abordan: (1) considerandos de la Resolución ENRE 544/2024 relativos al coseno fi y modificaciones tarifarias, (2) notas de actualización de artículos de la Ley 24.065, y (3) el procedimiento de Acuerdos de Generación Obligada para sistemas de transporte según Res. SE 61/1992.\n\nPara responder esta pregunta sería necesario contar, por ejemplo, con el Reglamento de Procedimientos del ENRE, las disposiciones pertinentes de la Ley 24.065 sobre sanciones y procedimientos sancionatorios, o normativa específica que regule la actuación de oficio del organismo ante incumplimientos de los agentes regulados.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene información sobre un procedimiento de determinación de oficio aplicable por el ENRE ante incumplimientos. Los fragmentos disponibles abordan: (1) considerandos de la Resolución ENRE 544/2024 relativos al coseno fi y modificaciones tarifarias, (2) notas de actualización de artículos de la Ley 24.065, y (3) el procedimiento de Acuerdos de Generación Obligada para sistemas de transporte según Res. SE 61/1992.\n\nPara responder esta pregunta sería necesario contar, por ejemplo, con el texto del régimen sancionatorio del ENRE, el reglamento de procedimientos del organismo, o los artículos pertinentes de la Ley 24.065 que regulen la potestad de fiscalización y determinación de oficio."
+ },
+ {
+  "pregunta": "¿Qué régimen de retención se aplica sobre los pagos que realiza CAMMESA a los generadores?",
+  "dom_ctx_b0": [
+   "contable",
+   "financiero"
+  ],
+  "dom_ctx_seg": [
+   "contable",
+   "financiero"
+  ],
+  "silos_seg": [
+   "legal",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto describe el rol de CAMMESA como cámara de compensación y centro de despacho del MEM, el régimen de penalidades aplicable a Transener/Transba, y los ajustes tarifarios de 2018-2019, pero **no contiene información sobre un régimen de retención aplicado sobre los pagos que CAMMESA realiza a los generadores**.\n\nPara responder esta pregunta sería necesario contar con documentación específica sobre las reglas de operación del MEM, resoluciones de la Secretaría de Energía o normativa de CAMMESA que regulen retenciones sobre pagos a agentes generadores.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto describe el rol de CAMMESA como cámara de compensación y centro de despacho del MEM, así como el mecanismo por el cual CAMMESA **deduce penalidades** de los ingresos regulados de Transener (Ventas por Segmento - Transener_Calificacion_FIX), pero no contiene información sobre un régimen de retención aplicable a los pagos que CAMMESA realiza a los **generadores**.\n\nPara responder esta pregunta sería necesario contar con documentación específica sobre las reglas de operación del MEM, resoluciones de la Secretaría de Energía o del ENRE que regulen retenciones sobre pagos a agentes generadores, o los contratos/marcos regulatorios aplicables a dicho segmento."
+ },
+ {
+  "pregunta": "¿Cuál es la multa por no presentar en término la declaración jurada ante el ENRE?",
+  "dom_ctx_b0": [
+   "impositivo"
+  ],
+  "dom_ctx_seg": [
+   "impositivo"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable",
+   "financiero"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto regula exclusivamente las multas por omisión de presentación de declaraciones juradas establecidas en la **Ley 11.683 de Procedimiento Fiscal**, que corresponden al ámbito de la **AFIP/ARCA** (administración tributaria nacional). No contiene ninguna norma del **ENRE** (Ente Nacional Regulador de la Electricidad) ni disposición alguna sobre obligaciones de presentación ante ese organismo.\n\nPara responder adecuadamente, sería necesario contar con la normativa específica del ENRE que regule infracciones y sanciones formales (por ejemplo, resoluciones del ENRE o el marco regulatorio eléctrico — Ley 24.065 y normas complementarias).",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto regula exclusivamente las multas por omisión de presentación de declaraciones juradas establecidas en la **Ley 11.683 de Procedimiento Fiscal**, que corresponden al ámbito de la **AFIP/ARCA** (administración tributaria nacional). No existe en el contexto ninguna norma del **ENRE** (Ente Nacional Regulador de la Electricidad) ni disposición que regule obligaciones de presentación ante dicho organismo.\n\nPara responder esta pregunta sería necesario contar con la normativa específica del ENRE (resoluciones, reglamentos o marco regulatorio eléctrico) que establezca las sanciones aplicables en su jurisdicción."
+ },
+ {
+  "pregunta": "¿Qué plazo tiene el contribuyente para apelar una sanción del ENARGAS ante el Tribunal Fiscal?",
+  "dom_ctx_b0": [
+   "impositivo"
+  ],
+  "dom_ctx_seg": [
+   "impositivo"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto regula los recursos ante el **Tribunal Fiscal de la Nación** en el marco de la **Ley 11.683 de Procedimiento Fiscal** (materia impositiva/aduanera administrada por AFIP). No contiene ninguna norma relativa al **ENARGAS** (Ente Nacional Regulador del Gas) ni a los procedimientos de apelación de sanciones impuestas por dicho organismo regulador.\n\nPara responder adecuadamente sería necesario contar con la normativa específica del ENARGAS, en particular la **Ley 24.076** (Marco Regulatorio del Gas Natural) y/o los reglamentos de procedimiento del ENARGAS que regulen el régimen sancionatorio y las vías recursivas disponibles.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto regula los plazos y procedimientos de apelación ante el Tribunal Fiscal de la Nación en el marco de la **Ley 11.683 de Procedimiento Fiscal**, que refiere a resoluciones de la **AFIP** (determinaciones de tributos y sanciones de naturaleza impositiva/aduanera).\n\nLa pregunta refiere a sanciones del **ENARGAS** (Ente Nacional Regulador del Gas), organismo cuyo régimen sancionatorio y vías recursivas se rigen por normativa específica del sector (Ley 24.076 y normas complementarias) que **no forma parte del contexto provisto**.\n\nPara responder adecuadamente sería necesario contar con la normativa regulatoria del ENARGAS que establezca el procedimiento de impugnación de sus actos sancionatorios."
+ },
+ {
+  "pregunta": "¿Cómo se computa la prescripción de la acción para reclamar el canon de transporte eléctrico?",
+  "dom_ctx_b0": [
+   "impositivo",
+   "legal"
+  ],
+  "dom_ctx_seg": [
+   "impositivo",
+   "legal"
+  ],
+  "silos_seg": [
+   "legal",
+   "impositivo",
+   "contable"
+  ],
+  "abst_b0": false,
+  "abst_seg": false,
+  "fusion_b0": true,
+  "fusion_seg": true,
+  "resp_b0": "## Respuesta\n\nEl contexto provisto **no contiene evidencia suficiente para responder esta pregunta en forma completa**.\n\n### Lo que el contexto sí permite afirmar:\n\nLa Ley 24.065 (contexto \"Despacho de cargas - Ley_24065_Energia_Electrica_TO\") regula el transporte y distribución de electricidad, pero **no establece reglas de prescripción aplicables al cobro del canon de transporte eléctrico**. Los artículos 48, 49, 50 y 51 presentes en el contexto refieren exclusivamente a tarifas, audiencias públicas, concesiones y sus prórrogas, sin abordar plazos de prescripción de acciones de cobro (ARTÍCULOS 48-51, Ley_24065_Energia_Electrica_TO).\n\n### Lo que el contexto no permite afirmar:\n\nLas normas de prescripción disponibles en el contexto —Artículo 56 de la Ley 11.683 y su texto ordenado por Decreto 821/1998— **son de procedimiento tributario fiscal** (determinación de impuestos, multas, retenciones, repetición de impuestos). No existe en el contexto ninguna disposición que extienda expresamente ese régimen al cobro del canon de transporte eléctrico entre privados o entre el transportista y el organismo regulador (ARTÍCULO 56, Ley_11683_Procedimiento_Fiscal_TO; ARTÍCULO 56, Decreto_821_1998_TO_Ley_11683).\n\n### Qué información faltaría para responder:\n\n- Las disposiciones específicas de la Ley 24.065 sobre prescripción de créditos tarifarios o del canon de transporte.\n- La reglamentación aplicable (decreto reglamentario de la Ley 24.065).\n- Normativa del ENRE o contratos de concesión que regulen el cómputo de plazos para el reclamo del canon.\n- Eventualmente, las normas del Código Civil y Comercial sobre prescripción de obligaciones periódicas, si fueran de aplicación supletoria, pero ese cuerpo normativo no obra en el contexto.\n\n**No tengo evidencia suficiente para responder la pregunta tal como fue formulada.**",
+  "resp_seg": "## Respuesta\n\nEl contexto provisto **no contiene evidencia suficiente para responder esta pregunta en forma completa**.\n\n### Lo que el contexto sí permite afirmar:\n\nLa Ley 24.065 (contexto \"Despacho de cargas - Ley_24065_Energia_Electrica_TO\") regula el transporte y distribución de electricidad, establece el marco tarifario y el rol del ente regulador, pero **no contiene disposiciones específicas sobre prescripción de acciones vinculadas al cobro del canon de transporte eléctrico** (ARTÍCULOS 48, 49, 50 y 51, Ley_24065_Energia_Electrica_TO).\n\n### Lo que el contexto no permite responder:\n\n- El cómputo específico de la prescripción aplicable al canon de transporte eléctrico (punto de inicio, plazo, causales de suspensión e interrupción) **no surge de ninguno de los documentos provistos**.\n- Las normas de prescripción del Artículo 56 de la Ley 11.683 (ARTÍCULO 56, Ley_11683_Procedimiento_Fiscal_TO y Decreto_821_1998_TO_Ley_11683) regulan exclusivamente las acciones del Fisco en materia **tributaria** (determinación, cobro de impuestos, multas, retenciones y percepciones), y **no resultan aplicables —según el contexto disponible— al cobro de cánones de transporte eléctrico**, que es una obligación de naturaleza regulatoria/contractual, no impositiva.\n\n### Información que sería necesaria para responder:\n\n- Las disposiciones del contrato de concesión de transporte aplicable.\n- La normativa del ENRE o resoluciones específicas sobre el régimen de cobro y prescripción del canon de transporte.\n- Eventualmente, las normas del Código Civil y Comercial sobre prescripción de acciones personales, si fueran de aplicación supletoria en este marco regulatorio.\n\n**No tengo evidencia suficiente para responder la pregunta tal como fue formulada.**"
+ },
+ {
+  "pregunta": "¿Qué alícuota de IVA se aplica a las penalidades que cobra el ENRE?",
+  "dom_ctx_b0": [
+   "contable",
+   "financiero"
+  ],
+  "dom_ctx_seg": [
+   "contable",
+   "financiero"
+  ],
+  "silos_seg": [
+   "impositivo",
+   "contable",
+   "financiero"
+  ],
+  "abst_b0": true,
+  "abst_seg": true,
+  "fusion_b0": false,
+  "fusion_seg": false,
+  "resp_b0": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto abarca exclusivamente información sobre mecanismos de ajuste tarifario, resoluciones de actualización de remuneraciones y la situación regulatoria de Transener y Transba. No contiene ninguna referencia al tratamiento impositivo del IVA aplicable a penalidades cobradas por el ENRE.\n\nPara responder esta pregunta sería necesario contar con, por ejemplo, resoluciones de AFIP, normativa del IVA aplicable al sector eléctrico, o documentación contractual/regulatoria que aborde específicamente ese tratamiento fiscal.",
+  "resp_seg": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto abarca exclusivamente información sobre mecanismos de ajuste tarifario, resoluciones de actualización de remuneraciones y la situación regulatoria de Transener y Transba. No contiene ninguna referencia al tratamiento impositivo del IVA aplicable a penalidades cobradas por el ENRE.\n\nPara responder esta pregunta sería necesario contar con documentación específica sobre el régimen tributario aplicable a dichas penalidades (por ejemplo, resoluciones de AFIP, normativa del IVA, o contratos de concesión que aborden este punto)."
+ }
+]

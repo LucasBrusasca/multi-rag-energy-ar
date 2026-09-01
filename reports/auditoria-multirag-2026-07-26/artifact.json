@@ -1,0 +1,210 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Auditoría técnica y metodológica de Multi-RAG Energy AR",
+    "description": "Revisión del plan, la implementación y la validez experimental al 26 de julio de 2026.",
+    "generatedAt": "2026-07-26T18:00:00-03:00",
+    "sources": [
+      {
+        "id": "db_audit",
+        "label": "Tabla PostgreSQL chunks",
+        "query": {
+          "engine": "PostgreSQL",
+          "language": "sql",
+          "executed_at": "2026-07-26T17:30:00-03:00",
+          "tables_used": [
+            "chunks"
+          ],
+          "description": "Cuenta chunks por dominio documental asignado a la fuente y silo actual.",
+          "sql": "WITH mapa(fuente, dominio_documental) AS (VALUES ('Decreto_1398_1992_Reglamentario_Electrico','legal'),('Decreto_1738_1992_Reglamentario_Gas','legal'),('ENRE_Resolucion_544_2024','legal'),('Ley_24065_Energia_Electrica_TO','legal'),('Ley_24076_Gas_Natural_TO','legal'),('Res_SE_137_1992','legal'),('Res_SE_61_1992_Los_Procedimientos','legal'),('Decreto_821_1998_TO_Ley_11683','impositivo'),('Ley_11683_Procedimiento_Fiscal_TO','impositivo'),('RG_AFIP_830','impositivo'),('EEFF-ind-31-03-2019','contable'),('Estados_Contables_Neuquen','contable'),('FS-31-03-2019','contable'),('TR-consolidado-03-2026_VF-Clean','contable'),('MSU_ON_ClaseIV','financiero'),('Transener_Calificacion_FIX','financiero'),('Transener-Company-Presentation-April-2026','financiero')) SELECT m.dominio_documental, c.silo AS silo_actual, COUNT(*)::int AS chunks FROM chunks c JOIN mapa m USING (fuente) GROUP BY 1,2 ORDER BY 1,2;",
+          "filters": [
+            "17 fuentes de la instantánea local",
+            "Dominio documental inferido por tipo de fuente; requiere adjudicación experta por chunk."
+          ]
+        }
+      }
+    ],
+    "charts": [
+      {
+        "id": "domain_assignment_chart",
+        "title": "Asignación de chunks según dominio documental y silo actual",
+        "description": "La mayor divergencia aparece entre las fuentes contables y los silos contable/financiero; es un diagnóstico, no una etiqueta experta.",
+        "dataset": "domain_assignment",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "dominio_documental",
+            "type": "nominal",
+            "title": "Dominio documental"
+          },
+          "y": {
+            "field": "chunks",
+            "type": "quantitative",
+            "title": "Chunks"
+          },
+          "color": {
+            "field": "silo_actual",
+            "type": "nominal",
+            "title": "Silo actual"
+          }
+        },
+        "options": {
+          "grouping": "stacked",
+          "orientation": "vertical",
+          "legend": {
+            "show": true
+          }
+        },
+        "sourceId": "db_audit"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Auditoría técnica y metodológica de Multi-RAG Energy AR"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## Resumen técnico\n\nLa tesis sigue siendo viable, pero la evidencia disponible aún no demuestra superioridad. El sistema actual comparte BGE-M3, abre uno o dos silos de forma fija y usa etiquetas parcialmente circulares. La hipótesis defendible es condicional: superar a un monolítico fuerte en consultas predefinidas con colisión interdominio, mediante expertos realmente especializados, ruteo calibrado y evaluación independiente."
+      },
+      {
+        "id": "domain_chart_block",
+        "type": "chart",
+        "chartId": "domain_assignment_chart"
+      },
+      {
+        "id": "findings",
+        "type": "markdown",
+        "body": "## Hallazgos decisivos\n\nLa coincidencia entre dominio documental de la fuente y silo actual es 1.842 de 2.709 chunks (68,0%); parte puede ser multi-pertenencia real. El resultado negativo del filtro compartido no refuta la arquitectura prometida porque los expertos especializados todavía no existen. El corpus contiene 17 fuentes frente a las 300–500 previstas, el Golden usa la ubicación actual como parte de la verdad y algunos resultados recientes no conservan todos sus scripts y artefactos. Con el corpus actual PostgreSQL realiza búsquedas exactas en ambos brazos; antes de escalar deberá agregarse un índice global equivalente al monolítico."
+      },
+      {
+        "id": "experiment",
+        "type": "markdown",
+        "body": "## Prueba que puede demostrar la hipótesis\n\nComparar cuatro brazos: monolítico BGE-M3 básico; monolítico fuerte con los mismos metadatos y reranker; filtro compartido actual; mezcla ruteada de expertos adaptados. Usar preguntas claras, ambiguas, multi-dominio y hard negatives; etiquetas independientes; partición train/dev/test por fuente, artículo y familia terminológica; Recall/nDCG y tasa de régimen erróneo; bootstrap agrupado o modelo mixto. La afirmación primaria debe ser superioridad en colisión y no inferioridad en preguntas claras."
+      },
+      {
+        "id": "recommendation",
+        "type": "markdown",
+        "body": "## Recomendación\n\nNo abandonar la tesis. Congelar el silver, resolver la taxonomía con el director, construir el Golden independiente, ampliar el corpus o focalizar dos dominios, y recién entonces implementar dos expertos piloto y un router de cobertura acumulada. RAPTOR, grafos, Bayes y otras extensiones deben quedar subordinados a esa prueba central."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## Limitaciones\n\nLa asignación de dominio documental fue inferida por el tipo de las 17 fuentes, no adjudicada por expertos a nivel chunk. La revisión no modificó archivos ni ejecutó llamadas pagas a modelos generativos."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "ready",
+    "generatedAt": "2026-07-26T18:00:00-03:00",
+    "datasets": {
+      "domain_assignment": [
+        {
+          "dominio_documental": "legal",
+          "silo_actual": "legal",
+          "chunks": 755
+        },
+        {
+          "dominio_documental": "legal",
+          "silo_actual": "impositivo",
+          "chunks": 64
+        },
+        {
+          "dominio_documental": "legal",
+          "silo_actual": "contable",
+          "chunks": 8
+        },
+        {
+          "dominio_documental": "legal",
+          "silo_actual": "financiero",
+          "chunks": 3
+        },
+        {
+          "dominio_documental": "impositivo",
+          "silo_actual": "legal",
+          "chunks": 0
+        },
+        {
+          "dominio_documental": "impositivo",
+          "silo_actual": "impositivo",
+          "chunks": 633
+        },
+        {
+          "dominio_documental": "impositivo",
+          "silo_actual": "contable",
+          "chunks": 0
+        },
+        {
+          "dominio_documental": "impositivo",
+          "silo_actual": "financiero",
+          "chunks": 4
+        },
+        {
+          "dominio_documental": "contable",
+          "silo_actual": "legal",
+          "chunks": 5
+        },
+        {
+          "dominio_documental": "contable",
+          "silo_actual": "impositivo",
+          "chunks": 105
+        },
+        {
+          "dominio_documental": "contable",
+          "silo_actual": "contable",
+          "chunks": 388
+        },
+        {
+          "dominio_documental": "contable",
+          "silo_actual": "financiero",
+          "chunks": 533
+        },
+        {
+          "dominio_documental": "financiero",
+          "silo_actual": "legal",
+          "chunks": 33
+        },
+        {
+          "dominio_documental": "financiero",
+          "silo_actual": "impositivo",
+          "chunks": 63
+        },
+        {
+          "dominio_documental": "financiero",
+          "silo_actual": "contable",
+          "chunks": 49
+        },
+        {
+          "dominio_documental": "financiero",
+          "silo_actual": "financiero",
+          "chunks": 66
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "db_audit",
+      "label": "Tabla PostgreSQL chunks",
+      "query": {
+        "engine": "PostgreSQL",
+        "language": "sql",
+        "executed_at": "2026-07-26T17:30:00-03:00",
+        "tables_used": [
+          "chunks"
+        ],
+        "description": "Cuenta chunks por dominio documental asignado a la fuente y silo actual.",
+        "sql": "WITH mapa(fuente, dominio_documental) AS (VALUES ('Decreto_1398_1992_Reglamentario_Electrico','legal'),('Decreto_1738_1992_Reglamentario_Gas','legal'),('ENRE_Resolucion_544_2024','legal'),('Ley_24065_Energia_Electrica_TO','legal'),('Ley_24076_Gas_Natural_TO','legal'),('Res_SE_137_1992','legal'),('Res_SE_61_1992_Los_Procedimientos','legal'),('Decreto_821_1998_TO_Ley_11683','impositivo'),('Ley_11683_Procedimiento_Fiscal_TO','impositivo'),('RG_AFIP_830','impositivo'),('EEFF-ind-31-03-2019','contable'),('Estados_Contables_Neuquen','contable'),('FS-31-03-2019','contable'),('TR-consolidado-03-2026_VF-Clean','contable'),('MSU_ON_ClaseIV','financiero'),('Transener_Calificacion_FIX','financiero'),('Transener-Company-Presentation-April-2026','financiero')) SELECT m.dominio_documental, c.silo AS silo_actual, COUNT(*)::int AS chunks FROM chunks c JOIN mapa m USING (fuente) GROUP BY 1,2 ORDER BY 1,2;",
+        "filters": [
+          "17 fuentes de la instantánea local",
+          "Dominio documental inferido por tipo de fuente; requiere adjudicación experta por chunk."
+        ]
+      }
+    }
+  ]
+}

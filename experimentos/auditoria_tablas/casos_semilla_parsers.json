@@ -1,0 +1,70 @@
+{
+  "schema_version": "parser-table-cases-v1",
+  "truth_status": "semilla_exploratoria_pendiente_de_verificacion_humana",
+  "page_numbering": "one_based",
+  "cases": [
+    {
+      "case_id": "transener_resumen_ebitda",
+      "documento": "Transener_Calificacion_FIX.pdf",
+      "pregunta": "¿Cuál fue el EBITDA de Transener al 30/09/25?",
+      "concepto": ["EBITDA"],
+      "valor": ["272.159"],
+      "encabezados": [["30/09/25"]],
+      "unidad": ["$ Millones", "Millones"],
+      "paginas": [1],
+      "dificultad": "unidad_y_periodo"
+    },
+    {
+      "case_id": "transener_fco_tabla_partida",
+      "documento": "Transener_Calificacion_FIX.pdf",
+      "pregunta": "¿Cuál fue el flujo de caja operativo de Transener para el año móvil?",
+      "concepto": ["Flujo de Caja Operativo", "FCO"],
+      "valor": ["204.545"],
+      "encabezados": [["Año Móvil"], ["12 meses"]],
+      "unidad": ["Moneda Constante"],
+      "paginas": [10, 11],
+      "dificultad": "tabla_partida_entre_paginas"
+    },
+    {
+      "case_id": "msu_ventas_unidad",
+      "documento": "MSU_ON_ClaseIV.pdf",
+      "pregunta": "¿Cuáles fueron las ventas de MSU al 31/3/2022?",
+      "concepto": ["Ventas"],
+      "valor": ["5,472,931", "5.472.931"],
+      "encabezados": [["31/3/2022"]],
+      "unidad": ["miles de Pesos"],
+      "paginas": [27],
+      "dificultad": "unidad_en_encabezado_jerarquico"
+    },
+    {
+      "case_id": "pampa_ingresos_periodo",
+      "documento": "Pampa_EEFF_Consolidado_1Q2026.pdf",
+      "pregunta": "¿Cuáles fueron los ingresos por ventas de Pampa al 31.03.2026?",
+      "concepto": ["Ingresos por ventas"],
+      "valor": ["807.831"],
+      "encabezados": [["31.03.2026"]],
+      "paginas": [8],
+      "dificultad": "estado_contable"
+    },
+    {
+      "case_id": "edenor_ingresos_nueve_meses",
+      "documento": "Edenor_EEFF_Consolidado_2025_09.pdf",
+      "pregunta": "¿Cuáles fueron los ingresos por servicios de Edenor en los nueve meses al 30.09.25?",
+      "concepto": ["Ingresos por servicios"],
+      "valor": ["2.118.337"],
+      "encabezados": [["Nueve meses"], ["30.09.25"]],
+      "paginas": [5],
+      "dificultad": "encabezado_jerarquico_dos_niveles"
+    },
+    {
+      "case_id": "tgs_intereses_nueve_meses",
+      "documento": "TGS_EEFF_2025_09.pdf",
+      "pregunta": "¿Cuáles fueron los ingresos financieros por intereses de TGS en los nueve meses de 2025?",
+      "concepto": ["Intereses"],
+      "valor": ["22.155.212"],
+      "encabezados": [["Período de nueve meses terminado el 30 de septiembre de"], ["2025"]],
+      "paginas": [68],
+      "dificultad": "encabezado_jerarquico_con_periodos_repetidos"
+    }
+  ]
+}

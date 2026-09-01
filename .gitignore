@@ -259,7 +259,11 @@ experimentos/revision_corpus/*.html
 experimentos/2026-07-25_silos/
 experimentos/auditoria_tablas/comparacion_parsers/resultados.json
 experimentos/contexto_semantico_piloto_v1/comparacion_v1.json
-experimentos/prototipo_tablas/informe.md
+
+# Fragmentos literales de documentos fuente. El archivo se conserva en local:
+# una publicacion futura debe usar una version sanitizada, con identificadores,
+# hashes y localizadores en lugar del texto.
+experimentos/2026-07-26_estado/resultados/golden_anclas.json
 
 # Credenciales y material sensible (defensivo: hoy no existe ninguno)
 *.pem

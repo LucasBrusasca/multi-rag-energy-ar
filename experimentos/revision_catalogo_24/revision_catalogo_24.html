@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión del catálogo — 24 documentos</title>
+<style>
+:root{
+  --tinta:#1c1c1e; --suave:#5b5f66; --linea:#dfe3e8; --fondo:#f5f6f8;
+  --panel:#ffffff; --acento:#2f5597; --ok:#1e7a46; --corr:#8a5a00;
+  --duda:#7a4fb5; --excl:#a32020; --aviso:#fff4e5; --avisoLinea:#e0a458;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);
+  font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--panel);border-bottom:1px solid var(--linea);
+  padding:14px 22px;position:sticky;top:0;z-index:10}
+.titulo{font-weight:650;font-size:16px}
+.sub{color:var(--suave);font-size:13px;margin-top:2px}
+.barra{height:8px;background:var(--linea);border-radius:99px;margin-top:12px;overflow:hidden}
+.barra > div{height:100%;background:var(--acento);width:0;transition:width .18s}
+.contadores{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:13px}
+.contadores b{font-variant-numeric:tabular-nums}
+main{max-width:1000px;margin:22px auto;padding:0 18px}
+.ficha{background:var(--panel);border:1px solid var(--linea);border-radius:12px;padding:22px}
+h1{font-size:21px;margin:0 0 2px}
+.docid{color:var(--suave);font-size:13px;font-family:ui-monospace,Consolas,monospace}
+.campos{display:grid;grid-template-columns:180px 1fr;gap:8px 16px;margin:18px 0}
+.campos dt{color:var(--suave);font-size:13px}
+.campos dd{margin:0}
+.etiquetas{display:flex;gap:6px;flex-wrap:wrap}
+.etiqueta{background:#eaf0fb;color:var(--acento);border:1px solid #cfdcf5;
+  border-radius:99px;padding:2px 10px;font-size:13px}
+.evidencia{background:#fafbfc;border:1px solid var(--linea);border-radius:8px;
+  padding:12px 14px;margin:10px 0;white-space:pre-wrap;font-size:13.5px}
+.evidencia .rotulo{color:var(--suave);font-size:12px;margin-bottom:6px;
+  text-transform:uppercase;letter-spacing:.04em}
+.aviso{background:var(--aviso);border:1px solid var(--avisoLinea);border-radius:8px;
+  padding:11px 14px;margin:14px 0;font-size:13.5px}
+.acciones{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 6px}
+button{font:inherit;border:1px solid var(--linea);background:var(--panel);
+  color:var(--tinta);border-radius:8px;padding:9px 16px;cursor:pointer}
+button:hover{border-color:var(--suave)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.sel[data-d="confirmar"]{background:var(--ok);border-color:var(--ok);color:#fff}
+button.sel[data-d="corregir"]{background:var(--corr);border-color:var(--corr);color:#fff}
+button.sel[data-d="dudoso"]{background:var(--duda);border-color:var(--duda);color:#fff}
+button.sel[data-d="excluir_del_corpus"]{background:var(--excl);border-color:var(--excl);color:#fff}
+.correcciones{border:1px dashed var(--corr);border-radius:8px;padding:14px;margin-top:14px}
+.correcciones label{display:block;margin-bottom:10px}
+.correcciones span{display:block;color:var(--suave);font-size:12.5px;margin-bottom:3px}
+input[type=text],textarea{width:100%;font:inherit;padding:8px 10px;
+  border:1px solid var(--linea);border-radius:6px;background:#fff;color:var(--tinta)}
+textarea{min-height:78px;resize:vertical}
+.actual{color:var(--suave);font-size:12px;margin-top:2px}
+.error{color:var(--excl);font-size:13px;margin-top:10px;min-height:19px}
+.navegacion{display:flex;gap:10px;align-items:center;justify-content:space-between;
+  margin-top:18px;flex-wrap:wrap}
+select{font:inherit;padding:8px;border:1px solid var(--linea);border-radius:6px;background:#fff}
+.pie{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:18px;
+  border-top:1px solid var(--linea)}
+.peligro{border-color:var(--excl);color:var(--excl)}
+.auto{margin-top:14px}
+.auto .contenido{background:#fff6f6;border:1px solid #f0c7c7;border-radius:8px;
+  padding:12px 14px;margin-top:8px;font-size:13.5px}
+.oculto{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="titulo">Revisión humana del catálogo — 24 documentos canónicos</div>
+  <div class="sub" id="sub"></div>
+  <div class="barra"><div id="progreso"></div></div>
+  <div class="contadores">
+    <span>✓ confirmados <b id="c-confirmar">0</b></span>
+    <span>✎ corregidos <b id="c-corregir">0</b></span>
+    <span>? dudosos <b id="c-dudoso">0</b></span>
+    <span>✕ excluidos <b id="c-excluir_del_corpus">0</b></span>
+    <span>· pendientes <b id="c-pendientes">24</b></span>
+  </div>
+</header>
+
+<main>
+  <div id="aviso-persistencia" class="aviso oculto"></div>
+  <section class="ficha">
+    <div class="docid" id="posicion"></div>
+    <h1 id="titulo"></h1>
+    <div class="docid" id="docid"></div>
+
+    <div id="aviso-defecto" class="aviso oculto"></div>
+
+    <dl class="campos">
+      <dt>Archivo</dt><dd id="archivo"></dd>
+      <dt>Emisor actual</dt><dd id="emisor"></dd>
+      <dt>Tipo documental actual</dt><dd id="tipo"></dd>
+      <dt>Dominios actuales</dt><dd><div class="etiquetas" id="dominios"></div></dd>
+      <dt>Jurisdicción y fecha</dt><dd id="jurisdiccion"></dd>
+      <dt>Origen</dt><dd id="origen"></dd>
+    </dl>
+
+    <div class="evidencia"><div class="rotulo">Extracto de evidencia (textual)</div>
+      <span id="extracto"></span></div>
+    <div class="evidencia"><div class="rotulo">Evidencia por dominio — señala dónde mirar, no justifica la etiqueta</div>
+      <span id="ev-dominio"></span></div>
+
+    <div class="auto">
+      <button type="button" id="btn-auto">Mostrar clasificación automática</button>
+      <div class="contenido oculto" id="auto-contenido"></div>
+    </div>
+
+    <div class="acciones" id="acciones"></div>
+
+    <div class="correcciones oculto" id="correcciones"></div>
+
+    <label id="lbl-obs" class="oculto" style="display:block;margin-top:14px">
+      <span style="display:block;color:#5b5f66;font-size:12.5px;margin-bottom:3px"
+            id="txt-obs">Observaciones</span>
+      <textarea id="observaciones"></textarea>
+    </label>
+
+    <div class="error" id="error"></div>
+
+    <div class="navegacion">
+      <div style="display:flex;gap:10px">
+        <button type="button" id="btn-anterior">← Anterior</button>
+        <button type="button" id="btn-siguiente">Siguiente →</button>
+      </div>
+      <select id="salto"></select>
+    </div>
+  </section>
+
+  <div class="pie">
+    <button type="button" id="btn-finalizar" disabled>Finalizar revisión</button>
+    <button type="button" id="btn-csv" disabled>Descargar CSV</button>
+    <button type="button" id="btn-json" disabled>Descargar JSON</button>
+    <button type="button" id="btn-borrador">Descargar borrador (JSON)</button>
+    <button type="button" id="btn-borrar" class="peligro">Borrar todas las decisiones</button>
+  </div>
+  <p class="sub" style="margin-top:14px">
+    Todo se guarda solo en este navegador. Nada se envía a internet y nada se aplica
+    al catálogo: la exportación es una propuesta para revisar.
+  </p>
+</main>
+
+<script type="application/json" id="datos">{"receta": "interfaz-revision-v1", "huella_catalogo": "sha256:2ce31fdf4f47eecf7a404f15827a283e89f6342396a4835f6b45ce99a5383b4d", "huella_csv_v2": "sha256:ae9e45a22734e35ba7dfc6ffb3c6cf297e1f2642bcbc5e182880b87f8407f5df", "columnas": ["document_id", "fuente", "titulo_oficial", "archivo_referencia", "emisor_id", "emisor_nombre", "tipo_documento", "dominios_documentales", "jurisdiccion", "fecha_documento", "chunks", "paginas", "evidencia_extracto", "evidencia_por_dominio", "url_origen", "estado_inclusion", "decision_humana", "emisor_id_corregido", "emisor_nombre_corregido", "tipo_documento_corregido", "dominios_documentales_corregidos", "observaciones"], "columnas_humanas": ["decision_humana", "emisor_id_corregido", "emisor_nombre_corregido", "tipo_documento_corregido", "dominios_documentales_corregidos", "observaciones"], "campos_corregibles": ["emisor_id_corregido", "emisor_nombre_corregido", "tipo_documento_corregido", "dominios_documentales_corregidos"], "origen_de_correccion": {"emisor_id_corregido": "emisor_id", "emisor_nombre_corregido": "emisor_nombre", "tipo_documento_corregido": "tipo_documento", "dominios_documentales_corregidos": "dominios_documentales"}, "opciones_decision": ["confirmar", "corregir", "dudoso", "excluir_del_corpus"], "etiquetas_decision": {"confirmar": "✓ Confirmar", "corregir": "✎ Corregir", "dudoso": "? Dudoso", "excluir_del_corpus": "✕ Excluir del corpus"}, "marcas": {"confirmar": "✓", "corregir": "✎", "dudoso": "?", "excluir_del_corpus": "✕"}, "documentos": [{"document_id": "DOC-0001", "fuente": "Decreto_1398_1992_Reglamentario_Electrico", "titulo_oficial": "Decreto 1398/1992 — Reglamentación de las Leyes 24.065 y 15.336", "archivo_referencia": "Decreto_1398_1992_Reglamentario_Electrico.pdf", "emisor_id": "EMI-0001", "emisor_nombre": "Poder Ejecutivo Nacional", "tipo_documento": "decreto", "dominios_documentales": "legal|impositivo|regulatorio", "jurisdiccion": "argentina_nacional", "fecha_documento": "1992-08-06", "chunks": "33", "paginas": "1–21", "evidencia_extracto": "[bf432d4eb346… p.1] DecretoReglamentario de la Ley 24065 y la Ley 15336 sobre el Régimen de la Energia Electrica — «DECRETONACIONAL1.398/1992 BUENOSAIRES,6deAgostode1992 Boletin Oficial, 1l de Agosto de 1992 Vigente, de alcance general Id SAIJ: DN19920001398 TEMA de energia eléctrica, transporte de energia eléctrica, generacion de energia eléctrica, centrales hidroeléctricas, energia térmica, despacho nacional de cargas, Sistema Elé…»", "evidencia_por_dominio": "legal: sin coincidencia literal en el documento\nimpositivo: sin coincidencia literal en el documento\nregulatorio: 1 chunk(s); p.ej. p.19 [3d3ae6b01660…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0002", "fuente": "Decreto_1738_1992_Reglamentario_Gas", "titulo_oficial": "Decreto 1738/1992 — Reglamentación de la Ley 24.076", "archivo_referencia": "Decreto_1738_1992_Reglamentario_Gas.pdf", "emisor_id": "EMI-0001", "emisor_nombre": "Poder Ejecutivo Nacional", "tipo_documento": "decreto", "dominios_documentales": "legal|regulatorio", "jurisdiccion": "argentina_nacional", "fecha_documento": "1992-09-18", "chunks": "50", "paginas": "1–34", "evidencia_extracto": "[e4a3f5ffcaa8… p.1] CONSIDERANDO: — «Que resulta necesario reglamentar los preceptos contenidos en dicha ley a los fines de su inmediata aplicación y de su conocimiento por los interesados en participar en el proceso de privatización de Gas del Estado Sociedad del Estado . Que los intereses económicos , sociales y ambientales de la Nación y sus habitantes…»", "evidencia_por_dominio": "legal: 4 chunk(s); p.ej. p.3 [470937588841…]\nregulatorio: 3 chunk(s); p.ej. p.2 [085e0ca81c71…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0003", "fuente": "Decreto_821_1998_TO_Ley_11683", "titulo_oficial": "Decreto 821/1998 — Texto ordenado de la Ley 11.683", "archivo_referencia": "Decreto_821_1998_TO_Ley_11683.pdf", "emisor_id": "EMI-0001", "emisor_nombre": "Poder Ejecutivo Nacional", "tipo_documento": "texto_ordenado", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1998-07-13", "chunks": "249", "paginas": "1–98", "evidencia_extracto": "[1a80b1827bf6… p.1] Ver Antecedentes Normativos — «VISTO la Ley Nº 11.683, texto ordenado en 1978, y sus modificaciones, y CONSIDERANDO: Que resulta necesario aprobar el texto ordenado de las normas aludidas, a fin de facilitar su consulta y evitar confusiones en su aplicación. Que ha tomado la intervención que le compete la DIRECCION GENERAL DE ASUNTOS JURIDICOS del M…»", "evidencia_por_dominio": "impositivo: 8 chunk(s); p.ej. p.8 [f3b06e0619ae…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0004", "fuente": "Edenor_EEFF_Consolidado_2025_09", "titulo_oficial": "Estados financieros consolidados condensados intermedios al 30 de septiembre de 2025", "archivo_referencia": "Edenor_EEFF_Consolidado_2025_09.pdf", "emisor_id": "EMI-0002", "emisor_nombre": "Empresa Distribuidora y Comercializadora Norte S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2025-09-30", "chunks": "175", "paginas": "2–49", "evidencia_extracto": "[86cd307544f9… p.2] Índice — «Deudas comerciales ................................ ................................ ................................ ................. Nota 22 | Nota 23 |, 2 = 34. , 1 = Otras deudas ................................ ................................ ................................ ............................ , 2 = 34…»", "evidencia_por_dominio": "contable: 12 chunk(s); p.ej. p.2 [d7bcca9349e8…]\nregulatorio: 8 chunk(s); p.ej. p.2 [d7bcca9349e8…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0005", "fuente": "EEFF-ind-31-03-2019", "titulo_oficial": "Estados financieros individuales condensados intermedios al 31 de marzo de 2019", "archivo_referencia": "EEFF-ind-31-03-2019.pdf", "emisor_id": "EMI-0003", "emisor_nombre": "Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2019-03-31", "chunks": "134", "paginas": "1–40", "evidencia_extracto": "[ebb885242b25… p.1] «COMPAÑIA DE TRANSPORTE DE ENERGIA ELECTRICA EN ALTA TENSION TRANSENER S.A. ESTADOS FINANCIEROS INDIVIDUALES CONDENSADOS INTERMEDIOS AL 31 DE MARZO DE 2019 Y POR LOS PERIODOS DE TRES MESES FINALIZADOS EL 31 DE MARZO DE 2019 Y 2018…»", "evidencia_por_dominio": "contable: 18 chunk(s); p.ej. p.8 [ebab606c57e0…]\nregulatorio: 2 chunk(s); p.ej. p.24 [4c4e3c0039e4…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0006", "fuente": "ENRE_Resolucion_544_2024", "titulo_oficial": "Resolución ENRE 544/2024 — Programa para la Mejora del Factor de Potencia", "archivo_referencia": "ENRE_Resolucion_544_2024.pdf", "emisor_id": "EMI-0004", "emisor_nombre": "Ente Nacional Regulador de la Electricidad", "tipo_documento": "resolucion", "dominios_documentales": "legal|regulatorio|tecnico", "jurisdiccion": "argentina_nacional", "fecha_documento": "2024-08-15", "chunks": "11", "paginas": "1–6", "evidencia_extracto": "[60666766e935… p.1] CONSIDERANDO: — «Que la Resolución del ENTE NACIONAL REGULADOR DE LA ELECTRICIDAD (ENRE) Nº 85 de fecha 2 de febrero de 2024 estableció el Programa para la Mejora del Factor de Potencia, que como iniciativa propende a la utilización eficiente de la energía eléctrica y las instalaciones de distribución, en las áreas de concesión de la E…»", "evidencia_por_dominio": "legal: sin coincidencia literal en el documento\nregulatorio: sin coincidencia literal en el documento\ntecnico: 1 chunk(s); p.ej. p.3 [ecc55ee6c040…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0007", "fuente": "Estados_Contables_Neuquen", "titulo_oficial": "Estados financieros, reseña informativa e información adicional al 31 de diciembre de 2014", "archivo_referencia": "Estados_Contables_Neuquen.pdf", "emisor_id": "EMI-0005", "emisor_nombre": "Gas y Petróleo del Neuquén S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|corporativo|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2014-12-31", "chunks": "647", "paginas": "3–202", "evidencia_extracto": "[57cfe5622423… p.3] «ei································· o Ir Buildin j a better working work( · · · · · · · · · · · · · · 411 · · · · · · · · 11 · · O ··· · · · · ·…»", "evidencia_por_dominio": "contable: 90 chunk(s); p.ej. p.14 [65af2a7a3fa0…]\ncorporativo: sin coincidencia literal en el documento\nregulatorio: 4 chunk(s); p.ej. p.33 [16d4fcce78ea…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0008", "fuente": "FS-31-03-2019", "titulo_oficial": "Unaudited condensed consolidated financial statements as of March 31, 2019", "archivo_referencia": "FS-31-03-2019.pdf", "emisor_id": "EMI-0003", "emisor_nombre": "Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2019-03-31", "chunks": "109", "paginas": "1–31", "evidencia_extracto": "[46d110127982… p.1] Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A. — «Unaudited Condensed Consolidated Financial Statements as of March 31, 2019 and for the three -month period ended March 31, 2019 and 2018 Free translation from the original prepared in Spanish for publication in Argentina…»", "evidencia_por_dominio": "contable: 1 chunk(s); p.ej. p.16 [a30a9f5f6a70…]\nregulatorio: sin coincidencia literal en el documento", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0009", "fuente": "Ley_11683_Procedimiento_Fiscal_TO", "titulo_oficial": "Ley 11.683 — Procedimiento Fiscal", "archivo_referencia": "Ley_11683_Procedimiento_Fiscal_TO.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "texto_ordenado", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1932-12-30", "chunks": "259", "paginas": "1–146", "evidencia_extracto": "[6e3336197de4… p.1] Publicada en el Boletín Oficial: — «Número: 12 -01 -1933 (/normativa/buscar -boletin?s=1&fecha _ publicacion=12-01-1933)11586 (/normativa acion=12-01-1933)11586 (/normativa/buscar -boletin?s=1&numero _ boletin Texto actualizado de la norma Decreto 821/98 Apruébase el texto ordenado de la Ley N ° 11 . 683 , texto ordenado en 1978 y sus modificaciones . Bs…»", "evidencia_por_dominio": "impositivo: 8 chunk(s); p.ej. p.13 [b24cb5235192…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0010", "fuente": "Ley_20628_Impuesto_Ganancias_TO", "titulo_oficial": "Ley 20.628 — Impuesto a las Ganancias", "archivo_referencia": "Ley_20628_Impuesto_Ganancias_TO.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "texto_ordenado", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1973-12-27", "chunks": "258", "paginas": "1–94", "evidencia_extracto": "[448b350323af… p.1] SUJETO Y OBJETO DEL IMPUESTO — «- Art. 2° -A los efectos de esta ley son ganancias, sin perjuicio de lo dispuesto especialmente en cada categoría y aun cuando no se indiquen en ellas: - 1) los rendimientos, rentas o enriquecimientos susceptibles de una periodicidad que implique la permanencia de la fuente que los produce y su habilitación. - 2) los r…»", "evidencia_por_dominio": "impositivo: 52 chunk(s); p.ej. p.2 [bbe70a2fe384…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0011", "fuente": "Ley_23349_IVA_TO", "titulo_oficial": "Ley 23.349 — Impuesto al Valor Agregado", "archivo_referencia": "Ley_23349_IVA_TO.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "texto_ordenado", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1986-08-07", "chunks": "111", "paginas": "1–23", "evidencia_extracto": "[158985ea5e52… p.1] Ver Antecedentes Normativos — «VISTO la Ley de Impuesto al Valor Agregado, texto sustituido por la Ley N° 23.349 y sus modificaciones, y CONSIDERANDO: Que resulta necesario aprobar el texto ordenado de las normas aludidas, a fin de facilitar su consulta y evitar contusiones en su aplicación. Que la presente medida se dicta en ejercicio de las atribu…»", "evidencia_por_dominio": "impositivo: 1 chunk(s); p.ej. p.8 [75673d37907b…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0012", "fuente": "Ley_23966_Combustibles_Liquidos_Gas", "titulo_oficial": "Ley 23.966 — Impuestos sobre combustibles líquidos, gas natural y bienes personales", "archivo_referencia": "Ley_23966_Combustibles_Liquidos_Gas.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "ley", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1991-08-01", "chunks": "91", "paginas": "1–36", "evidencia_extracto": "[78830218ebeb… p.1] «FINANCIAMIENTO DEL REGIMEN NACIONAL DE PREVISION SOCIAL. AFECTACION DEL I.V.A.. IMPUESTO SOBRE COMBUSTIBLES LIQUIDOS Y GAS NATURAL. MODIFICACIONES A LA LEY DEL FONDO NACIONAL DE LA VIVIENDA. DEROGACION DE REGIMENES DE JUBILACIONES ESPECIALES. IMPUESTO SOBRE LOS BIENES PERSONALES NO INCORPORADO AL PROCESO ECONOMICO. DES…»", "evidencia_por_dominio": "impositivo: sin coincidencia literal en el documento", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0013", "fuente": "Ley_24065_Energia_Electrica_TO", "titulo_oficial": "Ley 24.065 — Régimen de la Energía Eléctrica", "archivo_referencia": "Ley_24065_Energia_Electrica_TO.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "texto_ordenado", "dominios_documentales": "legal|regulatorio", "jurisdiccion": "argentina_nacional", "fecha_documento": "1991-12-19", "chunks": "38", "paginas": "1–23", "evidencia_extracto": "[43869a582765… p.1] REGIMEN DE LA ENERGIA ELECTRICA — «Generación , transporte y distribución de electricidad . Objeto . Política general y agentes . Transporte y distribución . Generadores , transportistas , distribuidores y grandes usuarios . Disposiciones comunes a transportistas y distribuidores . Provisión de servicios . Limitaciones . Exportación e importación . Desp…»", "evidencia_por_dominio": "legal: 4 chunk(s); p.ej. p.1 [43869a582765…]\nregulatorio: 1 chunk(s); p.ej. p.20 [f7c2c295d134…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0014", "fuente": "Ley_24076_Gas_Natural_TO", "titulo_oficial": "Ley 24.076 — Marco Regulatorio del Gas Natural", "archivo_referencia": "Ley_24076_Gas_Natural_TO.pdf", "emisor_id": "EMI-0006", "emisor_nombre": "Honorable Congreso de la Nación Argentina", "tipo_documento": "texto_ordenado", "dominios_documentales": "legal|regulatorio", "jurisdiccion": "argentina_nacional", "fecha_documento": "1992-05-20", "chunks": "31", "paginas": "1–19", "evidencia_extracto": "[167fb0e8f1ba… p.1] GAS NATURAL — «MARCO REGULATORIO -PRIVATIZACION GAS DEL ESTADO Sanción: 20 - 05 - 1992 Publicada en el Boletín Oficial: 12 - 06 - 1992 (/normativa/buscar - boletin?s=1&fecha _ publicacion=12-06-1992)27407 (/normativ acion=12-06-1992)27407 (/normativa/buscar - boletin?s=1&numero _ boletin Número: Página: 30 Texto actualizado de la nor…»", "evidencia_por_dominio": "legal: 4 chunk(s); p.ej. p.5 [5fc10e0ff7a7…]\nregulatorio: 4 chunk(s); p.ej. p.1 [167fb0e8f1ba…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0015", "fuente": "MSU_ON_ClaseIV", "titulo_oficial": "Suplemento de prospecto — Obligaciones Negociables Clase IV", "archivo_referencia": "MSU_ON_ClaseIV.pdf", "emisor_id": "EMI-0007", "emisor_nombre": "MSU Energy S.A.", "tipo_documento": "prospecto_financiero", "dominios_documentales": "financiero|legal|impositivo", "jurisdiccion": "no_aplica", "fecha_documento": "2022-05-11", "chunks": "147", "paginas": "1–42", "evidencia_extracto": "[1146cc65041a… p.1] MSU ENERGY S.A. Emisora — «Las Obligaciones Negociables serán obligaciones negociables simples, no convertibles en acciones y no subordinadas, emitidas y colocadas conforme a la Ley de Obligaciones Negociables Nº 23.576 y sus modificatorias y complementarias (la \"Ley de Obligaciones Negociables\"), y las normas de la CNV (T.O. Resolución General …»", "evidencia_por_dominio": "financiero: 26 chunk(s); p.ej. p.4 [a20de9a7dfb3…]\nlegal: 15 chunk(s); p.ej. p.4 [a20de9a7dfb3…]\nimpositivo: 10 chunk(s); p.ej. p.4 [a20de9a7dfb3…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0016", "fuente": "Pampa_EEFF_Consolidado_1Q2026", "titulo_oficial": "Estados financieros consolidados condensados intermedios al 31 de marzo de 2026", "archivo_referencia": "Pampa_EEFF_Consolidado_1Q2026.pdf", "emisor_id": "EMI-0008", "emisor_nombre": "Pampa Energía S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2026-03-31", "chunks": "217", "paginas": "2–66", "evidencia_extracto": "[4a57869762ce… p.2] COMITÉ DE AUDITORÍA — «Miembros Titulares Miembros Suplentes Noemí Cohn Martín Fernández Dussaut Germán Wetzler Malbrán Gabriel Szpigiel Carolina Zang Julia Sofía Pomares Clarisa Lifsic Clarisa Vittone Lorena Rappaport Ricardo Alejandro Torres Damián Miguel Mindlin Carolina Zang Gabriel Szpigiel Daniela Rivarola Meilan Julia Sofía Pomares Ni…»", "evidencia_por_dominio": "contable: 10 chunk(s); p.ej. p.19 [707a123a3695…]\nregulatorio: 1 chunk(s); p.ej. p.15 [d1ec4336ab01…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0017", "fuente": "Res_SE_137_1992", "titulo_oficial": "Resolución SE 137/1992 — Reglamentaciones del Sistema de Transporte de Energía Eléctrica", "archivo_referencia": "Res_SE_137_1992.pdf", "emisor_id": "EMI-0009", "emisor_nombre": "Secretaría de Energía", "tipo_documento": "resolucion", "dominios_documentales": "legal|regulatorio|tecnico|operativo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1992-11-30", "chunks": "11", "paginas": "1–4", "evidencia_extracto": "[43a424e38499… p.1] Resoluci�n 137/92 — «Que la SECRETARIA DE ENERGIA se encuentra facultada para el dictado del presente acto en virtud de lo dispuesto por el Art�culo 36 de la Ley N� 24.065 y por el Decreto N� 1594 del 31 de agosto de 1992. Por ello, EL SECRETARIO DE ENERGIA RESUELVE: CAPITULO I…»", "evidencia_por_dominio": "legal: sin coincidencia literal en el documento\nregulatorio: sin coincidencia literal en el documento\ntecnico: sin coincidencia literal en el documento\noperativo: sin coincidencia literal en el documento", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0018", "fuente": "Res_SE_61_1992_Los_Procedimientos", "titulo_oficial": "Los Procedimientos para la Programación de la Operación, el Despacho de Cargas y el Cálculo de Precios", "archivo_referencia": "Res_SE_61_1992_Los_Procedimientos.pdf", "emisor_id": "EMI-0009", "emisor_nombre": "Secretaría de Energía", "tipo_documento": "procedimiento_regulatorio", "dominios_documentales": "legal|regulatorio|tecnico|operativo", "jurisdiccion": "argentina_nacional", "fecha_documento": "1999-10-21", "chunks": "656", "paginas": "1–386", "evidencia_extracto": "[e2cac1714217… p.1] ENERGIA ELECTRICA — «Resolución 545/99 Modifícanse los Procedimientos para la Programación de la Operación, el Despacho de Cargas y el Cálculo de Precios aprobados por Resolución Nº 61/92, exSEE y sus normas modificatorias y complementarias. Derógase la Resolución Nº 404/99. Bs. As., 21/10/99 VISTO el Expediente Nº 750-004334/99 del Regist…»", "evidencia_por_dominio": "legal: 1 chunk(s); p.ej. p.1 [e2cac1714217…]\nregulatorio: 1 chunk(s); p.ej. p.1 [e2cac1714217…]\ntecnico: 21 chunk(s); p.ej. p.8 [9fcf06801e3a…]\noperativo: 11 chunk(s); p.ej. p.5 [a9aaea706aa9…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0019", "fuente": "RG_AFIP_830", "titulo_oficial": "Resolución General AFIP 830/2000 — Régimen de retención del Impuesto a las Ganancias", "archivo_referencia": "RG_AFIP_830.pdf", "emisor_id": "EMI-0010", "emisor_nombre": "Administración Federal de Ingresos Públicos", "tipo_documento": "resolucion_general", "dominios_documentales": "impositivo", "jurisdiccion": "argentina_nacional", "fecha_documento": "2000-04-26", "chunks": "129", "paginas": "1–36", "evidencia_extracto": "[6e53ccf1bb8f… p.1] Resolución General 830/2000 — «Impuesto a las Ganancias. Régimen de retención para determinadas ganancias. Régimen excepcional de ingreso. Resolución General Nº 2784 (DGI), sus modificatorias y complementarias. Resolución General Nº 2793 (DGI), sus modificatorias y complementaria. Su sustitución. Bs. As., 26 de abril de 2000…»", "evidencia_por_dominio": "impositivo: 2 chunk(s); p.ej. p.3 [a1405fcbdd28…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0020", "fuente": "TGS_EEFF_2024_4T", "titulo_oficial": "Memoria y estados financieros del ejercicio terminado el 31 de diciembre de 2024", "archivo_referencia": "TGS_EEFF_2024_4T.pdf", "emisor_id": "EMI-0011", "emisor_nombre": "Transportadora de Gas del Sur S.A.", "tipo_documento": "memoria_anual", "dominios_documentales": "ambiental|contable|corporativo|laboral|operativo|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2024-12-31", "chunks": "812", "paginas": "2–236", "evidencia_extracto": "[9f1e1d879475… p.2] 02 | ESTADOS FINANCIEROS CONSOLIDADOS AL 31 DE DICIEMBRE DE 2024 — «Estado de resultados integral consolidado Estado de situación financiera consolidado Estado de cambios en el patrimonio consolidado Estado de flujo de efectivo consolidado Notas a los estados financieros consolidados…»", "evidencia_por_dominio": "ambiental: 13 chunk(s); p.ej. p.52 [0260fb7d4f9e…]\ncontable: 40 chunk(s); p.ej. p.77 [339cb0cee8cb…]\ncorporativo: 4 chunk(s); p.ej. p.6 [f3163764a67b…]\nlaboral: 12 chunk(s); p.ej. p.12 [92e5a9c841a6…]\noperativo: 24 chunk(s); p.ej. p.8 [f73b849f9b2e…]\nregulatorio: 16 chunk(s); p.ej. p.8 [73fc46418bb4…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0021", "fuente": "TGS_EEFF_2025_09", "titulo_oficial": "Estados financieros al 30 de septiembre de 2025 y 2024", "archivo_referencia": "TGS_EEFF_2025_09.pdf", "emisor_id": "EMI-0011", "emisor_nombre": "Transportadora de Gas del Sur S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2025-09-30", "chunks": "416", "paginas": "2–84", "evidencia_extracto": "[329b75e993d2… p.2] 05 | ESTADOS FINANCIEROS SEPARADOS AL 30 DE SEPTIEMBRE DE 2025 — «Estado de Resultados Integrales Separado Condensado Intermedio Estado de Situación Financiera Separado condensado intermedio Estado de Cambios en el Patrimonio Separado Condensado Intermedio Estado de Flujos de Efectivo Separado Condensado Intermedio Notas a los Estados Financieros Separados Condensados Intermedios…»", "evidencia_por_dominio": "contable: 27 chunk(s); p.ej. p.3 [f8c303394b65…]\nregulatorio: 6 chunk(s); p.ej. p.20 [0b8132d52777…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0022", "fuente": "TR-consolidado-03-2026_VF-Clean", "titulo_oficial": "Estados financieros consolidados condensados intermedios al 31 de marzo de 2026", "archivo_referencia": "TR-consolidado-03-2026_VF-Clean.pdf", "emisor_id": "EMI-0003", "emisor_nombre": "Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.", "tipo_documento": "estado_contable", "dominios_documentales": "contable|regulatorio", "jurisdiccion": "no_aplica", "fecha_documento": "2026-03-31", "chunks": "141", "paginas": "1–37", "evidencia_extracto": "[7279fa8e0cd8… p.1] ESTADOS FINANCIEROS CONSOLIDADOS CONDENSADOS INTERMEDIOS — «Al 31 de marzo de 2026 y por los períodos de tres meses finalizados el 31 de marzo de 2026 y 2025. INFORMACIÓN ESPECIAL REQUERIDA POR EL REGLAMENTO DEL LISTADO DE BOLSAS Y MERCADOS ARGENTINOS S.A. Y LAS NORMAS DE LA COMISIÓN NACIONAL DE VALORES…»", "evidencia_por_dominio": "contable: 9 chunk(s); p.ej. p.15 [e664ff68901d…]\nregulatorio: 1 chunk(s); p.ej. p.32 [a8e6b0be9199…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0023", "fuente": "Transener-Company-Presentation-April-2026", "titulo_oficial": "Company Presentation — April 2026", "archivo_referencia": "Transener-Company-Presentation-April-2026.pdf", "emisor_id": "EMI-0003", "emisor_nombre": "Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.", "tipo_documento": "presentacion_corporativa", "dominios_documentales": "financiero|corporativo|regulatorio|tecnico|operativo", "jurisdiccion": "no_aplica", "fecha_documento": "2026-04", "chunks": "20", "paginas": "2–22", "evidencia_extracto": "[8736d5fdeb0f… p.2] Legal Disclaimer — «Securities may not be offered or sold within the United States or to U . S . persons, except to qualified institutional buyers (as defined in Rule 144A under the Securities Act) in reliance on the exemption from registration provided by Rule 144A under the Securities Act and to certain non -U . S . persons in offshore …»", "evidencia_por_dominio": "financiero: sin coincidencia literal en el documento\ncorporativo: sin coincidencia literal en el documento\nregulatorio: sin coincidencia literal en el documento\ntecnico: sin coincidencia literal en el documento\noperativo: sin coincidencia literal en el documento", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}, {"document_id": "DOC-0024", "fuente": "Transener_Calificacion_FIX", "titulo_oficial": "Informe de calificación — Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.", "archivo_referencia": "Transener_Calificacion_FIX.pdf", "emisor_id": "EMI-0012", "emisor_nombre": "FIX SCR S.A.", "tipo_documento": "informe_calificacion", "dominios_documentales": "financiero|regulatorio|corporativo", "jurisdiccion": "no_aplica", "fecha_documento": "2025-12-18", "chunks": "44", "paginas": "1–14", "evidencia_extracto": "[058f8f478e47… p.1] Factores relevantes de la calificación — «Suba de calificación: FIX SCR (afiliada de Fitch Ratings) – en adelante FIX – subió a categoría AA(arg) desde A+(arg) a la calificación de Emisor de Largo plazo de Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A. (Transener) , con Perspectiva Estable . FIX anticipa una mejora en el riesgo regu…»", "evidencia_por_dominio": "financiero: 16 chunk(s); p.ej. p.1 [115dedd91bbd…]\nregulatorio: 6 chunk(s); p.ej. p.1 [058f8f478e47…]\ncorporativo: 1 chunk(s); p.ej. p.8 [963e32f5b835…]", "url_origen": "", "estado_inclusion": "pendiente_revision", "decision_humana": "", "emisor_id_corregido": "", "emisor_nombre_corregido": "", "tipo_documento_corregido": "", "dominios_documentales_corregidos": "", "observaciones": ""}], "defectos": {"DOC-0017": {"registros": 13, "ocurrencias": 286}}, "contexto_automatico": {"DOC-0001": "legal 17 (52 %), impositivo 15 (45 %), contable 1 (3 %)", "DOC-0002": "legal 26 (52 %), impositivo 22 (44 %), contable 2 (4 %)", "DOC-0003": "impositivo 249 (100 %)", "DOC-0004": "financiero 98 (56 %), contable 64 (37 %), legal 7 (4 %), impositivo 6 (3 %)", "DOC-0005": "financiero 78 (58 %), contable 47 (35 %), impositivo 9 (7 %)", "DOC-0006": "legal 4 (36 %), impositivo 4 (36 %), contable 3 (27 %)", "DOC-0007": "contable 273 (42 %), financiero 271 (42 %), impositivo 97 (15 %), legal 6 (1 %)", "DOC-0008": "financiero 61 (56 %), contable 41 (38 %), impositivo 7 (6 %)", "DOC-0009": "impositivo 259 (100 %)", "DOC-0010": "impositivo 256 (99 %), financiero 1 (0 %), legal 1 (0 %)", "DOC-0011": "impositivo 110 (99 %), legal 1 (1 %)", "DOC-0012": "impositivo 87 (96 %), financiero 4 (4 %)", "DOC-0013": "legal 27 (71 %), impositivo 11 (29 %)", "DOC-0014": "legal 20 (65 %), impositivo 6 (19 %), contable 5 (16 %)", "DOC-0015": "impositivo 46 (31 %), financiero 41 (28 %), contable 35 (24 %), legal 25 (17 %)", "DOC-0016": "financiero 134 (62 %), contable 72 (33 %), legal 7 (3 %), impositivo 4 (2 %)", "DOC-0017": "legal 9 (82 %), impositivo 2 (18 %)", "DOC-0018": "legal 649 (99 %), impositivo 5 (1 %), financiero 2 (0 %)", "DOC-0019": "impositivo 129 (100 %)", "DOC-0020": "financiero 419 (52 %), contable 360 (44 %), impositivo 29 (4 %), legal 4 (0 %)", "DOC-0021": "financiero 272 (65 %), contable 142 (34 %), impositivo 2 (0 %)", "DOC-0022": "financiero 92 (65 %), contable 36 (26 %), impositivo 8 (6 %), legal 5 (4 %)", "DOC-0023": "legal 9 (45 %), financiero 6 (30 %), contable 5 (25 %)", "DOC-0024": "contable 19 (43 %), financiero 18 (41 %), legal 4 (9 %), impositivo 3 (7 %)"}, "salvedades": ["Los metadatos del catalogo estaban PENDIENTES DE RATIFICACION HUMANA al momento de esta revision.", "La exportacion es una PROPUESTA. No se aplico nada al catalogo ni a PostgreSQL.", "Un campo de correccion vacio conserva el valor actual: vacio significa 'no lo toque', nunca 'borralo'.", "Los caracteres danados de la ingesta se registran aparte y no se corrigen desde esta pantalla.", "Si el navegador no permite guardado automatico, la interfaz lo avisa en pantalla y el borrador se puede descargar en cualquier momento."]}</script>
+
+<script>
+/* === INICIO LOGICA PURA === */
+/* Pure functions: no DOM, no storage. Extracted verbatim by the tests and run
+   under node, so validation and export are actually tested and not merely
+   inspected.
+   [ES] Funciones puras: sin DOM, sin almacenamiento. Las pruebas las extraen tal
+   cual y las corren con node, asi que la validacion y la exportacion se prueban
+   de verdad y no solo se inspeccionan. */
+
+function limpio(v){ return (v === undefined || v === null) ? "" : String(v).trim(); }
+
+function hayCorreccionEfectiva(doc, estado, campos, origen){
+  /* A correction has to differ from what is on file. Retyping the current value
+     is not a correction, and accepting it would record a change that changes
+     nothing.
+     [ES] Una correccion tiene que diferir de lo que ya esta. Reescribir el valor
+     actual no es una correccion, y aceptarlo registraria un cambio que no
+     cambia nada. */
+  for (const campo of campos){
+    const nuevo = limpio(estado[campo]);
+    if (nuevo !== "" && nuevo !== limpio(doc[origen[campo]])) return true;
+  }
+  return false;
+}
+
+function validarDecision(doc, estado, campos, origen){
+  const d = limpio(estado.decision_humana);
+  if (d === "") return {ok:false, motivo:"Sin decisión."};
+
+  if (d === "confirmar"){
+    for (const campo of campos){
+      if (limpio(estado[campo]) !== ""){
+        return {ok:false, motivo:"«Confirmar» no admite correcciones cargadas."};
+      }
+    }
+    return {ok:true, motivo:""};
+  }
+  if (d === "corregir"){
+    if (!hayCorreccionEfectiva(doc, estado, campos, origen)){
+      return {ok:false,
+        motivo:"Completá al menos un campo con un valor distinto del actual."};
+    }
+    return {ok:true, motivo:""};
+  }
+  if (d === "dudoso"){
+    if (limpio(estado.observaciones) === ""){
+      return {ok:false, motivo:"«Dudoso» exige explicar la duda en observaciones."};
+    }
+    return {ok:true, motivo:""};
+  }
+  if (d === "excluir_del_corpus"){
+    if (limpio(estado.observaciones) === ""){
+      return {ok:false, motivo:"«Excluir del corpus» exige justificar el motivo."};
+    }
+    return {ok:true, motivo:""};
+  }
+  return {ok:false, motivo:"Decisión desconocida."};
+}
+
+function contarDecisiones(documentos, estados, opciones, campos, origen){
+  const cuenta = {pendientes:0};
+  for (const o of opciones) cuenta[o] = 0;
+  for (const doc of documentos){
+    const estado = estados[doc.document_id] || {};
+    const v = validarDecision(doc, estado, campos, origen);
+    if (v.ok) cuenta[limpio(estado.decision_humana)] += 1;
+    else cuenta.pendientes += 1;
+  }
+  return cuenta;
+}
+
+function celdaCsv(valor){
+  const v = (valor === undefined || valor === null) ? "" : String(valor);
+  return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+}
+
+function armarCsv(documentos, estados, columnas, humanas){
+  /* The 22 columns of the v2 sheet, in the same order, with the six human ones
+     filled in. Anything the reviewer left empty stays empty: empty means "I did
+     not touch it", never "delete it".
+     [ES] Las 22 columnas de la planilla v2, en el mismo orden, con las seis
+     humanas completas. Lo que el revisor dejo vacio queda vacio: vacio significa
+     "no lo toque", nunca "borralo". */
+  const lineas = [columnas.map(celdaCsv).join(",")];
+  for (const doc of documentos){
+    const estado = estados[doc.document_id] || {};
+    const fila = columnas.map(function(col){
+      return celdaCsv(humanas.indexOf(col) >= 0 ? limpio(estado[col]) : doc[col]);
+    });
+    lineas.push(fila.join(","));
+  }
+  return lineas.join("\n") + "\n";
+}
+
+function armarJson(meta, documentos, estados, opciones, campos, origen, humanas){
+  const decisiones = documentos.map(function(doc){
+    const estado = estados[doc.document_id] || {};
+    const registro = {document_id: doc.document_id, fuente: doc.fuente};
+    for (const col of humanas) registro[col] = limpio(estado[col]);
+    registro.valida = validarDecision(doc, estado, campos, origen).ok;
+    return registro;
+  });
+  return {
+    receta: meta.receta,
+    huella_catalogo: meta.huella_catalogo,
+    huella_csv_v2: meta.huella_csv_v2,
+    fecha_exportacion: meta.fecha_exportacion,
+    documentos: documentos.length,
+    conteos: contarDecisiones(documentos, estados, opciones, campos, origen),
+    decisiones: decisiones,
+    salvedades: meta.salvedades
+  };
+}
+/* === FIN LOGICA PURA === */
+
+(function(){
+  "use strict";
+  const D = JSON.parse(document.getElementById("datos").textContent);
+  const CAMPOS = D.campos_corregibles;
+  const ORIGEN = D.origen_de_correccion;
+  const HUMANAS = D.columnas_humanas;
+  const CLAVE = "revision_catalogo_24::" + D.huella_csv_v2.slice(0, 24);
+
+  let indice = 0;
+  let estados = {};
+  let persistencia = true;
+
+  /* Probe storage instead of assuming it. It is disabled in private windows,
+     under some file:// configurations and inside data: URLs. Swallowing the
+     failure silently is how a reviewer loses twenty judgements and finds out
+     at the end.
+     [ES] Se sondea el almacenamiento en lugar de suponerlo. Esta deshabilitado
+     en ventanas privadas, en algunas configuraciones de file:// y dentro de
+     URLs data:. Tragarse la falla en silencio es como un revisor pierde veinte
+     juicios y se entera al final. */
+  try {
+    const sonda = CLAVE + "::sonda";
+    localStorage.setItem(sonda, "1");
+    localStorage.removeItem(sonda);
+  } catch (e) { persistencia = false; }
+
+  if (persistencia){
+    try { estados = JSON.parse(localStorage.getItem(CLAVE) || "{}"); } catch (e) { estados = {}; }
+  }
+
+  function guardar(){
+    if (!persistencia) return;
+    try { localStorage.setItem(CLAVE, JSON.stringify(estados)); }
+    catch (e) { persistencia = false; avisarPersistencia(); }
+  }
+
+  function avisarPersistencia(){
+    const caja = document.getElementById("aviso-persistencia");
+    if (persistencia){ caja.classList.add("oculto"); return; }
+    caja.classList.remove("oculto");
+    caja.textContent = "⚠ Este navegador no permite guardado automático acá "
+      + "(pasa en ventanas privadas y en algunos modos de apertura). Tus "
+      + "decisiones NO se conservan si cerrás la pestaña. Usá «Descargar "
+      + "borrador (JSON)» seguido para no perder trabajo.";
+  }
+  function estadoDe(doc){
+    if (!estados[doc.document_id]) estados[doc.document_id] = {};
+    return estados[doc.document_id];
+  }
+  function texto(id, valor){
+    document.getElementById(id).textContent = (valor === null || valor === undefined || valor === "") ? "—" : String(valor);
+  }
+  function vaciar(nodo){ while (nodo.firstChild) nodo.removeChild(nodo.firstChild); }
+
+  function pintarDominios(doc){
+    const cont = document.getElementById("dominios");
+    vaciar(cont);
+    const tokens = String(doc.dominios_documentales || "").split("|")
+      .map(function(t){ return t.trim(); }).filter(Boolean);
+    if (!tokens.length){
+      const s = document.createElement("span"); s.textContent = "—"; cont.appendChild(s); return;
+    }
+    tokens.forEach(function(t){
+      const s = document.createElement("span");
+      s.className = "etiqueta";
+      s.textContent = t;              // textContent: viene de un documento
+      cont.appendChild(s);
+    });
+  }
+
+  function pintarOrigen(doc){
+    const cont = document.getElementById("origen");
+    vaciar(cont);
+    const url = String(doc.url_origen || "").trim();
+    /* Only http/https become clickable. A `javascript:` value in a catalogue
+       field must never turn into a link.
+       [ES] Solo http/https se vuelven clickeables. Un valor `javascript:` en un
+       campo del catalogo no puede convertirse nunca en un enlace. */
+    if (/^https?:\/\//i.test(url)){
+      const a = document.createElement("a");
+      a.href = url; a.textContent = url;
+      a.target = "_blank"; a.rel = "noreferrer noopener";
+      cont.appendChild(a);
+    } else {
+      const s = document.createElement("span");
+      s.textContent = url || "—";
+      cont.appendChild(s);
+    }
+  }
+
+  function pintarAcciones(doc){
+    const cont = document.getElementById("acciones");
+    vaciar(cont);
+    const estado = estadoDe(doc);
+    D.opciones_decision.forEach(function(op){
+      const b = document.createElement("button");
+      b.type = "button";
+      b.dataset.d = op;
+      b.textContent = D.etiquetas_decision[op];
+      if (estado.decision_humana === op) b.className = "sel";
+      b.addEventListener("click", function(){
+        estado.decision_humana = op;
+        if (op === "confirmar") CAMPOS.forEach(function(c){ estado[c] = ""; });
+        guardar(); render();
+      });
+      cont.appendChild(b);
+    });
+  }
+
+  function pintarCorrecciones(doc){
+    const cont = document.getElementById("correcciones");
+    vaciar(cont);
+    const estado = estadoDe(doc);
+    if (estado.decision_humana !== "corregir"){ cont.classList.add("oculto"); return; }
+    cont.classList.remove("oculto");
+
+    const aviso = document.createElement("div");
+    aviso.className = "actual";
+    aviso.textContent = "Completá solo lo que cambia. Un campo vacío conserva el valor actual.";
+    cont.appendChild(aviso);
+
+    CAMPOS.forEach(function(campo){
+      const label = document.createElement("label");
+      const span = document.createElement("span");
+      span.textContent = campo;
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = estado[campo] || "";
+      input.addEventListener("input", function(){
+        estado[campo] = input.value; guardar(); actualizarCabecera(); validar(doc);
+      });
+      const actual = document.createElement("div");
+      actual.className = "actual";
+      actual.textContent = "actual: " + (doc[ORIGEN[campo]] || "—");
+      label.appendChild(span); label.appendChild(input); label.appendChild(actual);
+      cont.appendChild(label);
+    });
+  }
+
+  function pintarObservaciones(doc){
+    const estado = estadoDe(doc);
+    const label = document.getElementById("lbl-obs");
+    const area = document.getElementById("observaciones");
+    const rotulo = document.getElementById("txt-obs");
+    const d = estado.decision_humana;
+    label.classList.remove("oculto");
+    if (d === "dudoso") rotulo.textContent = "Observaciones — obligatorio: explicá la duda";
+    else if (d === "excluir_del_corpus") rotulo.textContent = "Observaciones — obligatorio: justificá el motivo";
+    else rotulo.textContent = "Observaciones (opcional)";
+    area.value = estado.observaciones || "";
+    area.oninput = function(){
+      estado.observaciones = area.value; guardar(); actualizarCabecera(); validar(doc);
+    };
+  }
+
+  function pintarDefecto(doc){
+    const caja = document.getElementById("aviso-defecto");
+    const defecto = D.defectos[doc.document_id];
+    if (!defecto){ caja.classList.add("oculto"); caja.textContent = ""; return; }
+    caja.classList.remove("oculto");
+    caja.textContent = "⚠ Este documento contiene caracteres dañados durante la "
+      + "ingesta. El defecto está registrado aparte y no debe corregirse desde "
+      + "esta pantalla. (" + defecto.ocurrencias + " ocurrencias en "
+      + defecto.registros + " fragmentos)";
+  }
+
+  function pintarAutomatico(doc){
+    const caja = document.getElementById("auto-contenido");
+    const boton = document.getElementById("btn-auto");
+    vaciar(caja);
+    caja.classList.add("oculto");
+    boton.textContent = "Mostrar clasificación automática";
+    boton.onclick = function(){
+      if (caja.classList.contains("oculto")){
+        vaciar(caja);
+        const p1 = document.createElement("div");
+        p1.textContent = "⚠ No es verdad de referencia: es lo que decidió el "
+          + "clasificador. Mirarlo antes de decidir puede anclar tu juicio hacia "
+          + "coincidir con la máquina.";
+        const p2 = document.createElement("div");
+        p2.style.marginTop = "8px";
+        p2.textContent = D.contexto_automatico[doc.document_id] || "(sin dato)";
+        caja.appendChild(p1); caja.appendChild(p2);
+        caja.classList.remove("oculto");
+        boton.textContent = "Ocultar clasificación automática";
+      } else {
+        caja.classList.add("oculto");
+        boton.textContent = "Mostrar clasificación automática";
+      }
+    };
+  }
+
+  function pintarSalto(){
+    const sel = document.getElementById("salto");
+    vaciar(sel);
+    D.documentos.forEach(function(doc, i){
+      const estado = estados[doc.document_id] || {};
+      const v = validarDecision(doc, estado, CAMPOS, ORIGEN);
+      const marca = v.ok ? D.marcas[estado.decision_humana] : "·";
+      const op = document.createElement("option");
+      op.value = String(i);
+      op.textContent = marca + "  " + (i + 1) + "/" + D.documentos.length + "  " + doc.document_id + " — " + doc.fuente;
+      if (i === indice) op.selected = true;
+      sel.appendChild(op);
+    });
+    sel.onchange = function(){ indice = parseInt(sel.value, 10); render(); };
+  }
+
+  function validar(doc){
+    const v = validarDecision(doc, estadoDe(doc), CAMPOS, ORIGEN);
+    document.getElementById("error").textContent =
+      (estadoDe(doc).decision_humana && !v.ok) ? v.motivo : "";
+    return v;
+  }
+
+  function actualizarCabecera(){
+    const c = contarDecisiones(D.documentos, estados, D.opciones_decision, CAMPOS, ORIGEN);
+    D.opciones_decision.forEach(function(op){
+      document.getElementById("c-" + op).textContent = String(c[op]);
+    });
+    document.getElementById("c-pendientes").textContent = String(c.pendientes);
+    const hechos = D.documentos.length - c.pendientes;
+    document.getElementById("progreso").style.width =
+      (hechos / D.documentos.length * 100).toFixed(1) + "%";
+    document.getElementById("sub").textContent =
+      hechos + " de " + D.documentos.length + " con decisión válida";
+    const completo = c.pendientes === 0;
+    ["btn-finalizar", "btn-csv", "btn-json"].forEach(function(id){
+      document.getElementById(id).disabled = !completo;
+    });
+    pintarSalto();
+  }
+
+  function render(){
+    const doc = D.documentos[indice];
+    texto("posicion", "Documento " + (indice + 1) + " de " + D.documentos.length);
+    texto("titulo", doc.titulo_oficial || doc.fuente);
+    texto("docid", doc.document_id + "  ·  " + doc.fuente);
+    texto("archivo", doc.archivo_referencia);
+    texto("emisor", (doc.emisor_nombre || "—") + "  (" + (doc.emisor_id || "—") + ")");
+    texto("tipo", doc.tipo_documento);
+    texto("jurisdiccion", (doc.jurisdiccion || "—") + "  ·  " + (doc.fecha_documento || "—"));
+    texto("extracto", doc.evidencia_extracto);
+    texto("ev-dominio", doc.evidencia_por_dominio);
+    pintarDominios(doc);
+    pintarOrigen(doc);
+    pintarDefecto(doc);
+    pintarAutomatico(doc);
+    pintarAcciones(doc);
+    pintarCorrecciones(doc);
+    pintarObservaciones(doc);
+    validar(doc);
+    document.getElementById("btn-anterior").disabled = indice === 0;
+    document.getElementById("btn-siguiente").disabled = indice === D.documentos.length - 1;
+    actualizarCabecera();
+    window.scrollTo(0, 0);
+  }
+
+  function descargar(nombre, contenido, tipo){
+    const blob = new Blob([contenido], {type: tipo});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = nombre;
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a); URL.revokeObjectURL(url);
+  }
+
+  function meta(){
+    return {
+      receta: D.receta,
+      huella_catalogo: D.huella_catalogo,
+      huella_csv_v2: D.huella_csv_v2,
+      fecha_exportacion: new Date().toISOString(),
+      salvedades: D.salvedades
+    };
+  }
+
+  document.getElementById("btn-anterior").onclick = function(){
+    if (indice > 0){ indice -= 1; render(); }
+  };
+  document.getElementById("btn-siguiente").onclick = function(){
+    if (indice < D.documentos.length - 1){ indice += 1; render(); }
+  };
+  document.getElementById("btn-csv").onclick = function(){
+    descargar("revision_catalogo_24_decisiones.csv",
+      "﻿" + armarCsv(D.documentos, estados, D.columnas, HUMANAS),
+      "text/csv;charset=utf-8");
+  };
+  document.getElementById("btn-json").onclick = function(){
+    descargar("revision_catalogo_24_decisiones.json",
+      JSON.stringify(armarJson(meta(), D.documentos, estados,
+        D.opciones_decision, CAMPOS, ORIGEN, HUMANAS), null, 2),
+      "application/json;charset=utf-8");
+  };
+  document.getElementById("btn-borrador").onclick = function(){
+    /* Available at any time, complete or not. Partial work must never be
+       trapped inside a tab.
+       [ES] Disponible en cualquier momento, completo o no. El trabajo parcial
+       nunca puede quedar atrapado dentro de una pestana. */
+    descargar("revision_catalogo_24_borrador.json",
+      JSON.stringify(armarJson(meta(), D.documentos, estados,
+        D.opciones_decision, CAMPOS, ORIGEN, HUMANAS), null, 2),
+      "application/json;charset=utf-8");
+  };
+  document.getElementById("btn-finalizar").onclick = function(){
+    const c = contarDecisiones(D.documentos, estados, D.opciones_decision, CAMPOS, ORIGEN);
+    window.alert("Revisión completa: " + (D.documentos.length - c.pendientes)
+      + " de " + D.documentos.length + " documentos.\n\n"
+      + "confirmados " + c.confirmar + "  ·  corregidos " + c.corregir
+      + "  ·  dudosos " + c.dudoso + "  ·  excluidos " + c.excluir_del_corpus
+      + "\n\nDescargá el CSV y el JSON. Nada se aplicó al catálogo.");
+  };
+  document.getElementById("btn-borrar").onclick = function(){
+    if (!window.confirm("¿Borrar TODAS las decisiones cargadas? No se puede deshacer.")) return;
+    if (!window.confirm("Confirmá otra vez: se pierden las 24 decisiones.")) return;
+    estados = {};
+    try { localStorage.removeItem(CLAVE); } catch (e) {}
+    indice = 0; render();
+  };
+
+  avisarPersistencia();
+  render();
+})();
+</script>
+</body>
+</html>

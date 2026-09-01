@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planilla del Golden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root {
+  --papel: #f7f8fa;
+  --superficie: #ffffff;
+  --tinta: #16202e;
+  --tinta-suave: #5a6675;
+  --borde: #dde2ea;
+  --evidencia: #1f3d6b;
+  --evidencia-fondo: #eef2f8;
+  --distractor: #a8641b;
+  --distractor-fondo: #fbf3e8;
+  --tabla: #0f6b5c;
+  --tabla-fondo: #e9f4f1;
+  --foco: #1f3d6b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #12161c;
+    --superficie: #1a1f27;
+    --tinta: #e6eaf0;
+    --tinta-suave: #9aa5b4;
+    --borde: #2c333e;
+    --evidencia: #8fb3e8;
+    --evidencia-fondo: #1b2534;
+    --distractor: #e0a259;
+    --distractor-fondo: #2a2118;
+    --tabla: #5fc7b2;
+    --tabla-fondo: #162926;
+    --foco: #8fb3e8;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #12161c;
+  --superficie: #1a1f27;
+  --tinta: #e6eaf0;
+  --tinta-suave: #9aa5b4;
+  --borde: #2c333e;
+  --evidencia: #8fb3e8;
+  --evidencia-fondo: #1b2534;
+  --distractor: #e0a259;
+  --distractor-fondo: #2a2118;
+  --tabla: #5fc7b2;
+  --tabla-fondo: #162926;
+  --foco: #8fb3e8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.barra {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding: .7rem clamp(1rem, 4vw, 2.5rem);
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+.barra strong { font-size: .95rem; font-weight: 600; }
+.progreso { flex: 1 1 8rem; height: 6px; background: var(--borde); border-radius: 3px; overflow: hidden; min-width: 6rem; }
+.progreso > i { display: block; height: 100%; width: 0; background: var(--evidencia); transition: width .3s; }
+.contador { font-variant-numeric: tabular-nums; font-size: .85rem; color: var(--tinta-suave); }
+button {
+  font: inherit; font-size: .85rem; font-weight: 500;
+  padding: .45rem .9rem; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--evidencia); background: var(--evidencia); color: var(--papel);
+}
+button.secundario { background: transparent; color: var(--evidencia); }
+button:focus-visible, textarea:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--foco); outline-offset: 2px;
+}
+main { max-width: 54rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem) 5rem; }
+.intro { padding: 2.5rem 0 1rem; }
+h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 600;
+  line-height: 1.15; margin: 0 0 .6rem; text-wrap: balance;
+}
+h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.3rem; font-weight: 600; margin: 2.2rem 0 .6rem; text-wrap: balance;
+}
+.bajada { font-size: 1.05rem; color: var(--tinta-suave); margin: 0 0 1.5rem; max-width: 40rem; }
+.intro p, .intro li { max-width: 40rem; }
+.intro ol, .intro ul { padding-left: 1.2rem; }
+.intro li { margin-bottom: .4rem; }
+.cita {
+  border-left: 3px solid var(--evidencia);
+  padding: .2rem 0 .2rem 1rem; margin: 1rem 0;
+  font-family: "Source Serif 4", Georgia, serif; color: var(--tinta-suave);
+}
+table.campos { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .92rem; }
+table.campos th, table.campos td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
+table.campos th { font-weight: 600; white-space: nowrap; }
+table.campos code { font-family: "IBM Plex Mono", monospace; font-size: .85em; }
+.aviso {
+  background: var(--distractor-fondo); border: 1px solid var(--distractor);
+  border-radius: 8px; padding: .9rem 1.1rem; margin: 1.5rem 0; font-size: .93rem;
+}
+.aviso.guardado { background: var(--evidencia-fondo); border-color: var(--evidencia); }
+.item {
+  background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: 10px; padding: 1.4rem; margin-bottom: 1.6rem;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.item-cabecera { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.numero { font-family: "Source Serif 4", Georgia, serif; font-size: 1.15rem; font-weight: 600; }
+.estado { font-size: .78rem; color: var(--tinta-suave); text-transform: uppercase; letter-spacing: .06em; }
+.estado[data-listo] { color: var(--tabla); font-weight: 600; }
+.marca-tabla {
+  margin: 0; padding: .6rem .9rem; font-size: .88rem;
+  background: var(--tabla-fondo); border-left: 3px solid var(--tabla); border-radius: 0 6px 6px 0;
+}
+.fragmento { border-left: 3px solid; padding-left: 1rem; }
+.fragmento.evidencia { border-color: var(--evidencia); }
+.fragmento.distractor { border-color: var(--distractor); }
+.rol {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 600;
+  display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-bottom: .35rem;
+}
+.evidencia .rol { color: var(--evidencia); }
+.distractor .rol { color: var(--distractor); }
+.dominio, .similitud {
+  font-family: "IBM Plex Mono", monospace; font-size: .72rem;
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+  padding: .1rem .4rem; border-radius: 4px; border: 1px solid currentColor;
+}
+.procedencia { margin: 0; font-size: .9rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+.procedencia span { color: var(--tinta-suave); }
+.ubicacion { margin: .1rem 0 .5rem; font-size: .82rem; color: var(--tinta-suave); font-family: "IBM Plex Mono", monospace; }
+.texto {
+  font-family: "Source Serif 4", Georgia, serif; font-size: 1rem; line-height: 1.65;
+  max-height: 11rem; overflow: hidden; position: relative;
+  background: var(--evidencia-fondo); padding: .8rem 1rem; border-radius: 6px;
+}
+.distractor .texto { background: var(--distractor-fondo); }
+.texto.abierto { max-height: none; }
+.texto:not(.abierto)::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 3rem;
+  background: linear-gradient(transparent, var(--evidencia-fondo));
+}
+.distractor .texto:not(.abierto)::after { background: linear-gradient(transparent, var(--distractor-fondo)); }
+.ver-mas { margin-top: .4rem; background: transparent; border: none; color: var(--tinta-suave); padding: .2rem 0; text-decoration: underline; }
+.completar { display: flex; flex-direction: column; gap: .8rem; border-top: 1px solid var(--borde); padding-top: 1rem; }
+.completar label { display: flex; flex-direction: column; gap: .3rem; flex: 1 1 10rem; }
+.completar label > span { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta-suave); font-weight: 600; }
+.fila { display: flex; gap: .8rem; flex-wrap: wrap; }
+textarea, input, select {
+  font: inherit; font-size: .95rem; color: var(--tinta);
+  background: var(--papel); border: 1px solid var(--borde);
+  border-radius: 6px; padding: .5rem .6rem; width: 100%; resize: vertical;
+}
+.identidad { margin: 0; font-size: .75rem; color: var(--tinta-suave); }
+.identidad code { font-family: "IBM Plex Mono", monospace; }
+.aviso-copia { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+  background: var(--tinta); color: var(--papel); padding: .6rem 1.2rem; border-radius: 6px;
+  font-size: .9rem; opacity: 0; pointer-events: none; transition: opacity .25s; }
+.aviso-copia.visible { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<nav class="barra">
+  <strong>Planilla del Golden</strong>
+  <span class="progreso"><i id="barra-progreso"></i></span>
+  <span class="contador" id="contador">0 de 10</span>
+  <button type="button" id="copiar">Copiar lo escrito</button>
+  <button type="button" class="secundario" id="borrar">Borrar todo</button>
+</nav>
+
+<main>
+<div class="intro">
+<h1>Planilla del Golden</h1>
+<p class="bajada">El Golden es el instrumento de medición de la tesis: preguntas con la respuesta
+correcta ya conocida y verificada. Sin él no se puede saber si B1 recupera mejor que B0, porque no
+habría contra qué comparar. Es lo único del experimento que no puede hacer una máquina.</p>
+
+<h2>Qué necesita cada pregunta</h2>
+<ol>
+<li><strong>Una pregunta realista</strong>, del tipo que haría alguien que trabaja en el sector.</li>
+<li><strong>La evidencia</strong>: el fragmento concreto que la responde. No «está en la Ley 24.065»,
+sino el artículo exacto.</li>
+<li><strong>Los dominios que hacen falta</strong> para responderla: legal, impositivo, contable o financiero.</li>
+</ol>
+
+<h2>Por qué las preguntas de colisión son las importantes</h2>
+<p>La hipótesis dice que segregar por dominio reduce la contaminación entre dominios. Una pregunta
+solo puede confirmarla o refutarla si <strong>hay algo que pueda contaminar</strong>.</p>
+<p>Un ítem de colisión tiene esa forma: la respuesta está en el dominio A, y existe otro fragmento del
+dominio B que se le parece mucho por vocabulario pero <strong>no sirve para responder</strong>. Si el
+sistema monolítico trae el equivocado y el segregado no, eso es exactamente lo que la tesis afirma.</p>
+<p>Lo difícil de escribir un ítem de colisión no es la pregunta: es encontrar un distractor plausible.
+Eso ya está hecho en esta planilla.</p>
+
+<h2>Cómo trabajar</h2>
+<ol>
+<li><strong>Leé la evidencia.</strong> Preguntate: qué consulta real se respondería con esto.</li>
+<li><strong>Mirá el distractor.</strong> ¿Podría un buscador traerlo por parecido de palabras, aunque
+no sirva para responder?
+<ul>
+<li>Si <strong>sí</strong>, tenés un ítem de colisión. Escribí la pregunta.</li>
+<li>Si el distractor <strong>también responde</strong>, no es colisión. Marcalo y seguí de largo.
+Vas a descartar varios, es normal.</li>
+</ul></li>
+<li><strong>Completá los cinco campos.</strong> Dos ya vienen sugeridos.</li>
+</ol>
+<p>No busques que la pregunta salga perfecta. Salen mejores escribiendo diez que pensando una.</p>
+
+<h2>Un ejemplo, de un ítem que ya escribiste</h2>
+<div class="cita">
+<strong>pregunta:</strong> ¿Qué sanciones corresponden por violar la ley del sector eléctrico,
+cometidas por terceros no concesionarios?<br>
+<strong>evidencia:</strong> Ley 24.065, artículo 63<br>
+<strong>silos_necesarios:</strong> legal
+</div>
+<p>Funciona como colisión porque «sanciones» también aparece en materia impositiva —multas fiscales,
+intereses resarcitorios— y un buscador sin gobierno puede traer el régimen sancionatorio equivocado.</p>
+
+<h2>Los cinco campos</h2>
+<table class="campos">
+<tr><th>Pregunta</th><td>La consulta, redactada como la haría una persona real.</td></tr>
+<tr><th>Respuesta de referencia</th><td>La respuesta correcta, breve. Una o dos oraciones.</td></tr>
+<tr><th>Silos necesarios</th><td>Qué dominios hacen falta para responder. Casi siempre uno. Viene sugerido.</td></tr>
+<tr><th>Dominio de la evidencia</th><td>De qué dominio es <em>el fragmento</em>. Suele coincidir con el anterior, pero no siempre.</td></tr>
+<tr><th>El distractor sirve</th><td>Si se parece pero no responde, o si también responde.</td></tr>
+</table>
+<p>Todo lo demás —<code>document_id</code>, <code>artifact_id</code>, <code>sha256</code>,
+<code>chunk_uid</code>, <code>emisor_id</code>, el silo persistido y los campos derivados— se completa
+solo después, desde el catálogo y la base. Son veinte campos que no hace falta que escribas.</p>
+
+<div class="aviso">
+<strong>Un aviso metodológico.</strong> El parecido entre evidencia y distractor lo calculó el
+embedding, y es solo una ayuda para buscar. Que un par aparezca acá <strong>no</strong> lo convierte
+en colisión: eso lo decidís leyendo. Y el dominio del distractor tiene que salir de tu lectura de su
+contenido, nunca del silo automático ni de la salida del router.
+</div>
+
+<div class="aviso guardado">
+<strong>Lo que escribas se guarda en este navegador</strong> mientras no borres los datos del sitio,
+así que podés cerrar y seguir después. Igual, cuando termines una tanda, usá
+<strong>Copiar lo escrito</strong> y pegalo en el chat: ahí queda a salvo y se convierte al formato
+YAML del protocolo.
+</div>
+</div>
+
+
+<article class="item" id="item-1" data-item="1">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 1</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+  <p class="marca-tabla">La evidencia es una tabla. Estos ítems son los que demuestran la parte multimodal de la tesis: priorizálos.</p>
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">financiero</span></div>
+    <p class="procedencia">
+      <strong>Transener_Calificacion_FIX</strong>
+      <span>informe_calificacion</span>
+      <span>FIX SCR S.A.</span>
+    </p>
+    <p class="ubicacion">DOC-0024 &middot; Anexo I. Resumen Financiero</p>
+    <div class="texto" data-texto>Flujo de Caja Operativo (FCO), (30.716) = 204.545. Flujo de Caja Operativo (FCO), (32.572) = 139.724. Flujo de Caja Operativo (FCO), (50.685) = 165.338. Flujo de Caja Operativo (FCO), (29.874) = 51.677. Flujo de Caja Operativo (FCO), (28.169) = 26.624. Flujo de Caja Operativo (FCO), 10.865 = 52.976. Flujo de Caja No Operativo / No Recurrente Total, (30.716) = (2). Flujo de Caja No Operativo / No Recurrente Total, (32.572) = (1). Flujo de Caja No Operativo / No Recurrente Total, (50.685) = (1). Flujo de Caja No Operativo / No Recurrente Total, (29.874) = 0. Flujo de Caja No Operativo / No Recurrente Total, (28.169) = 0. Flujo de Caja No Operativo / No Recurrente Total, 10.865 = 0. Inversiones de Capital, (30.716) = (76.223). Inversiones de Capital, (32.572) = (52.198). Inversiones de Capital, (50.685) = (58.424). Inversiones de Capital, (29.874) = (44.396). Inversiones de Capital, (28.169) = (27.195). Inversiones de Capital, 10.865 = (26.637). Dividendos, (30.716) = (134.200). Dividendos, (32.572) = (134.200). Dividendos, (50.685) = 0. Dividendos, (29.874) = 0. Dividendos, (28.169) = 0. Dividendos, 10.865 = 0. Flujo de Fondos Libre (FFL), (30.716) = (5.878). Flujo de Fondos Libre (FFL), (32.572) = (46.674). Flujo de Fondos Libre (FFL), (50.685) = 106.915. Flujo de Fondos Libre (FFL), (29.874) = 7.281. Flujo de Fondos Libre (FFL), (28.169) = (571). Flujo de Fondos Libre (FFL), 10.865 =</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">contable</span>
+      <span class="similitud">parecido 0.78</span>
+    </div>
+    <p class="procedencia"><strong>Edenor_EEFF_Consolidado_2025_09</strong></p>
+    <div class="texto" data-texto>Flujo neto de efectivo generado por las actividades operativas, 30.09.25 = 136.110. Flujo neto de efectivo generado por las actividades operativas, 30.09.24 = 174.558. Flujo neto de efectivo generado por las actividades operativas, 30.09.23 = 176.012. Flujo neto de efectivo generado por las actividades operativas, 30.09.22 = 218.310. Flujo neto de efectivo generado por las actividades operativas, 30.09.21 = 306.615. Flujo neto de efectivo utilizado en las actividades de inversión, 30.09.25 = (253.795). Flujo neto de efectivo utilizado en las actividades de inversión, 30.09.24 = (464.004). Flujo neto de efectivo utilizado en las actividades de inversión, 30.09.23 = (199.329). Flujo neto de efectivo utilizado en las actividades de inversión, 30.09.22 = (213.307). Flujo neto de efectivo utilizado en las actividades de inversión, 30.09.21 = (269.416). Flujo neto de efectivo generado por (utilizado en) las actividades de financiación, 30.09.25 = 161.139. Flujo neto de efectivo generado por (utilizado en) las actividades de financiación, 30.09.24 = 219.816. Flujo neto de efectivo generado por (utilizado en) las actividades de financiación, 30.09.23 = 30.666. Flujo neto de efectivo generado por (utilizado en) las actividades de financiación, 30.09.22 = (3.957). Flujo neto de efectivo generado por (utilizado en) las actividades de financiación, 30.09.21 = (15.393). Total de fondos generados (utilizados), 30.09.25 = 43.454. Total de fondos generados (utilizados), 30.09.24 = (69.630). Total de fondos generados (utilizados), 30.09.23 = 7.349. Total de fondos generados (utilizados), 30.09.22 = 1.046. Total de fondos generados (utilizados), 30.09.21 = 21.806</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="financiero">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="financiero">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>5727b090aedcd7ad...</code> &middot;
+      distractor <code>cba3ca8cd1e064e2...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-2" data-item="2">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 2</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+  <p class="marca-tabla">La evidencia es una tabla. Estos ítems son los que demuestran la parte multimodal de la tesis: priorizálos.</p>
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">financiero</span></div>
+    <p class="procedencia">
+      <strong>Transener_Calificacion_FIX</strong>
+      <span>informe_calificacion</span>
+      <span>FIX SCR S.A.</span>
+    </p>
+    <p class="ubicacion">DOC-0024 &middot; Anexo I. Resumen Financiero</p>
+    <div class="texto" data-texto>Caja, Moneda Constante(*) = . Flujo de Caja, Moneda Constante(*) = . Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 235.261. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 172.296. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 216.024. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 81.551. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 54.793. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 42.111</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">contable</span>
+      <span class="similitud">parecido 0.74</span>
+    </div>
+    <p class="procedencia"><strong>Pampa_EEFF_Consolidado_1Q2026</strong></p>
+    <div class="texto" data-texto>Flujos netos de efectivo (aplicado a) generados por las actividades operativas, 31.03.2026 = (330.230). Flujos netos de efectivo (aplicado a) generados por las actividades operativas, 31.03.2025 = 93.885. Flujos netos de efectivo (aplicado a) generados por las actividades operativas, 31.03.2024 = (14.214). Flujos netos de efectivo aplicados a las actividades de inversión, 31.03.2026 = (290.751). Flujos netos de efectivo aplicados a las actividades de inversión, 31.03.2025 = (50.561). Flujos netos de efectivo aplicados a las actividades de inversión, 31.03.2024 = (32.967). Flujos netos de efectivo (aplicados a) generados por las actividades de financiación, 31.03.2026 = (73.872). Flujos netos de efectivo (aplicados a) generados por las actividades de financiación, 31.03.2025 = (443.912). Flujos netos de efectivo (aplicados a) generados por las actividades de financiación, 31.03.2024 = 66.988. (Disminución) Aumento del efectivo y equivalentes de efectivo, 31.03.2026 = (694.853). (Disminución) Aumento del efectivo y equivalentes de efectivo, 31.03.2025 = (400.588). (Disminución) Aumento del efectivo y equivalentes de efectivo, 31.03.2024 = 19.807</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="financiero">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="financiero">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>6d74d719fe815b04...</code> &middot;
+      distractor <code>c3763f2b03392bfa...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-3" data-item="3">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 3</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+  <p class="marca-tabla">La evidencia es una tabla. Estos ítems son los que demuestran la parte multimodal de la tesis: priorizálos.</p>
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">financiero</span></div>
+    <p class="procedencia">
+      <strong>Transener-Company-Presentation-April-2026</strong>
+      <span>presentacion_corporativa</span>
+      <span>Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.</span>
+    </p>
+    <p class="ubicacion">DOC-0023 &middot; RQT Tariff Schedule- Five year Projection in US$ MM</p>
+    <div class="texto" data-texto>Revenues, Year 1 = 123. Revenues, Year 2 = 122. Revenues, Year 3 = 121. Revenues, Year 4 = 119. Revenues, Year 5 = 118. Revenues, Average = 121. Revenues, % = 100%. Penalties, Year 1 = 1. Penalties, Year 2 = 1. Penalties, Year 3 = 1. Penalties, Year 4 = 1. Penalties, Year 5 = 1. Penalties, Average = 1. Penalties, % = 1%. Operating Costs, Year 1 = 45. Operating Costs, Year 2 = 44. Operating Costs, Year 3 = 43. Operating Costs, Year 4 = 42. Operating Costs, Year 5 = 42. Operating Costs, Average = 43. Operating Costs, % = 36%. Capex, Year 1 = 24. Capex, Year 2 = 24. Capex, Year 3 = 24. Capex, Year 4 = 24. Capex, Year 5 = 24. Capex, Average = 24. Capex, % = 20%. Income Tax, Year 1 = 24. Income Tax, Year 2 = 24. Income Tax, Year 3 = 23. Income Tax, Year 4 = 23. Income Tax, Year 5 = 22. Income Tax, Average = 23. Income Tax, % = 19%. Net Income, Year 1 = 30. Net Income, Year 2 = 30. Net Income, Year 3 = 30. Net Income, Year 4 = 30. Net Income, Year 5 = 30. Net Income, Average = 30. Net Income, % = 25%</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">contable</span>
+      <span class="similitud">parecido 0.63</span>
+    </div>
+    <p class="procedencia"><strong>EEFF-ind-31-03-2019</strong></p>
+    <div class="texto" data-texto>Ingresos por ventas, Nota = 6. Ingresos por ventas, Período de tres meses finalizado el.31.03.2019 = 1.813.473. Ingresos por ventas, Período de tres meses finalizado el.31.03.2018 = 2.029.066. Costos de explotación, Nota = 7. Costos de explotación, Período de tres meses finalizado el.31.03.2019 = (733 . 946). Costos de explotación, Período de tres meses finalizado el.31.03.2018 = (762.996). Resultado bruto, Nota = . Resultado bruto, Período de tres meses finalizado el.31.03.2019 = 1.079.527. Resultado bruto, Período de tres meses finalizado el.31.03.2018 = 1.266.070. Gastos de administración, Nota = 7. Gastos de administración, Período de tres meses finalizado el.31.03.2019 = (86.230). Gastos de administración, Período de tres meses finalizado el.31.03.2018 = (100.784). Otros (egresos)/ingresos operativos, netos, Nota = . Otros (egresos)/ingresos operativos, netos, Período de tres meses finalizado el.31.03.2019 = 936. Otros (egresos)/ingresos operativos, netos, Período de tres meses finalizado el.31.03.2018 = (18.614). Resultado operativo, Nota = . Resultado operativo, Período de tres meses finalizado el.31.03.2019 = 994.233. Resultado operativo, Período de tres meses finalizado el.31.03.2018 = 1.146.672. Ingresos financieros, Nota = 8. Ingresos financieros, Período de tres meses finalizado el.31.03.2019 = 165.894. Ingresos financieros, Período de tres meses finalizado el.31.03.2018 = 128.765. Gastos financieros, Nota = 8. Gastos financieros, Período de tres meses finalizado el.31.03.2019 = (157.469). Gastos financieros, Período de tres meses finalizado el.31.03.2018 = (93.787). Otros resultados financieros, Nota = 8. Otros resultados financieros, Período de tres meses finalizado</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="financiero">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="financiero">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>85ccb15214fcb05d...</code> &middot;
+      distractor <code>f6ed43c3b0ff7d08...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-4" data-item="4">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 4</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">impositivo</span></div>
+    <p class="procedencia">
+      <strong>Ley_20628_Impuesto_Ganancias_TO</strong>
+      <span>texto_ordenado</span>
+      <span>Honorable Congreso de la Nación Argentina</span>
+    </p>
+    <p class="ubicacion">DOC-0010 &middot; Art. 79 - Constituyen ganancias de cuarta categoría las provenientes:</p>
+    <div class="texto" data-texto>a) Del desempeño de cargos públicos nacionales, provinciales, municipales y de la Ciudad Autónoma de Buenos Aires, sin excepción, incluidos los cargos electivos de los Poderes Ejecutivos y Legislativos. En el caso de los Magistrados, Funcionarios y Empleados del Poder Judicial de la Nación y de las provincias y del Ministerio Público de la Nación cuando su nombramiento hubiera ocurrido a partir del año 2017, inclusive. (Inciso sustituido por art. 1° pto. 5 de la Ley N° 27.346 B.O. 27/12/2016. Vigencia: a partir de su publicación en el Boletín Oficial y surtirá efecto a partir del año fiscal 2017, inclusive). b) Del trabajo personal ejecutado en relación de dependencia. c) De las jubilaciones, pensiones, retiros o subsidios de cualquier especie en cuanto tengan su origen en el trabajo personal y en la medida que hayan estado sujeto al pago del impuesto , y de los consejeros de las sociedades cooperativas. (Inciso sustituido por art. 1° pto. 5 de la Ley N° 27.346 B.O. 27/12/2016. Vigencia: a partir de su publicación en el Boletín Oficial y surtirá efecto a partir del año fiscal 2017, inclusive). d) De los beneficios netos de aportes no deducibles, derivados del cumplimiento de los requisitos de los planes de seguro de retiro privados administrados por entidades sujetas al control de la SUPERINTENDENCIA DE SEGUROS, en cuanto tengan su origen en el trabajo personal. e) De los servicios personales prestados por los socios de las sociedades cooperativas mencionadas en la última parte del inciso g) del artículo 45, que trabajen personalmente en la explotación, inclusive el retorno percibido por aquéllos.</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">contable</span>
+      <span class="similitud">parecido 0.64</span>
+    </div>
+    <p class="procedencia"><strong>TGS_EEFF_2024_4T</strong></p>
+    <div class="texto" data-texto>El cargo por impuesto a las ganancias incluye el impuesto corriente y el diferido. El impuesto a las ganancias es reconocido en el Estado de Resultados Integrales. El impuesto a las ganancias corriente se calcula sobre la base de las leyes impositivas vigentes a la fecha de cierre del ejercicio. La Gerencia evalúa en forma periódica las posiciones tomadas en las declaraciones juradas con relación a situaciones en las cuales la legislación impositiva está sujeta a alguna interpretación y establece provisiones en función de los montos estimados que podría pagar a las autoridades fiscales, en el caso que correspondan. Al 31 de diciembre de 2024, 2023 y 2022, no se han registrado provisiones por tales conceptos. La Sociedad ha reconocido el cargo por impuesto a las ganancias en base al método del impuesto diferido, reconociendo de esta manera las diferencias temporarias entre las mediciones de los activos y pasivos contables e impositivas. Los activos y pasivos por impuestos diferidos se valoran por su valor nominal no descontado a los tipos impositivos que se espera aplicar en el ejercicio en que el activo se realice o el pasivo se liquide, sobre la base de los tipos impositivos y las leyes fiscales promulgadas o prácticamente promulgadas en la fecha del ejercicio sobre el que se informa (véase la Nota 14). El 29 de diciembre de 2017 el Poder Ejecutivo Nacional promulgó la ley N° 27.430 (la &quot;Ley 27630&quot;) de Reforma Tributaria. La misma ha introducido varios cambios en el texto de la Ley del impuesto a las ganancias. La Ley 27630 establece un nuevo tratamiento con la aplicación de la siguiente escala, actualizada para los ejercicios iniciados a partir del 1 de enero de 2023, manteniéndose la alícuota del 7% sobre dividendos.</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="impositivo">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="impositivo">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>bc2d533089dce975...</code> &middot;
+      distractor <code>e3891cdb0973f200...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-5" data-item="5">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 5</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">impositivo</span></div>
+    <p class="procedencia">
+      <strong>Ley_11683_Procedimiento_Fiscal_TO</strong>
+      <span>texto_ordenado</span>
+      <span>Honorable Congreso de la Nación Argentina</span>
+    </p>
+    <p class="ubicacion">DOC-0009 &middot; Demanda por repetición</p>
+    <div class="texto" data-texto>ARTICULO 83 — En la demanda contenciosa por repetición de tributos no podrá el actor fundar sus pretensiones en hechos no alegados en la instancia administrativa ni ofrecer prueba que no hubiera sido ofrecida en dicha instancia , con excepción de los hechos nuevos y de la prueba sobre los mismos . (Párrafo sustituido por Título XV art . 18 inciso 4) de la Ley N º 25. 5. 239 (/normativa/nacional/norma -61784) B . O . 31/12/1999) Incumbe al mismo demostrar en qué medida el impuesto abonado es excesivo con relación al gravamen que según la ley le correspondía pagar , y no podrá , por tanto , limitar su reclamación a la mera impugnación de los fundamentos que sirvieron de base a la estimación de oficio administrativa cuando ésta hubiera tenido lugar . Sólo procederá la repetición por los períodos fiscales con relación a los cuales se haya satisfecho el impuesto hasta ese momento determinado por la ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">legal</span>
+      <span class="similitud">parecido 0.61</span>
+    </div>
+    <p class="procedencia"><strong>Decreto_1738_1992_Reglamentario_Gas</strong></p>
+    <div class="texto" data-texto>(5) No será necesario agotar la vía administrativa si por la índole de la cuestión controvertida , y los actos precedentes del Ente , la voluntad administrativa contraria a la posición sustentada por el interesado es conocida , resultando tal procedimiento una inútil demora . Este inciso no será aplicable cuando existan cuestiones de hecho controvertidas . (6) Toda la información recibida por el Ente de los titulares de las habilitaciones estará a disposición del público dentro de las pautas que se fijen para permitir su utilización sin perturbar la gestión del Ente . Se excluye la información que dichos titulares soliciten fundadamente sea considerada confidencial , cuando el Ente le confiera tal carácter , en cuyo caso el Ente deberá tomar las medidas necesarias para asegurar , dentro de lo razonablemente posible , tal confidencialidad . (7) El Ente dictará las normas de procedimiento que se aplicarán a la resolución de las controversias previstas en el Artículo 66 de la Ley . Ellas podrán incluir requerimientos que procuren la brevedad y síntesis de las presentaciones de los particulares a los efectos de facilitar su consideración por el Ente . (8) Sin perjuicio de los demás temas que decida incluir el Ente , se considerará incluida en el inciso a) del artículo 68 de la ley la revisión quinquenal del cuadro tarifario que prevé el artículo 42 de la misma . En todos y cada uno de los casos previstos en la ley , el Ente podrá complementar o sustituir la audiencia pública por un procedimiento de consulta pública en los términos de los artículos 1 ° bis y 8 ° bis de la Ley Nacional de Procedimientos Administrativos N ° 19 . 549 y sus modificatorias . (Inciso sustituido por art . 17 del Anexo II del Decreto N ° 1057/2024 (/normativa/nacional/norma -406651) B . O . 29/11/2024 . Vigencia: a partir del día de su publicación en el BOLETÍN OFICIAL . ) (9) La exigencia de la audiencia pública que establece el Artículo 68 de la Ley se entenderá limitada a la resolución de controversias específicas .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="impositivo">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="impositivo">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>bc48fb4f2f288b62...</code> &middot;
+      distractor <code>271db1a37a5c1d44...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-6" data-item="6">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 6</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+  <p class="marca-tabla">La evidencia es una tabla. Estos ítems son los que demuestran la parte multimodal de la tesis: priorizálos.</p>
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">contable</span></div>
+    <p class="procedencia">
+      <strong>Pampa_EEFF_Consolidado_1Q2026</strong>
+      <span>estado_contable</span>
+      <span>Pampa Energía S.A.</span>
+    </p>
+    <p class="ubicacion">DOC-0016 &middot; NOTA 5: (Continuación)</p>
+    <div class="texto" data-texto>Asociadas, Información sobre el emisor.Actividad principal = . Asociadas, Información sobre el emisor.Fecha = . Asociadas, Información sobre el emisor.Capital social = . Asociadas, Información sobre el emisor.Resultado del período = . Asociadas, Información sobre el emisor.Patrimonio = . Asociadas, Información sobre el emisor.% de participación directo e indirecto = . SESA, Información sobre el emisor.Actividad principal = Tratamiento de gas. SESA, Información sobre el emisor.Fecha = 31.03.2026. SESA, Información sobre el emisor.Capital social = 1.203. SESA, Información sobre el emisor.Resultado del período = 889. SESA, Información sobre el emisor.Patrimonio = 132.254. SESA, Información sobre el emisor.% de participación directo e indirecto = 20,00%. VMOS, Información sobre el emisor.Actividad principal = Transporte de hidrocarburos. VMOS, Información sobre el emisor.Fecha = 31.03.2026. VMOS, Información sobre el emisor.Capital social = 159.133. VMOS, Información sobre el emisor.Resultado del período = (50.292). VMOS, Información sobre el emisor.Patrimonio = 527.382. VMOS, Información sobre el emisor.% de participación directo e indirecto = 10,20%. Negocios conjuntos, Información sobre el emisor.Actividad principal = . Negocios conjuntos, Información sobre el emisor.Fecha = . Negocios conjuntos, Información sobre el emisor.Capital social = . Negocios conjuntos, Información sobre el emisor.Resultado del período = . Negocios conjuntos, Información sobre el emisor.Patrimonio = . Negocios conjuntos, Información sobre el emisor.% de participación directo e indirecto = . CIESA (1), Información sobre el emisor.Actividad principal = Inversora. CIESA (1), Información sobre el emisor.Fecha = 31.03.2026. CIESA (1), Información sobre el emisor.Capital social = 639. CIESA (1), Información sobre el emisor.Resultado del período = 87.608. CIESA (1), Información sobre el emisor.Patrimonio =</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">financiero|impositivo|legal</span>
+      <span class="similitud">parecido 0.65</span>
+    </div>
+    <p class="procedencia"><strong>MSU_ON_ClaseIV</strong></p>
+    <div class="texto" data-texto>ACTIVO, 31/3/2022 (en miles de Pesos) = . ACTIVO, 31/12/2021 = . ACTIVO NO CORRIENTE, 31/3/2022 (en miles de Pesos) = . ACTIVO NO CORRIENTE, 31/12/2021 = . Propiedad, planta y equipo, 31/3/2022 (en miles de Pesos) = 101,602,705. Propiedad, planta y equipo, 31/12/2021 = 94,645,378. Préstamos financieros, 31/3/2022 (en miles de Pesos) = 5,100,553. Préstamos financieros, 31/12/2021 = 4,656,785. Créditos impositivos y aduaneros, 31/3/2022 (en miles de Pesos) = 230,508. Créditos impositivos y aduaneros, 31/12/2021 = 215,410. Otros créditos, 31/3/2022 (en miles de Pesos) = 530,336. Otros créditos, 31/12/2021 = 503,639. Total del activo no corriente, 31/3/2022 (en miles de Pesos) = 107,464,102. Total del activo no corriente, 31/12/2021 = 100,021,212. ACTIVO CORRIENTE, 31/3/2022 (en miles de Pesos) = . ACTIVO CORRIENTE, 31/12/2021 = . Materiales y repuestos, 31/3/2022 (en miles de Pesos) = 1,668,147. Materiales y repuestos, 31/12/2021 = 1,290,963. Créditos impositivos y aduaneros, 31/3/2022 (en miles de Pesos) = 426,398. Créditos impositivos y aduaneros, 31/12/2021 = 272,105. Otros créditos, 31/3/2022 (en miles de Pesos) = 616,440. Otros créditos, 31/12/2021 = 663,476. Cuentas por cobrar comerciales, 31/3/2022 (en miles de Pesos) = 5,810,519. Cuentas por cobrar comerciales, 31/12/2021 = 4,421,043. Efectivo y equivalente de efectivo, 31/3/2022 (en miles de Pesos) = 4,258,024. Efectivo y equivalente de efectivo, 31/12/2021 = 6,452,767. Total del activo corriente, 31/3/2022</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="contable">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="contable">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>c6132ce3432d2d0e...</code> &middot;
+      distractor <code>6aa145ecfaf3c98c...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-7" data-item="7">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 7</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">impositivo</span></div>
+    <p class="procedencia">
+      <strong>Decreto_821_1998_TO_Ley_11683</strong>
+      <span>texto_ordenado</span>
+      <span>Poder Ejecutivo Nacional</span>
+    </p>
+    <p class="ubicacion">DOC-0003 &middot; DE LA SENTENCIA DEL TRIBUNAL</p>
+    <div class="texto" data-texto>Cuando en función de las facultades del artículo 164 el Tribunal Fiscal de la Nación recalifique o reduzca la sanción a aplicar, r, las costas se impondrán por el orden causado . No obstante, el Tribunal podrá imponer las costas al Fisco Nacional, cuando la tipificación o la cuantía de la sanción recurrida se demuestre temeraria o carente de justificación. (Párrafo sustituido por art. 241 de la Ley N° 27430 B.O. 29/12/2017. Vigencia: el día siguiente al de su publicación en el Boletín Oficial y surtirán efecto de conformidad con lo previsto en cada uno de los Títulos que la componen. Ver art. 247 de la Ley de referencia) (Artículo sustituido por art. 1° pto. XXIX de la Ley N° 26.044 B.O. 6/7/2005) ARTICULO 185 — La sentencia no podrá contener pronunciamiento respecto de la falta de validez constitucional de las leyes tributarias o aduaneras y sus reglamentaciones, a no ser que la Jurisprudencia de la Corte Suprema de Justicia de la Nación haya declarado la inconstitucionalidad de las mismas, en cuyo caso podrá seguirse la interpretación efectuada por ese TRIBUNAL de la NACION. ARTICULO 186 — El TRIBUNAL FISCAL DE LA NACION podrá declarar en el caso concreto , que la interpretación ministerial o administrativa aplicada no se ajusta a la ley interpretada. En ambos supuestos, la sentencia será comunicada al organismo de superintendencia competente. ARTICULO 187 — El Tribunal Fiscal de la Nación podrá practicar en la sentencia la liquidación del tributo y accesorios y fijar el importe de la multa o , si lo estimare conveniente, dar las bases precisas para ello , ordenando dentro de los diez (10) días a las reparticiones recurridas que practiquen la liquidación en el término de treinta (30) días prorrogables por igual plazo y una sola vez, bajo apercibimiento de practicarlas el recurrente.</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">legal</span>
+      <span class="similitud">parecido 0.63</span>
+    </div>
+    <p class="procedencia"><strong>Decreto_1738_1992_Reglamentario_Gas</strong></p>
+    <div class="texto" data-texto>- (4) La aplicación de sanciones será independiente de la obligación de reintegrar o compensar las tarifas indebidamente percibidas de los usuarios , con intereses , o de indemnizar los perjuicios ocasionados al Estado , a los usuarios o a terceros por la infracción . - (5) Las infracciones a las normas reglamentarias tendrán carácter formal y se configurarán con independencia del dolo o de la culpa del infractor , salvo cuando se disponga expresamente lo contrario en este Decreto o en la habilitación respectiva . - (6) El acto sancionatorio firme en sede administrativa constituirá antecedente a los fines de considerar configurada la reiteración de la infracción durante el plazo que fije la reglamentación . (Inciso sustituido por art . 3 ° del Decreto N ° 2255/1992 (/normativa/nacional/norma -10897) B . O . 7/12/1992); - (7) La aplicación de sanciones no impedirá al Ente promover las acciones que persigan el cumplimiento o extinción de la habilitación . - (8) En la aplicación de sanciones se seguirá el procedimiento que al efecto establezca el Ente con el debido respeto del derecho de defensa del imputado . A tal efecto deberá notificársele la imputación y otorgársele un plazo no inferior a Diez (10) días hábiles administrativos para la producción del descargo pertinente . - (9) a) El recurso previsto en el artículo 73 de la Ley N ° 24 . 076 tendrá efecto suspensivo . (Inciso sustituido por art . 18 del Anexo II del Decreto N ° 1057/2024 (/normativa/nacional/norma -406651) B . O . 29/11/2024 . Vigencia: a partir del día de su publicación en el BOLETÍN OFICIAL . ) - b) De confirmarse la sanción impuesta , el depósito en caución será imputado al pago de la penalidad , sin perjuicio de las demás compensaciones que correspondan por intereses y costas . - c) En el caso de revocarse total o parcialmente la sanción el depósito en caución será devuelto en su totalidad o en la parte que corresponda una vez notificada la sentencia .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="impositivo">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="impositivo">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>cb874fa502ba0ddc...</code> &middot;
+      distractor <code>4447ef286aec86d0...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-8" data-item="8">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 8</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">legal</span></div>
+    <p class="procedencia">
+      <strong>Ley_24065_Energia_Electrica_TO</strong>
+      <span>texto_ordenado</span>
+      <span>Honorable Congreso de la Nación Argentina</span>
+    </p>
+    <p class="ubicacion">DOC-0013 &middot; CAPÍTULO VI</p>
+    <div class="texto" data-texto>Provisión de servicios ARTÍCULO 22 ARTÍCULO 23 ARTÍCULO 24 pedido ARTÍCULO 25 ARTÍCULO 26 ARTÍCULO 28 monto de sus inversiones conforme lo dispuesto en el artículo 41 de esta ley . ARTÍCULO 28 bis . -Si una obra de transporte no estuviera contemplada en los contratos de concesión de transporte en curso de ejecución , pero su ejecución resultara esencial técnica y económicamente para hacer frente a las necesidades del servicio público correspondiente en el Sistema Argentino de Interconexión (SADI) , previa consulta al OED , la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA podrá resolver su inclusión , a cuyo fin podrá considerar la utilización de los recursos previstos en el segundo párrafo del artículo 31 de la Ley N ° 15 . 336 y sus modificatorias . Las condiciones económico -financieras asociadas a la obligación de la ampliación no pueden afectar el normal funcionamiento de la concesión . El ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD seguirá los procedimientos habituales para aprobar la construcción de la obra , estableciendo su forma de financiación y , en su caso , incorporar el importe correspondiente a la recuperación de los costos de la ampliación en el respectivo cuadro tarifario . La contratación de la obra se deberá efectuar mediante procedimientos abiertos , competitivos y auditables . . -La concesión de transporte sujeta a jurisdicción nacional se otorgará por plazo fijo , en los términos del artículo 18 de la Ley N ° 15 . 336 , no siéndole aplicables los incisos 3 , 11 , 12 , 16 , 17 y 18 del mismo . A su vez , deberá también especificarse la capacidad , características y el plan de obras e instalaciones a efectuarse , así como el régimen de precios del peaje , entendiéndose por tal el régimen tarifario conforme los principios establecidos en el CAPÍTULO X .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">impositivo</span>
+      <span class="similitud">parecido 0.66</span>
+    </div>
+    <p class="procedencia"><strong>Ley_23966_Combustibles_Liquidos_Gas</strong></p>
+    <div class="texto" data-texto>ARTICULO ... — Los sujetos que presten servicios de transporte público de pasajeros y/o de carga terrestre, fluvial o marítimo , podrán computar como pago a cuenta del impuesto al valor agregado , el cuarenta y cinco por ciento (45%) del impuesto previsto en el Capítulo I contenido en las compras de gasoil efectuadas en el respectivo periodo fiscal, que se utilicen como combustible de las unidades afectadas a la realización de los referidos servicios, en las condiciones que fije la reglamentación. El remanente del cómputo dispuesto en este artículo , podrá trasladarse a los períodos fiscales siguientes, hasta su agotamiento . (Primer artículo sin número agregado a continuación del artículo 15 sustituido por art. 142 de la Ley N° 27.430 B.O. 29/12/2017. Vigencia: el día siguiente al de su publicación en el Boletín Oficial y surtirán efecto de conformidad con lo previsto en cada uno de los Títulos que la componen. Ver art. 148 de la Ley de referencia) ARTICULO …. -(Segundo artículo sin número agregado a continuación del artículo 15 derogado por art. 146 de la Ley N° 27.430 B.O. 29/12/2017. Vigencia: el día siguiente al de su publicación en el Boletín Oficial y surtirán efecto de conformidad con lo previsto en cada uno de los Títulos que la componen. Ver art. 148 de la Ley de referencia) Artículo...: Facúltase al Poder Ejecutivo nacional, previa consulta a la Comisión Bicameral creada por la Ley N° 25.561, para suspender o dejar sin efecto , total o parcialmente, los regímenes de pago a cuenta establecidos en los TRES (3) artículos anteriores (Artículo sin número incorporado por art. 1° h) de la Ley N° 25.745 B.O. 25/6/2003. Vigencia: a partir del día de su publicación en el Boletín Oficial y tendrán efecto para los hechos imponibles que se perfeccionen a partir del primer día del mes subsiguiente a dicha publicación, inclusive.)</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="legal">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="legal">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>cc140be829d812de...</code> &middot;
+      distractor <code>d36b66eb788fd77a...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-9" data-item="9">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 9</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">legal</span></div>
+    <p class="procedencia">
+      <strong>Decreto_1738_1992_Reglamentario_Gas</strong>
+      <span>decreto</span>
+      <span>Poder Ejecutivo Nacional</span>
+    </p>
+    <p class="ubicacion">DOC-0002 &middot; IV -Transporte y Distribución</p>
+    <div class="texto" data-texto>- a) Objeto . - b) Término de duración . - c) Régimen de prestación del servicio . - d) Régimen de los activos afectados al servicio . - e) Régimen de ocupación del dominio público . - f) Servidumbres y restricciones al dominio . - g) Régimen de ampliaciones y mejoras . - h) Reglamento del Servicio y Tarifas . - i) Régimen de penalidades . - j) Terminación de la licencia y consecuencias jurídicas de la misma . - k) Tratamiento de las quejas de los usuarios . - l) Régimen impositivo . - m) Régimen de suministros . - n) Relaciones con la Autoridad Regulatoria . - o) Ley aplicable y jurisdicción . - p) Causales de caducidad por inobservancia de la Licencia . Las licencias otorgadas no podrán ser objeto de rescate por la Administración , ni serán modificadas durante su vigencia sin el consentimiento de los licenciatarios . No se considerarán modificaciones a la licencia (i) las modificaciones que el Ente introduzca en el Reglamento del Servicio , sin perjuicio del derecho del Ente o del licenciatario a requerir el correspondiente ajuste de las tarifas si el efecto neto de tal modificación alterase en sentido favorable o desfavorable , respectivamente , el equilibrio económico -financiero existente antes de tal modificación; y (ii) los reajustes de la Tarifa que conste como anexo de la licencia y que se practiquen de acuerdo con la Ley , esta Reglamentación y los términos de la respectiva licencia . Al convocar a licitación en caso de extinción de una licencia , el Ente podrá modificar los términos de la licencia vigente hasta ese momento . (6) En los casos excepcionales en que los servicios de Transporte o Distribución no sean prestados por personas jurídicas de derecho privado , la habilitación será otorgada en forma de concesión .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">contable</span>
+      <span class="similitud">parecido 0.66</span>
+    </div>
+    <p class="procedencia"><strong>EEFF-ind-31-03-2019</strong></p>
+    <div class="texto" data-texto>- 1) Regímenes jurídicos específicos y significativos que impliquen decaimientos o renacimientos contingentes de beneficios previstos por dichas disposiciones. No existen otros regímenes jurídicos específicos con excepción del marco regulatorio del sector eléctrico y de las entidades que participan en el establecido por la Ley N° 24.065 y normas reglamentarias y complementarias. - 2) Modificaciones significativas que afecten la comparabilidad con los períodos presentados anteriormente. No existen. - 3) Clasificación de los saldos de créditos y deudas en las siguientes categorías: - a) De plazo vencido. - b) Sin plazo establecido a la vista. - c) A vencer, con subtotales para cada uno de los primeros cuatro trimestres y para cada año siguiente.</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="legal">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="legal">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>f7a702f5f82ab1d5...</code> &middot;
+      distractor <code>a48d1005e9991888...</code>
+    </p>
+  </section>
+</article>
+
+<article class="item" id="item-10" data-item="10">
+  <header class="item-cabecera">
+    <span class="numero">Ítem 10</span>
+    <span class="estado" data-estado>sin empezar</span>
+  </header>
+  <p class="marca-tabla">La evidencia es una tabla. Estos ítems son los que demuestran la parte multimodal de la tesis: priorizálos.</p>
+
+  <section class="fragmento evidencia">
+    <div class="rol">Evidencia <span class="dominio">contable</span></div>
+    <p class="procedencia">
+      <strong>TGS_EEFF_2024_4T</strong>
+      <span>memoria_anual</span>
+      <span>Transportadora de Gas del Sur S.A.</span>
+    </p>
+    <p class="ubicacion">DOC-0020 &middot; Ejercicio terminado el 31 de diciembre de 2023</p>
+    <div class="texto" data-texto>Por mercado, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Por mercado, = . Mercado externo - 207.725.378 - 207.725.378, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Mercado externo - 207.725.378 - 207.725.378, = . Mercado local 215.700.088 351.693.053 187.380.086 754.773.227, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Mercado local 215.700.088 351.693.053 187.380.086 754.773.227, = . , Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = Total 215.700.088 559.418.431 187.380.086 962.498.605. , = . Por oportunidad:, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Por oportunidad:, = . A lo largo del tiempo 215.700.088 32.098.542 187.380.086 435.178.716, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . A lo largo del tiempo 215.700.088 32.098.542 187.380.086 435.178.716, = . En un determinado momento - 527.319.889 - 527.319.889, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . En un determinado momento - 527.319.889 - 527.319.889, = . , Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . , = Total 215.700.088 559.418.431 187.380.086 962.498.605</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="fragmento distractor">
+    <div class="rol">Distractor candidato
+      <span class="dominio">legal</span>
+      <span class="similitud">parecido 0.64</span>
+    </div>
+    <p class="procedencia"><strong>Ley_24076_Gas_Natural_TO</strong></p>
+    <div class="texto" data-texto>- b) Promover la competitividad de los mercados de oferta y demanda de gas natural y alentar inversiones para asegurar el suministro a largo plazo; - c) Propender a una mejor operación , confiabilidad , igualdad , libre acceso , no discriminación y uso generalizado de los servicios e instalaciones de transporte y distribución de gas natural; - d) Regular las actividades del transporte y distribución de gas natural , asegurando que las tarifas que se apliquen a los servicios sean justas y razonables de acuerdo a lo normado en la presente ley; - e) Incentivar la eficiencia en el transporte , almacenamiento , distribución y uso del gas natural; - f) Incentivar el uso racional del gas natural , velando por la adecuada protección del medioambiente; y g) Propender a que el precio de suministro de gas natural a la industria sea equivalente a los que rigen internacionalmente en países con similar dotación de recursos y condiciones . III -Exportación e Importación de Gas Natural ARTÍCULO 3° . -Quedan autorizadas las importaciones de gas natural sin necesidad de aprobación previa . Las exportaciones de gas natural deberán ser reglamentadas por el PODER EJECUTIVO NACIONAL conforme con lo establecido en el artículo 6 ° de la Ley N ° 17 . 319 y sus modificatorias . ARTÍCULO 3° bis . -Las exportaciones de Gas Natural Licuado (GNL) deberán ser autorizadas por la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA , dentro del plazo de CIENTO VEINTE (120) días de recibida la solicitud conforme la reglamentación que dicte el PODER EJECUTIVO NACIONAL que establecerá las condiciones que deben reunir los solicitantes y las inversiones y proyectos de desarrollo de explotación de hidrocarburos que permitan producir las cantidades de gas natural requeridas para abastecer el o los respectivos proyectos de licuefacción de gas natural destinados principalmente a la exportación de Gas Natural Licuado (GNL) . No aplicará en este caso lo dispuesto en el artículo 3 ° de la presente ley .</div>
+    <button class="ver-mas" type="button" data-vermas>Ver todo</button>
+  </section>
+
+  <section class="completar">
+    <label>
+      <span>Pregunta</span>
+      <textarea rows="2" data-campo="pregunta"
+        placeholder="La consulta, como la haría alguien que trabaja en el sector"></textarea>
+    </label>
+    <label>
+      <span>Respuesta de referencia</span>
+      <textarea rows="2" data-campo="respuesta_referencia"
+        placeholder="La respuesta correcta, en una o dos oraciones"></textarea>
+    </label>
+    <div class="fila">
+      <label>
+        <span>Silos necesarios</span>
+        <input type="text" data-campo="silos_necesarios" value="contable">
+      </label>
+      <label>
+        <span>Dominio de la evidencia</span>
+        <input type="text" data-campo="dominios_evidencia" value="contable">
+      </label>
+      <label>
+        <span>El distractor sirve</span>
+        <select data-campo="distractor_valido">
+          <option value="">elegir</option>
+          <option value="si">Sí, se parece pero no responde</option>
+          <option value="no">No, también responde</option>
+        </select>
+      </label>
+    </div>
+    <p class="identidad">
+      evidencia <code>f9be28601fceac35...</code> &middot;
+      distractor <code>3489a4b827637f98...</code>
+    </p>
+  </section>
+</article>
+</main>
+
+<div class="aviso-copia" id="aviso-copia">Copiado</div>
+
+<script>
+const IDENTIDAD = [
+    {numero: "1", evidencia: "5727b090aedcd7ad04d157e539f31f30191ce840964cc53a2e41262c312843e9", distractor: "cba3ca8cd1e064e295f177247b04580e77a24a1f6e5efa532e0e7d65161738f1"},
+    {numero: "2", evidencia: "6d74d719fe815b0406e87a915b68d229317b49b5612c5458fc6f688f57c34c55", distractor: "c3763f2b03392bfabfc9c85f54f1b4e77c8d9ccc753d3916bee588806dcb71aa"},
+    {numero: "3", evidencia: "85ccb15214fcb05d983ca23e9e35afe958101899bd9c543d8ac490b449275216", distractor: "f6ed43c3b0ff7d086c20dc7adbe50ccc3d4bde35a5a866e434ccce38f5915dbf"},
+    {numero: "4", evidencia: "bc2d533089dce975d9426eeda7795cd6ac09c01699ce8a9f221473df81ba8bbe", distractor: "e3891cdb0973f200b01849addec3d8f5de69a42cc1eadce79b579d993ded983a"},
+    {numero: "5", evidencia: "bc48fb4f2f288b622816838db34f8a083574f6d36d84c7764f1993dc462d2e5b", distractor: "271db1a37a5c1d44a4d1386b67027af831acb768fe242e42df28c5acb01296af"},
+    {numero: "6", evidencia: "c6132ce3432d2d0e51748a6e29dc64e8fff0ba64edbedbe793fab09e68a4d076", distractor: "6aa145ecfaf3c98c732de3dc4682897e01cf4a51c9bc964ab434168720dff420"},
+    {numero: "7", evidencia: "cb874fa502ba0ddcab0b49974caef47e1dd13720040c6b21f003af3dbd4dcd0d", distractor: "4447ef286aec86d0b8eb81834fd8ec5a0a504563195d016911122d08cf9cea27"},
+    {numero: "8", evidencia: "cc140be829d812de16841e9b341c9ec20b26167f3e3879e30cef522704629629", distractor: "d36b66eb788fd77a67095a3dc24cbb0e0989b560bc65ab80210ced0ffc6a45c5"},
+    {numero: "9", evidencia: "f7a702f5f82ab1d597623a4f35c6c31ef0cf0d36048dba0f4f465fd058baabba", distractor: "a48d1005e999188871094d357fb73177c6d910f2b0f56624ec1a33d2e2835c41"},
+    {numero: "10", evidencia: "f9be28601fceac358b97b234ef402dd0d4776fac0bab08c6e76492a6415df82e", distractor: "3489a4b827637f98896eca967cf737f77fd454f66b14572c3785522e9099f608"}
+];
+const CLAVE = "planilla-golden-v1";
+
+function cargar() {
+  try { return JSON.parse(localStorage.getItem(CLAVE) || "{}"); }
+  catch (e) { return {}; }
+}
+function guardar(datos) {
+  try { localStorage.setItem(CLAVE, JSON.stringify(datos)); } catch (e) {}
+}
+
+const datos = cargar();
+
+function refrescar() {
+  let listos = 0;
+  document.querySelectorAll(".item").forEach(function (tarjeta) {
+    const numero = tarjeta.dataset.item;
+    const estado = tarjeta.querySelector("[data-estado]");
+    const d = datos[numero] || {};
+    if (d.distractor_valido === "no") {
+      estado.textContent = "descartado";
+      estado.setAttribute("data-listo", "");
+      listos++;
+    } else if ((d.pregunta || "").trim()) {
+      estado.textContent = "escrito";
+      estado.setAttribute("data-listo", "");
+      listos++;
+    } else {
+      estado.textContent = "sin empezar";
+      estado.removeAttribute("data-listo");
+    }
+  });
+  const total = IDENTIDAD.length;
+  document.getElementById("contador").textContent = listos + " de " + total;
+  document.getElementById("barra-progreso").style.width = (100 * listos / total) + "%";
+}
+
+document.querySelectorAll(".item").forEach(function (tarjeta) {
+  const numero = tarjeta.dataset.item;
+  tarjeta.querySelectorAll("[data-campo]").forEach(function (campo) {
+    const nombre = campo.dataset.campo;
+    if (datos[numero] && datos[numero][nombre] !== undefined) {
+      campo.value = datos[numero][nombre];
+    }
+    campo.addEventListener("input", function () {
+      datos[numero] = datos[numero] || {};
+      datos[numero][nombre] = campo.value;
+      guardar(datos);
+      refrescar();
+    });
+  });
+  tarjeta.querySelectorAll("[data-vermas]").forEach(function (boton) {
+    boton.addEventListener("click", function () {
+      const texto = boton.previousElementSibling;
+      texto.classList.toggle("abierto");
+      boton.textContent = texto.classList.contains("abierto") ? "Ver menos" : "Ver todo";
+    });
+  });
+});
+
+function avisar(mensaje) {
+  const aviso = document.getElementById("aviso-copia");
+  aviso.textContent = mensaje;
+  aviso.classList.add("visible");
+  setTimeout(function () { aviso.classList.remove("visible"); }, 1800);
+}
+
+document.getElementById("copiar").addEventListener("click", function () {
+  const lineas = [];
+  IDENTIDAD.forEach(function (ref) {
+    const d = datos[ref.numero];
+    if (!d) return;
+    if (!(d.pregunta || "").trim() && d.distractor_valido !== "no") return;
+    lineas.push("- item: " + ref.numero);
+    lineas.push('  pregunta: "' + (d.pregunta || "").replace(/"/g, "'") + '"');
+    lineas.push('  respuesta_referencia: "' + (d.respuesta_referencia || "").replace(/"/g, "'") + '"');
+    lineas.push("  silos_necesarios: [" + (d.silos_necesarios || "") + "]");
+    lineas.push("  dominios_evidencia: [" + (d.dominios_evidencia || "") + "]");
+    lineas.push("  distractor_valido: " + (d.distractor_valido || ""));
+    lineas.push("  chunk_evidencia: " + ref.evidencia);
+    lineas.push("  chunk_distractor: " + ref.distractor);
+  });
+  if (!lineas.length) { avisar("Todavía no hay nada escrito"); return; }
+  const texto = lineas.join("\n");
+  navigator.clipboard.writeText(texto).then(
+    function () { avisar("Copiado: pegalo en el chat"); },
+    function () { window.prompt("Copiá esto:", texto); }
+  );
+});
+
+document.getElementById("borrar").addEventListener("click", function () {
+  if (!window.confirm("Esto borra todo lo escrito en esta planilla. ¿Seguro?")) return;
+  Object.keys(datos).forEach(function (k) { delete datos[k]; });
+  guardar(datos);
+  document.querySelectorAll("[data-campo]").forEach(function (campo) {
+    campo.value = campo.defaultValue || "";
+  });
+  refrescar();
+  avisar("Planilla vaciada");
+});
+
+refrescar();
+</script>
+</body>
+</html>

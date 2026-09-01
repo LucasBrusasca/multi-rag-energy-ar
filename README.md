@@ -1,36 +1,123 @@
-# Multi-RAG Multimodal with Reflexive Orchestration for the Argentine Energy Sector
+# Multi-RAG Energy AR
 
-Multimodal Multi-RAG architecture with reflexive orchestration for knowledge management in high-complexity domains. Applied to the Argentine regulated energy sector (ENRE, CAMMESA, RenovAr).
+Sistema de investigación para evaluar si una arquitectura Multi-RAG gobernada
+reduce la colisión semántica entre dominios legal, impositivo, contable y
+financiero sin degradar de forma inaceptable la recuperación de evidencia.
 
-## What is this?
+El caso de estudio es el sector energético argentino. El repositorio implementa
+la ingesta multimodal, identidad documental, clasificación por chunk,
+recuperación monolítica y por silos, generación con citas, veto epistémico y
+sondas experimentales B0/B1/B2.
 
-A specialized information-retrieval system that organizes knowledge across four domains —legal, tax, financial and accounting— of the energy sector into independent modules (silos), coordinated by a reflexive component that detects its own uncertainty.
+## Estructura canónica
 
-Unlike a traditional monolithic RAG, this architecture:
-- Segregates semantic domains into independent vector indexes
-- Implements an **epistemic veto** when the evidence is insufficient
-- Mitigates **cognitive offloading** through intentional friction
-- Produces full **traceability** for every decision
+```text
+src/multirag/
+  config.py                 configuración central del sistema
+  db.py                     acceso a PostgreSQL/pgvector
+  paths.py                  rutas estables del proyecto
+  ingestion/                catálogo, metadatos, Docling, chunks y embeddings
+  acquisition/              adquisición de fuentes, separada por proveedor
+    providers/infoleg/      adaptador actual para InfoLEG
+  orchestration/            clasificador, compuerta y recuperación
+  generation/               LLM, generación fundamentada y veto
+  evaluation/               comparación B0/B1/B2 y sondas reutilizables
+  research/                 prototipos y análisis no productivos
+scripts/
+  admin/                    operaciones explícitas sobre la base
+  diagnostics/              comprobaciones manuales de desarrollo
+tests/                      pruebas automatizadas del código activo
+experimentos/               corridas, protocolos piloto y resultados fechados
+docs/                       memoria canónica de la tesis
+data/                       corpus y artefactos locales; no se publica
+```
 
-## Tech stack
+Los directorios fechados de `experimentos/` son evidencia histórica. No forman
+parte del paquete activo y se conservan en sus rutas originales para no romper
+su trazabilidad ni sus supuestos de ejecución.
 
-- **Ingestion:** Docling (multimodal, all formats); RAPTOR + ColPali → planned (financial silo)
-- **Chunking:** structure-aware via Docling (native section hierarchy; tables kept atomic)
-- **Memory / Vector DB:** PostgreSQL + pgvector (vectors + graph + ledger in a single database)
-- **Embeddings:** sentence-transformers (`BAAI/bge-m3`, 1024d)
-- **Generation:** LiteLLM (swappable model: Claude / Gemini / local via Ollama)
-- **Orchestration:** LangGraph (planned)
-- **Evaluation / veto:** RAGAS + conformal prediction (planned)
+## Instalación local
 
-## Status
+Desde la raíz del repositorio, en PowerShell:
 
-🚧 Work in progress — Master's thesis, Data Mining & Knowledge Management, Universidad Austral.
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install -e . --no-deps --no-build-isolation
+docker compose up -d
+```
 
-**Base pipeline working** ✅: ingestion → Docling structure-aware chunking → embeddings → PostgreSQL/pgvector → cosine retrieval → **citation-grounded generation** (answers grounded in evidence, citing the source and abstaining when the context is insufficient). **Next:** kNN silo router, multi-signal veto, Golden Dataset + experiment.
+La instalación editable hace importable `multirag` sin modificar `sys.path` en
+cada script. Los cambios realizados dentro de `src/multirag/` se reflejan sin
+reinstalar el paquete.
 
-## Notes
+## Verificación
 
-This system operates over a **Spanish-language** regulatory corpus. The codebase and public documentation here are in English for an international audience. The detailed thesis design documents are maintained privately in Spanish, as they belong to a thesis defended in Spanish.
+```powershell
+python -B -m unittest discover -v
+python -B -m compileall -q src\multirag scripts tests
+```
 
-**Author:** Lucas Brusasca
-**Advisor:** Hernán Merlino
+## Flujos principales
+
+Catalogar de forma neutral los archivos disponibles en `data/raw/`:
+
+```powershell
+python -B -m multirag.ingestion.catalogo `
+  --salida data/catalog/inventario_objetivo.jsonl
+```
+
+Generar la plantilla de metadatos curados:
+
+```powershell
+python -B -m multirag.ingestion.metadatos `
+  --catalogo data/catalog/inventario_objetivo.jsonl `
+  --salida data/catalog/metadatos_curados.csv
+```
+
+Ingerir documentos ya catalogados y curados:
+
+```powershell
+python -B -m multirag.ingestion.pipeline data/raw/documento.pdf
+```
+
+Comparar recuperación con el mismo `k` final:
+
+```powershell
+python -B -m multirag.evaluation.comparar `
+  --pregunta "¿Qué establece la Ley 24.065 sobre el acceso abierto?" `
+  --silos-oraculo legal `
+  --k 3
+```
+
+El código de adquisición no está acoplado conceptualmente a InfoLEG. InfoLEG es
+el primer adaptador bajo `acquisition/providers/`; otros proveedores deben
+incorporarse como adaptadores hermanos con su propia política de selección y
+descarga.
+
+```powershell
+python -B -m multirag.acquisition.providers.infoleg.select --help
+python -B -m multirag.acquisition.providers.infoleg.download --help
+python -B -m multirag.acquisition.providers.infoleg.audit --help
+```
+
+La explicación completa de cada componente, sus entradas, salidas y relación
+con la tesis está en
+[`docs/GUIA_ARQUITECTURA_Y_ESTUDIO.md`](docs/GUIA_ARQUITECTURA_Y_ESTUDIO.md).
+
+## Estado y autoridad documental
+
+El [plan aprobado](docs/PLAN_APROBADO.pdf) define el compromiso académico. El
+[estado verificado](docs/ESTADO_VERIFICADO.md) describe qué existe realmente y
+las [decisiones vigentes](docs/DECISIONES_VIGENTES.md) fundamentan la
+arquitectura actual. Las ideas candidatas permanecen en
+[IDEAS_Y_ROADMAP.md](docs/IDEAS_Y_ROADMAP.md) hasta ser promovidas mediante una
+falla medida y una ablación definida.
+
+Proyecto en desarrollo para la Maestría en Explotación de Datos y Gestión del
+Conocimiento, Universidad Austral.
+
+**Autor:** Lucas Brusasca
+
+**Director:** Hernán Merlino

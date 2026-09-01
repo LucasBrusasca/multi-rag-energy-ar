@@ -1,0 +1,700 @@
+{
+  "huella_particion": "630c6299540161e437828ae5590a4a8fb57622bb4d13191063ad376a7f61e4ac",
+  "estrato": "colision",
+  "k": 3,
+  "llamadas_al_generador": 19,
+  "items": [
+    {
+      "id": "G-P-005",
+      "pregunta": "¿Qué sanciones corresponden por violar la ley del sector eléctrico, cometidas por terceros no concesionarios?",
+      "anclas": [
+        "d8cf1eae9a64b750ff39843f0bc076f33caab2de0ff9ef3e4a7aa5749e3e2641"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0013"
+      ],
+      "contexto_identico": false,
+      "respuesta_identica": false,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "d8cf1eae9a64b750ff39843f0bc076f33caab2de0ff9ef3e4a7aa5749e3e2641",
+            "48cbaf9acef6c488e46df8be27c6cd25dfe8aabd8de5cd1be2558c3b477e384c",
+            "5cb58e011de576151082ee21d0b5d033d8c14d443ded1c0873caf0c3d2ee381e"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "legal",
+            "legal"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Sanciones por violaciones a la ley eléctrica cometidas por terceros no concesionarios\n\nConforme al **Artículo 63 de la Ley 24.065**, las violaciones o incumplimientos de la ley y sus normas reglamentarias cometidos por **terceros no concesionarios** pueden ser sancionados con las siguientes medidas:\n\n---\n\n### Sanciones principales\n\n| Tipo | Alcance |\n|------|---------|\n| **Multa** | Entre **$130.000** y **$140.000.000**, con facultad del Ente para actualizar dichos valores según variaciones económicas de la industria |\n| **Inhabilitación especial** | De **1 a 5 años** |\n| **Suspensión** | Hasta **90 días** en la prestación de servicios y actividades autorizados por el Ente |\n\n### Sanción accesoria o independiente\n\n- **Decomiso** de los elementos utilizados para cometer la contravención, o de los bienes, artefactos e instalaciones construidas o ubicadas en contravención. Esta sanción puede aplicarse como accesoria de las anteriores o de forma independiente.\n\n*(ARTÍCULO 63, Ley_24065_Energia_Electrica_TO)*\n\n---\n\n### Medidas complementarias del Ente\n\nEl Ente cuenta además con facultades adicionales de carácter procedimental:\n\n- **Secuestro de bienes** como medida precautoria, salvo que pertenezcan a un tercero no responsable *(ARTÍCULO 65, Ley_24065_Energia_Electrica_TO)*.\n- **Requerimiento de auxilio de la fuerza pública** para prevención, constatación de contravenciones y cumplimiento de medidas de secuestro, mediante requerimiento escrito del funcionario competente *(ARTÍCULO 66, Ley_24065_Energia_Electrica_TO)*.\n- Si el hecho constituyera un **delito de orden público**, el Ente deberá dar intervención inmediata a la **justicia federal** con jurisdicción en el lugar *(ARTÍCULO 66, Ley_24065_Energia_Electrica_TO)*.\n\n---\n\n> **Nota de alcance:** Este régimen sancionatorio aplica exclusivamente a **terceros no concesionarios**. Las violaciones a contratos de concesión de transporte o distribución se rigen por un régimen distinto, previsto en el **Artículo 64** de la misma ley, que remite a las penalidades establecidas en los respectivos contratos de concesión.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "d8cf1eae9a64b750ff39843f0bc076f33caab2de0ff9ef3e4a7aa5749e3e2641",
+            "bd08b957c64477a50ba22dbdd8ebdacba8b540ea61835be2bef713d5785ef381",
+            "3552806ff6edd6a7e5b2d734ae7e13c7e4ed5ed397cfdd27ffd0ef845e111eb0"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Sanciones por violaciones a la ley del sector eléctrico cometidas por terceros no concesionarios\n\nConforme al **Artículo 63 de la Ley 24.065**, las violaciones o incumplimientos cometidos por **terceros no concesionarios** pueden ser sancionados con las siguientes medidas:\n\n### a) Multa\nEntre **$ 130.000 y $ 140.000.000**, con facultad del Ente para modificar dichos valores de acuerdo a las variaciones económicas que operen en la industria.\n\n### b) Inhabilitación especial\nDe **1 a 5 años**.\n\n### c) Suspensión\nDe hasta **90 días** en la prestación de servicios y actividades autorizados por el Ente.\n\n### d) Decomiso\nDe los elementos utilizados para cometer la contravención, o de los bienes, artefactos e instalaciones construidas o ubicadas en contravención. Esta sanción puede aplicarse **como accesoria de las anteriores o de forma independiente**.\n\n*(ARTÍCULO 63, Capítulo XIV - Ley_24065_Energia_Electrica_TO)*\n\n---\n\n### Consideración adicional relevante\n\nEl Ente también está facultado para disponer el **secuestro de bienes como medida precautoria**, salvo que dichos bienes pertenezcan a un tercero no responsable *(ARTÍCULO 65, Capítulo XIV - Ley_24065_Energia_Electrica_TO)*, y puede **requerir el auxilio de la fuerza pública** para la prevención y constatación de contravenciones, bastando un requerimiento escrito del funcionario competente *(ARTÍCULO 66, Capítulo XIV - Ley_24065_Energia_Electrica_TO)*.\n\n---\n\n> **Nota de alcance:** El régimen del Artículo 63 aplica exclusivamente a **terceros no concesionarios**. Para los titulares de contratos de concesión de transporte o distribución, las penalidades aplicables son las previstas en los respectivos contratos de concesión *(ARTÍCULO 64, Capítulo XIV - Ley_24065_Energia_Electrica_TO)*, cuyo contenido no obra en el contexto provisto.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-006",
+      "pregunta": "¿Qué tasa deben abonar anualmente los transportistas y distribuidores de electricidad, y con qué fin?",
+      "anclas": [
+        "264911a2eb98feb8667a8568b968239e6d5b33c17ce448208518a51fe8f9d4a6"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0013"
+      ],
+      "contexto_identico": false,
+      "respuesta_identica": false,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "264911a2eb98feb8667a8568b968239e6d5b33c17ce448208518a51fe8f9d4a6",
+            "6a2e05be7e52828ee93a7799aa797fa29d7243db9f79bb204bc000cd48e1ff3c",
+            "0a5e86e8f9266c0fd445939f51d93ffeb6271acc2e026c49b6d9f8752ca2833a"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "legal",
+            "legal"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Tasa de Fiscalización y Control\n\nLos productores, transportistas y distribuidores de electricidad deben abonar **anualmente y por adelantado** una **tasa de fiscalización y control**, cuyo fin es financiar el presupuesto del Ente regulador (ENRE). (ARTÍCULO 56, Ley_24065_Energia_Electrica_TO)\n\n---\n\n### Determinación del monto\n\nLa tasa se fija de forma **singular para cada sujeto obligado** y se calcula mediante la siguiente fórmula:\n\n> **Tasa individual = Gastos e inversiones totales previstos en el presupuesto del Ente × (Ingresos brutos propios del año anterior / Ingresos brutos totales de todos los productores, transportistas y distribuidores del país en igual período)**\n\n(ARTÍCULO 56, Ley_24065_Energia_Electrica_TO)\n\n---\n\n### Tasa complementaria\n\nSi durante la ejecución del presupuesto los recursos estimados resultaran **insuficientes por hechos imprevisibles**, el Ente podrá requerir el pago de una **tasa complementaria**, sujeta a la aprobación del **Poder Ejecutivo Nacional**, hasta cubrir las necesidades presupuestarias. (ARTÍCULO 56, Ley_24065_Energia_Electrica_TO)\n\n---\n\n**En síntesis:** el mecanismo garantiza que el costo de regulación y control del sistema eléctrico sea solventado por los propios regulados, en proporción a su participación relativa en los ingresos del sector.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "264911a2eb98feb8667a8568b968239e6d5b33c17ce448208518a51fe8f9d4a6",
+            "08f7f524499b850381f4183e0c1e46031e66f7667e67603c3846816505080913",
+            "f8bf6c0e17550b3529b4a49c69225bc2ff9202d8f880e3805752f4d8d5712ab2"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Tasa de Fiscalización y Control – Transportistas y Distribuidores de Electricidad\n\nLos productores, transportistas y distribuidores de electricidad deben abonar **anualmente y por adelantado** una **tasa de fiscalización y control** (ARTÍCULO 56, Ley_24065_Energia_Electrica_TO).\n\n### Fin de la tasa\nLa tasa tiene como propósito **financiar el presupuesto del Ente regulador** (ENRE), siendo su monto total igual a la suma de gastos e inversiones previstos por dicho organismo en su presupuesto (ARTÍCULO 56, Ley_24065_Energia_Electrica_TO).\n\n### Metodología de cálculo\nLa tasa es **fijada en forma singular para cada sujeto obligado**, mediante la siguiente fórmula:\n\n> **Tasa individual = Presupuesto total del Ente × (Ingresos brutos propios del año anterior / Ingresos brutos totales de todos los productores, transportistas y distribuidores del país en igual período)**\n\n(ARTÍCULO 56, Ley_24065_Energia_Electrica_TO)\n\n### Tasa complementaria\nSi durante la ejecución del presupuesto los recursos resultaran insuficientes por **hechos imprevisibles**, el Ente podrá requerir el pago de una **tasa complementaria**, sujeta a aprobación del **Poder Ejecutivo Nacional**, hasta cubrir las necesidades presupuestarias (ARTÍCULO 56, Ley_24065_Energia_Electrica_TO).",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-007",
+      "pregunta": "Para cobrar deudas por suministro eléctrico, ¿qué procedimiento se aplica y qué constituye título hábil?",
+      "anclas": [
+        "f7c2c295d134b53060f1f15d238ce98a6d738fe17edd131a8ef2976553564a75"
+      ],
+      "silos_oraculo": [
+        "legal"
+      ],
+      "document_ids": [
+        "DOC-0013"
+      ],
+      "contexto_identico": false,
+      "respuesta_identica": false,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "e49c38cf7384ac1da16309000c85cad6b7a240e548bb2145c7681420d8224f25",
+            "f7c2c295d134b53060f1f15d238ce98a6d738fe17edd131a8ef2976553564a75",
+            "e18cedaeb304e5c4468a1b12f702b2c850fff86d2707a4134b54f5307d62c272"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "legal",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Procedimiento de cobro de deudas por suministro eléctrico\n\n### Procedimiento aplicable\n\nPara la percepción de los importes correspondientes a **precios de compraventa en bloque y/o tarifas de suministros a usuarios finales**, se aplica el **procedimiento ejecutivo** (Disposiciones varias, Ley_24065_Energia_Electrica_TO).\n\n### Título hábil\n\nEl título hábil para habilitar dicho procedimiento ejecutivo es la **constancia de deuda**, cuyas características específicas son determinadas por la reglamentación (Disposiciones varias, Ley_24065_Energia_Electrica_TO).\n\nA nivel reglamentario, el Decreto 1398/1992 precisa que dicha constancia de deuda debe ser **emitida por los Generadores, Transportistas y/o Distribuidores**, y debe reunir los requisitos que, a tales efectos, determine la **Secretaría de Energía Eléctrica** (ARTÍCULO 84, Decreto_1398_1992_Reglamentario_Electrico).\n\n### Síntesis operativa\n\n| Elemento | Contenido |\n|---|---|\n| Procedimiento | Ejecutivo |\n| Instrumento habilitante | Constancia de deuda |\n| Emisores habilitados | Generadores, Transportistas y/o Distribuidores |\n| Autoridad que define requisitos | Secretaría de Energía Eléctrica |\n\n### Limitación\n\nEl contexto disponible **no contiene** los requisitos formales específicos que la Secretaría de Energía Eléctrica haya determinado para la constancia de deuda, por lo que no es posible detallar sus condiciones concretas de validez con la evidencia provista.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "f7c2c295d134b53060f1f15d238ce98a6d738fe17edd131a8ef2976553564a75",
+            "65cc7f0fcdd8b2dab0157fcd2b1321ad1c67cdc3067501766e27379f18d19d87",
+            "ac62af1bdd169344fddedb43dd5588b682c8b2b56916646b9695755078e3e075"
+          ],
+          "silos_recuperados": [
+            "legal",
+            "legal",
+            "legal"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Procedimiento de cobro de deudas por suministro eléctrico\n\n### Procedimiento aplicable\n\nPara la percepción de los importes correspondientes a **precios de compraventa en bloque y/o tarifas de suministros a usuarios finales**, se aplica el **procedimiento ejecutivo** (ARTÍCULO 70, Ley_24065_Energia_Electrica_TO).\n\n### Título hábil\n\nConstituye título hábil la **constancia de deuda** que determine la reglamentación (ARTÍCULO 70, Ley_24065_Energia_Electrica_TO).\n\n---\n\n### Limitación de respuesta\n\nEl contexto provisto no especifica el contenido, forma o requisitos concretos que debe reunir dicha constancia de deuda, ya que esa determinación queda delegada en la reglamentación. Para precisar esos requisitos formales, sería necesario contar con la norma reglamentaria específica que los establezca, la cual no obra en el contexto disponible.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-009",
+      "pregunta": "¿Quiénes son los agentes del Mercado Eléctrico Mayorista?",
+      "anclas": [
+        "e54f4a9ae0518578e80f4e61d215991452dce1c32f780bef6b4274c02371ad7d"
+      ],
+      "silos_oraculo": [
+        "legal"
+      ],
+      "document_ids": [
+        "DOC-0013"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "2ce99685f6a147c4ec31a81af4ec2e4175e30d4bbf6a06c9e14bc73830b7468d",
+            "cd071020811ea8c862abc8e0c4fb0b2710554530d0301657c20c670dc8858451",
+            "9428d19c894213813023bc2ac458ecadb23d1151480ba46c5ab9e06386c2943b"
+          ],
+          "silos_recuperados": [
+            "legal",
+            "legal",
+            "legal"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "## Agentes del Mercado Eléctrico Mayorista (MEM)\n\nEl contexto provisto **no contiene una enumeración o definición exhaustiva de los agentes del MEM**.\n\nLo que sí puede afirmarse con base en la evidencia disponible es que el MEM involucra a las siguientes categorías de participantes, mencionadas de forma referencial:\n\n- **Agentes y Comercializadores del MEM**, quienes pueden realizar operaciones de importación y exportación de energía eléctrica con mercados eléctricos de otros países (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos).\n- **Vendedores y compradores** que celebran contratos en el Mercado a Término (ORGANIZACIÓN COMERCIAL, Res_SE_61_1992_Los_Procedimientos).\n- **Distribuidores**, mencionados como compradores fuera de contratos en el sistema de estabilización de precios (ORGANIZACIÓN COMERCIAL, Res_SE_61_1992_Los_Procedimientos).\n- **Grandes Usuarios**, referenciados en el contexto de requisitos aplicables a la exportación (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos).\n- El **OED (Organismo Encargado del Despacho)** y **CAMMESA**, como administradores y operadores del mercado (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos; Art. 7°, Res_SE_137_1992).\n\n---\n\n**Lo que no puedo responder con la evidencia disponible:** el contexto no incluye el artículo o anexo específico que define y enumera taxativamente las categorías de agentes del MEM (generadores, transportistas, distribuidores, grandes usuarios, comercializadores, etc.). Para ello sería necesario contar con el **Anexo 17 de Los Procedimientos** (\"Ingreso de Nuevos Agentes al MEM\") aprobado por el Art. 9° de la Res_SE_137_1992, o el cuerpo principal de la Res_SE_61_1992, ninguno de los cuales está disponible en el contexto provisto.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "2ce99685f6a147c4ec31a81af4ec2e4175e30d4bbf6a06c9e14bc73830b7468d",
+            "cd071020811ea8c862abc8e0c4fb0b2710554530d0301657c20c670dc8858451",
+            "9428d19c894213813023bc2ac458ecadb23d1151480ba46c5ab9e06386c2943b"
+          ],
+          "silos_recuperados": [
+            "legal",
+            "legal",
+            "legal"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "## Agentes del Mercado Eléctrico Mayorista (MEM)\n\nEl contexto provisto **no contiene una enumeración o definición exhaustiva de los agentes del MEM**.\n\nLo que sí puede afirmarse con base en la evidencia disponible es que el MEM involucra a las siguientes categorías de participantes, mencionadas de forma referencial:\n\n- **Agentes y Comercializadores del MEM**, quienes pueden realizar operaciones de importación y exportación de energía eléctrica con mercados eléctricos de otros países (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos).\n- **Vendedores y compradores** que celebran contratos en el Mercado a Término (ORGANIZACIÓN COMERCIAL, Res_SE_61_1992_Los_Procedimientos).\n- **Distribuidores**, mencionados como compradores fuera de contratos en el sistema de estabilización de precios (ORGANIZACIÓN COMERCIAL, Res_SE_61_1992_Los_Procedimientos).\n- **Grandes Usuarios**, referenciados en el contexto de requisitos aplicables a la exportación (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos).\n- El **OED (Organismo Encargado del Despacho)** y **CAMMESA**, como administradores y operadores del mercado (INTRODUCCIÓN, Res_SE_61_1992_Los_Procedimientos; Art. 7°, Res_SE_137_1992).\n\n---\n\n**Lo que no puedo responder con la evidencia disponible:** el contexto no incluye el artículo o anexo específico que define y enumera taxativamente las categorías de agentes del MEM (generadores, transportistas, distribuidores, grandes usuarios, comercializadores, etc.). Para ello sería necesario contar con el **Anexo 17 de Los Procedimientos** (\"Ingreso de Nuevos Agentes al MEM\") aprobado por el Art. 9° de la Res_SE_137_1992, o el cuerpo principal de la Res_SE_61_1992, ninguno de los cuales está disponible en el contexto provisto.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-011",
+      "pregunta": "Además de la multa, ¿qué se incluye en la determinación de oficio de un tributo cuando corresponde?",
+      "anclas": [
+        "58e038c5de56ab09562e330a97a4fd9d0ed967cad0212f4f32d7e460d4d61525"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0003"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "58e038c5de56ab09562e330a97a4fd9d0ed967cad0212f4f32d7e460d4d61525",
+            "acd128caccd792c69426bd45d61afda26dd5bbffde70d595169f3be0001809e1",
+            "f3b06e0619aefdb4ea6ae6a213f561d417524f76c2f61fe6f5e9246ac43d6011"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Contenido de la Determinación de Oficio\n\nSegún la normativa aplicable, la resolución que determina de oficio un tributo deberá contener los siguientes conceptos cuando correspondan:\n\n1. **El tributo adeudado** — monto principal de la obligación tributaria determinada.\n2. **La multa** — en caso de que resulte procedente.\n3. **El interés resarcitorio** — calculado hasta la fecha indicada en la resolución.\n4. **La actualización** — calculada igualmente hasta la fecha indicada en la resolución.\n\nTodo ello **sin perjuicio de la prosecución del curso de los mismos** (intereses y actualización) con arreglo a las normas legales y reglamentarias pertinentes, es decir, los accesorios continúan devengándose más allá de la fecha de corte indicada en la resolución.\n\n(Segundo párrafo, Determinación de Oficio - Decreto_821_1998_TO_Ley_11683)",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "58e038c5de56ab09562e330a97a4fd9d0ed967cad0212f4f32d7e460d4d61525",
+            "acd128caccd792c69426bd45d61afda26dd5bbffde70d595169f3be0001809e1",
+            "f3b06e0619aefdb4ea6ae6a213f561d417524f76c2f61fe6f5e9246ac43d6011"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Contenido de la Determinación de Oficio\n\nSegún la normativa aplicable, la resolución que determina de oficio un tributo deberá contener los siguientes conceptos cuando correspondan:\n\n1. **El tributo adeudado** — monto principal de la obligación tributaria determinada.\n2. **La multa** — en caso de que resulte procedente.\n3. **El interés resarcitorio** — calculado hasta la fecha indicada en la resolución.\n4. **La actualización** — calculada igualmente hasta la fecha indicada en la resolución.\n\nTodo ello **sin perjuicio de la prosecución del curso de los mismos** (intereses y actualización) con arreglo a las normas legales y reglamentarias pertinentes, es decir, los accesorios continúan devengándose más allá de la fecha de corte indicada en la resolución.\n\n(Segundo párrafo, Determinación de Oficio - Decreto_821_1998_TO_Ley_11683)",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-012",
+      "pregunta": "¿Ante qué tribunal y en qué plazo se impugnan las sanciones del ente regulador de la electricidad?",
+      "anclas": [
+        "e0cc6f36385ff70e955b85f65d4e1e0c8b3596272e9f9235bdc495131de6d2ff"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0013"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "e939894783b703b250639a0b33e154d9f312dc42f15d7181008278c95f95c15b",
+            "a4d7d3fc94b1f95895df2930170c565335030d594a185a3ccadd983d126bd7a3",
+            "e0cc6f36385ff70e955b85f65d4e1e0c8b3596272e9f9235bdc495131de6d2ff"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Impugnación de sanciones del ente regulador de la electricidad\n\nLas sanciones aplicadas por el Ente regulador de la electricidad (ENRE) son impugnables **ante la Cámara Nacional de Apelaciones en lo Contencioso Administrativo Federal**, mediante **recurso directo** a interponerse dentro de los **treinta (30) días hábiles judiciales** posteriores a su notificación.\n\n(CAPÍTULO XIV, Ley_24065_Energia_Electrica_TO)",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "e939894783b703b250639a0b33e154d9f312dc42f15d7181008278c95f95c15b",
+            "a4d7d3fc94b1f95895df2930170c565335030d594a185a3ccadd983d126bd7a3",
+            "e0cc6f36385ff70e955b85f65d4e1e0c8b3596272e9f9235bdc495131de6d2ff"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Impugnación de sanciones del ente regulador de la electricidad\n\nLas sanciones aplicadas por el Ente regulador de la electricidad (ENRE) son impugnables **ante la Cámara Nacional de Apelaciones en lo Contencioso Administrativo Federal**, mediante **recurso directo** a interponerse dentro de los **treinta (30) días hábiles judiciales** posteriores a su notificación.\n\n(CAPÍTULO XIV, Ley_24065_Energia_Electrica_TO)",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-017",
+      "pregunta": "¿Qué genera la falta total o parcial de pago de gravámenes, retenciones o anticipos, y desde cuándo?",
+      "anclas": [
+        "f83fc442427c82c8c31b329ad37ecc5351f4b30f67d6246bc299294b5aa06d8d"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0003"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "f83fc442427c82c8c31b329ad37ecc5351f4b30f67d6246bc299294b5aa06d8d",
+            "53ae74336a372cf36fafe317a0edd6f903821f8730cec2cd1ce572961c9e9526",
+            "dd533551d074a53d5fe8421d919be51f399cd0cc25aff96644f8e375847fc39e"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Interés resarcitorio por falta de pago\n\nLa falta total o parcial de pago de los gravámenes, retenciones, percepciones, anticipos y demás pagos a cuenta **genera un interés resarcitorio**, que se devenga **desde los respectivos vencimientos**, sin necesidad de interpelación alguna. (ARTÍCULO 37, Decreto_821_1998_TO_Ley_11683)\n\n### Aspectos complementarios relevantes del mismo artículo:\n\n- **Fijación de la tasa:** La tasa de interés y su mecanismo de aplicación son fijados por la Secretaría de Hacienda, con el límite de no poder exceder el doble de la mayor tasa vigente que perciba el Banco de la Nación Argentina en sus operaciones.\n- **Independencia de otras obligaciones:** Los intereses se devengan sin perjuicio de la actualización del artículo 129 ni de las multas que pudieran corresponder por los artículos 39, 45, 46 y 48.\n- **Subsistencia de la obligación:** La obligación de abonar los intereses subsiste aunque la AFIP no haya efectuado reserva al percibir el pago de la deuda principal, mientras no haya prescripto la acción de cobro.\n- **Capitalización:** Si se cancela total o parcialmente la deuda principal sin cancelarse los intereses devengados, estos se transforman en capital y devengan a su vez los mismos intereses resarcitorios desde ese momento.\n- **Apelación ante el TFN:** Los intereses continúan devengándose durante la tramitación de apelaciones ante el Tribunal Fiscal de la Nación.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "f83fc442427c82c8c31b329ad37ecc5351f4b30f67d6246bc299294b5aa06d8d",
+            "53ae74336a372cf36fafe317a0edd6f903821f8730cec2cd1ce572961c9e9526",
+            "dd533551d074a53d5fe8421d919be51f399cd0cc25aff96644f8e375847fc39e"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Interés resarcitorio por falta de pago\n\nLa falta total o parcial de pago de los gravámenes, retenciones, percepciones, anticipos y demás pagos a cuenta **genera un interés resarcitorio**, que se devenga **desde los respectivos vencimientos**, sin necesidad de interpelación alguna. (ARTÍCULO 37, Decreto_821_1998_TO_Ley_11683)\n\n### Aspectos complementarios relevantes del mismo artículo:\n\n- **Fijación de la tasa:** La tasa de interés y su mecanismo de aplicación son fijados por la Secretaría de Hacienda, con el límite de no poder exceder el doble de la mayor tasa vigente que perciba el Banco de la Nación Argentina en sus operaciones.\n- **Independencia de otras obligaciones:** Los intereses se devengan sin perjuicio de la actualización del artículo 129 ni de las multas que pudieran corresponder por los artículos 39, 45, 46 y 48.\n- **Subsistencia de la obligación:** La obligación de abonar los intereses subsiste aunque la AFIP no haya efectuado reserva al percibir el pago de la deuda principal, mientras no haya prescripto la acción de cobro.\n- **Capitalización:** Si se cancela total o parcialmente la deuda principal sin cancelarse los intereses devengados, estos se transforman en capital y devengan a su vez los mismos intereses resarcitorios desde ese momento.\n- **Apelación ante el TFN:** Los intereses continúan devengándose durante la tramitación de apelaciones ante el Tribunal Fiscal de la Nación.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-018",
+      "pregunta": "¿Con qué multa se sanciona la omisión de presentar la declaración jurada dentro de los plazos generales?",
+      "anclas": [
+        "6dff77847f543a9ba2c41b9294023533d01f27343584634a72db08787c9c23ab"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0003"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "5e307c7e67e620a01ec2eaaff15b784a962db43dac38b8ea237eb8981652af61",
+            "6dff77847f543a9ba2c41b9294023533d01f27343584634a72db08787c9c23ab",
+            "12cfe6a81f8001380e95b7ee14b375ec0785696ea401db21ecda2fbd14587900"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Multas por omisión de presentación de declaración jurada\n\nLa Ley 11.683 establece **dos regímenes sancionatorios** según el tipo de declaración jurada omitida:\n\n---\n\n### 1. Declaraciones juradas en general (Art. 38)\n\nLa omisión de presentar la declaración jurada dentro de los plazos generales fijados por la AFIP se sanciona **sin necesidad de requerimiento previo** con:\n\n| Sujeto | Multa |\n|---|---|\n| Personas físicas y demás obligados | **$220.000** |\n| Sociedades, asociaciones o entidades constituidas en el país; o establecimientos de empresas estables pertenecientes a sujetos del exterior | **$440.000** |\n\nLas mismas sanciones aplican cuando se omitiere proporcionar los datos del último párrafo del artículo 11. (ARTÍCULO 38, Ley_11683_Procedimiento_Fiscal_TO y Decreto_821_1998_TO_Ley_11683 — montos actualizados por art. 15, Ley N° 27.799, B.O. 2/1/2026).\n\n---\n\n### 2. Declaración jurada informativa sobre operaciones de importación/exportación entre partes independientes (incidencia en Ganancias)\n\n| Sujeto | Multa |\n|---|---|\n| Personas físicas y demás obligados | **$1.500.000** |\n| Sociedades, empresas, fideicomisos, asociaciones o entidades constituidas en el país; o establecimientos de empresas estables pertenecientes a sujetos del exterior | **$10.000.000** |\n\n(Ley_11683_Procedimiento_Fiscal_TO — montos actualizados por art. 17, Ley N° 27.799, B.O. 2/1/2026).\n\n---\n\n**Nota de vigencia:** Ambas actualizaciones de montos rigen a partir del **2 de enero de 2026**, fecha de publicación en el Boletín Oficial de la Ley N° 27.799.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "5e307c7e67e620a01ec2eaaff15b784a962db43dac38b8ea237eb8981652af61",
+            "6dff77847f543a9ba2c41b9294023533d01f27343584634a72db08787c9c23ab",
+            "12cfe6a81f8001380e95b7ee14b375ec0785696ea401db21ecda2fbd14587900"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Multas por omisión de presentación de declaración jurada\n\nLa Ley 11.683 establece **dos regímenes sancionatorios** según el tipo de declaración jurada omitida:\n\n---\n\n### 1. Declaraciones juradas en general (Art. 38)\n\nLa omisión de presentar la declaración jurada dentro de los plazos generales fijados por la AFIP se sanciona **sin necesidad de requerimiento previo** con:\n\n| Sujeto | Multa |\n|---|---|\n| Personas físicas y demás obligados | **$220.000** |\n| Sociedades, asociaciones o entidades constituidas en el país; o establecimientos de empresas estables pertenecientes a sujetos del exterior | **$440.000** |\n\nLas mismas sanciones aplican cuando se omitiere proporcionar los datos del último párrafo del artículo 11. (ARTÍCULO 38, Ley_11683_Procedimiento_Fiscal_TO y Decreto_821_1998_TO_Ley_11683 — montos actualizados por art. 15, Ley N° 27.799, B.O. 2/1/2026).\n\n---\n\n### 2. Declaración jurada informativa sobre operaciones de importación/exportación entre partes independientes (incidencia en Ganancias)\n\n| Sujeto | Multa |\n|---|---|\n| Personas físicas y demás obligados | **$1.500.000** |\n| Sociedades, empresas, fideicomisos, asociaciones o entidades constituidas en el país; o establecimientos de empresas estables pertenecientes a sujetos del exterior | **$10.000.000** |\n\n(Ley_11683_Procedimiento_Fiscal_TO — montos actualizados por art. 17, Ley N° 27.799, B.O. 2/1/2026).\n\n---\n\n**Nota de vigencia:** Ambas actualizaciones de montos rigen a partir del **2 de enero de 2026**, fecha de publicación en el Boletín Oficial de la Ley N° 27.799.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-019",
+      "pregunta": "¿Qué sanción corresponde a quien no emite facturas o comprobantes por sus operaciones comerciales?",
+      "anclas": [
+        "3ae5e89457e267a9c881b5d1df3310096472ac455446af850f48950b7d74dccd",
+        "e08dc64299ad17862bccee9b88545c5cce9a167bc01baf7949014fd88484ca78"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0003",
+        "DOC-0009"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "3ae5e89457e267a9c881b5d1df3310096472ac455446af850f48950b7d74dccd",
+            "e08dc64299ad17862bccee9b88545c5cce9a167bc01baf7949014fd88484ca78",
+            "12cfe6a81f8001380e95b7ee14b375ec0785696ea401db21ecda2fbd14587900"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Sanción por no emisión de facturas o comprobantes\n\nLa conducta de **no emitir facturas o comprobantes equivalentes** por una o más operaciones comerciales, industriales, agropecuarias o de prestación de servicios —en las formas, requisitos y condiciones que establezca la AFIP— configura una infracción expresamente tipificada.\n\nEsta conducta está prevista como causal de **clausura** en el inciso a) de los artículos correspondientes tanto en el texto ordenado de la Ley 11.683 como en el Decreto 821/1998 (T.O. Ley 11.683).\n\n(Inciso a), Clausura – Ley_11683_Procedimiento_Fiscal_TO; Inciso a), Artículo sobre sanciones – Decreto_821_1998_TO_Ley_11683)\n\n---\n\n### Límite de la respuesta\n\nEl contexto provisto **tipifica la conducta** y la encuadra como causal de clausura, pero **no especifica el quantum de la sanción** (cantidad de días de clausura, monto de multa asociada, ni condiciones de reincidencia) para esta infracción en particular.\n\nPara determinar el alcance completo de la sanción aplicable (días de clausura, multa accesoria, procedimiento), sería necesario contar con el articulado completo que regula la clausura en la Ley 11.683, el cual no obra en el contexto provisto.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "3ae5e89457e267a9c881b5d1df3310096472ac455446af850f48950b7d74dccd",
+            "e08dc64299ad17862bccee9b88545c5cce9a167bc01baf7949014fd88484ca78",
+            "12cfe6a81f8001380e95b7ee14b375ec0785696ea401db21ecda2fbd14587900"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Sanción por no emisión de facturas o comprobantes\n\nLa conducta de **no emitir facturas o comprobantes equivalentes** por una o más operaciones comerciales, industriales, agropecuarias o de prestación de servicios —en las formas, requisitos y condiciones que establezca la AFIP— configura una infracción expresamente tipificada.\n\nEsta conducta está prevista como causal de **clausura** en el inciso a) de los artículos correspondientes tanto en el texto ordenado de la Ley 11.683 como en el Decreto 821/1998 (T.O. Ley 11.683).\n\n(Inciso a), Clausura – Ley_11683_Procedimiento_Fiscal_TO; Inciso a), Artículo sobre sanciones – Decreto_821_1998_TO_Ley_11683)\n\n---\n\n### Límite de la respuesta\n\nEl contexto provisto **tipifica la conducta** y la encuadra como causal de clausura, pero **no especifica el quantum de la sanción** (cantidad de días de clausura, monto de multa asociada, ni condiciones de reincidencia) para esta infracción en particular.\n\nPara determinar el alcance completo de la sanción aplicable (días de clausura, multa accesoria, procedimiento), sería necesario contar con el articulado completo que regula la clausura en la Ley 11.683, el cual no obra en el contexto provisto.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-022",
+      "pregunta": "¿Cuándo puede AFIP disponer la clausura preventiva de un establecimiento?",
+      "anclas": [
+        "9fc2af0019a959ccfd99f7664a598edf8c8ff7867598b40cc6fdc464c828d6e6",
+        "30a70348651805aaf0412ffdd87de818c47684b31a24d4588df718f940b6ecf3"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0003",
+        "DOC-0009"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "3ec10b9703628ec7fd1696f1e2d3d82599229235de49e1dafb7cb5750ae2354f",
+            "ae3261c9c09649c80b9e9d5e7d205eaad9cd24490133deec353a95d1d80438c3",
+            "30a70348651805aaf0412ffdd87de818c47684b31a24d4588df718f940b6ecf3"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Clausura Preventiva: Condiciones para su Procedencia\n\nLa AFIP puede disponer la clausura preventiva de un establecimiento cuando se verifiquen **concurrentemente** los siguientes requisitos:\n\n### Requisitos sustantivos\n\n**1. Pluralidad de infracciones**\nEl funcionario autorizado por AFIP debe constatar que se han configurado **dos (2) o más** de los hechos u omisiones previstos en el artículo 40 de la Ley 11.683.\n(Artículo 35 inciso f), VERIFICACION Y FISCALIZACION - Ley_11683_Procedimiento_Fiscal_TO)\n\n**2. Condición concurrente** — debe darse *al menos una* de las siguientes:\n- Que exista un **grave perjuicio**, o\n- Que el responsable registre **antecedentes** por haber cometido la misma infracción en un período **no superior a dos (2) años** desde que se detectó la anterior, siempre que se cuente con resolución condenatoria, aun cuando esta última no haya quedado firme.\n\n(Artículo 35 inciso f) —sustituido por art. 188, Ley N° 27.430, B.O. 29/12/2017—, VERIFICACION Y FISCALIZACION - Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Requisito formal posterior\n\nUna vez dispuesta la clausura preventiva, **debe ser comunicada de inmediato** al juez federal o en lo Penal Económico, según corresponda, para que —previa audiencia con el responsable— resuelva mantenerla o dejarla sin efecto. La medida **no puede extenderse más de tres (3) días** sin resolución judicial de mantenimiento.\n(ARTÍCULO 75, De la clausura preventiva - Decreto_821_1998_TO_Ley_11683)",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "3ec10b9703628ec7fd1696f1e2d3d82599229235de49e1dafb7cb5750ae2354f",
+            "ae3261c9c09649c80b9e9d5e7d205eaad9cd24490133deec353a95d1d80438c3",
+            "30a70348651805aaf0412ffdd87de818c47684b31a24d4588df718f940b6ecf3"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Clausura Preventiva: Condiciones para su Procedencia\n\nLa AFIP puede disponer la clausura preventiva de un establecimiento cuando se verifiquen **concurrentemente** los siguientes requisitos:\n\n### Requisitos sustantivos\n\n**1. Pluralidad de infracciones**\nEl funcionario autorizado por AFIP debe constatar que se han configurado **dos (2) o más** de los hechos u omisiones previstos en el artículo 40 de la Ley 11.683.\n(Artículo 35 inciso f), VERIFICACION Y FISCALIZACION - Ley_11683_Procedimiento_Fiscal_TO)\n\n**2. Condición concurrente** — debe darse *al menos una* de las siguientes:\n- Que exista un **grave perjuicio**, o\n- Que el responsable registre **antecedentes** por haber cometido la misma infracción en un período **no superior a dos (2) años** desde que se detectó la anterior, siempre que se cuente con resolución condenatoria, aun cuando esta última no haya quedado firme.\n\n(Artículo 35 inciso f) —sustituido por art. 188, Ley N° 27.430, B.O. 29/12/2017—, VERIFICACION Y FISCALIZACION - Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Requisito formal posterior\n\nUna vez dispuesta la clausura preventiva, **debe ser comunicada de inmediato** al juez federal o en lo Penal Económico, según corresponda, para que —previa audiencia con el responsable— resuelva mantenerla o dejarla sin efecto. La medida **no puede extenderse más de tres (3) días** sin resolución judicial de mantenimiento.\n(ARTÍCULO 75, De la clausura preventiva - Decreto_821_1998_TO_Ley_11683)",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-026",
+      "pregunta": "En el estado de resultados de Pampa Energía al 31/03/2026, ¿qué importe se registró en la línea \"Impuesto a las ganancias\" y con qué signo?",
+      "anclas": [
+        "fd6b3947e848418535265f6e24dfd9597a6706c99f949930fd2214042350ebaf",
+        "720db8d467660af2e8f112791e637b809769688237cb5ab7a35ddf8320db7ef7"
+      ],
+      "silos_oraculo": [
+        "financiero"
+      ],
+      "document_ids": [
+        "DOC-0016"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "6a68e0c048f63341722a4f896446f46dafef63062962849cbf7de353ef2f1064",
+            "995234770482a9961d1b6ba6e5a6a700ad026ecc93844ff21e939f2b7d2fc560",
+            "c0430ee9f60a81a83bc96b24b388fa0953cb98630642f1eeb46b3ba6d023505f"
+          ],
+          "silos_recuperados": [
+            "financiero",
+            "financiero",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene información del **balance (estado de situación patrimonial)** consolidado al 31/03/2026 y 31/12/2025 — específicamente líneas del pasivo y patrimonio neto — y notas sobre partes relacionadas de TGS. No se incluye el **estado de resultados** del período de tres meses finalizado el 31/03/2026.\n\nPara responder la pregunta sería necesario contar con el estado de resultados consolidado condensado intermedio del trimestre enero-marzo 2026, que debería exponer la línea \"Impuesto a las ganancias\" (cargo o crédito del período) con su importe y signo correspondiente.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "6a68e0c048f63341722a4f896446f46dafef63062962849cbf7de353ef2f1064",
+            "995234770482a9961d1b6ba6e5a6a700ad026ecc93844ff21e939f2b7d2fc560",
+            "c0430ee9f60a81a83bc96b24b388fa0953cb98630642f1eeb46b3ba6d023505f"
+          ],
+          "silos_recuperados": [
+            "financiero",
+            "financiero",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene información del **balance (estado de situación patrimonial)** consolidado al 31/03/2026 y 31/12/2025 — específicamente líneas del pasivo y patrimonio neto — y notas sobre partes relacionadas de TGS. No se incluye el **estado de resultados** del período de tres meses finalizado el 31/03/2026.\n\nPara responder la pregunta sería necesario contar con el estado de resultados consolidado condensado intermedio del trimestre enero-marzo 2026, que debería exponer la línea \"Impuesto a las ganancias\" (cargo o crédito del período) con su importe y signo correspondiente.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-027",
+      "pregunta": "¿Qué importe registra Pampa en \"Activo por impuesto diferido\" dentro del activo no corriente al 31/03/2026?",
+      "anclas": [
+        "b7674a13915ab4fbffa1720dd0c8852030f82fa24373617ab33991bcf23a7941",
+        "1d17453a1d5f9d1d19f36d5dd65770b45c25a5e8a0115faacc0c8505f14b528c"
+      ],
+      "silos_oraculo": [
+        "financiero"
+      ],
+      "document_ids": [
+        "DOC-0016"
+      ],
+      "contexto_identico": true,
+      "respuesta_identica": true,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "de0fba67004ca2149a2103f26dd572136f6a836196ea787bbe584db6f5fc3c9a",
+            "8eee52e3977c1991aba56eea8061358cddbc3b80b23c179b92427283f01672e6",
+            "97324c35046ec9d553b95d5400131a97e05b409196117cbf6e5580452e592782"
+          ],
+          "silos_recuperados": [
+            "financiero",
+            "financiero",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "El contexto provisto no incluye una línea de \"Activo por impuesto diferido\" dentro del activo no corriente del balance consolidado de Pampa (documento **TR-consolidado-03-2026_VF-Clean**). El fragmento disponible de ese estado de situación patrimonial solo expone partidas del pasivo no corriente y corriente.\n\nLo que sí surge del contexto es el detalle de la **nota de impuesto diferido** (Nota 11.3, **Pampa_EEFF_Consolidado_1Q2026**), donde se informa:\n\n- **Activo por impuesto diferido al 31/03/2026: 445.408** (en la moneda de presentación del documento).\n- **Pasivo por impuesto diferido al 31/03/2026: (103.735)**.\n\nSin embargo, no puedo confirmar que ese importe de 445.408 sea el valor que figura como línea del activo no corriente en el balance consolidado, ya que esa sección del balance no está disponible en el contexto provisto.\n\n**Qué faltaría para responder con precisión:** el fragmento del estado de situación patrimonial consolidado correspondiente al activo no corriente (donde debería figurar la línea \"Activo por impuesto diferido\" con su referencia a nota).",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "de0fba67004ca2149a2103f26dd572136f6a836196ea787bbe584db6f5fc3c9a",
+            "8eee52e3977c1991aba56eea8061358cddbc3b80b23c179b92427283f01672e6",
+            "97324c35046ec9d553b95d5400131a97e05b409196117cbf6e5580452e592782"
+          ],
+          "silos_recuperados": [
+            "financiero",
+            "financiero",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "El contexto provisto no incluye una línea de \"Activo por impuesto diferido\" dentro del activo no corriente del balance consolidado de Pampa (documento **TR-consolidado-03-2026_VF-Clean**). El fragmento disponible de ese estado de situación patrimonial solo expone partidas del pasivo no corriente y corriente.\n\nLo que sí surge del contexto es el detalle de la **nota de impuesto diferido** (Nota 11.3, **Pampa_EEFF_Consolidado_1Q2026**), donde se informa:\n\n- **Activo por impuesto diferido al 31/03/2026: 445.408** (en la moneda de presentación del documento).\n- **Pasivo por impuesto diferido al 31/03/2026: (103.735)**.\n\nSin embargo, no puedo confirmar que ese importe de 445.408 sea el valor que figura como línea del activo no corriente en el balance consolidado, ya que esa sección del balance no está disponible en el contexto provisto.\n\n**Qué faltaría para responder con precisión:** el fragmento del estado de situación patrimonial consolidado correspondiente al activo no corriente (donde debería figurar la línea \"Activo por impuesto diferido\" con su referencia a nota).",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-031",
+      "pregunta": "¿Cuál fue el resultado financiero neto de Pampa en el trimestre cerrado el 31/03/2026?",
+      "anclas": [
+        "385a20a5fe4060059b1561669154a3097459ac58684d3f1471d29eb2fe76f69e"
+      ],
+      "silos_oraculo": [
+        "financiero"
+      ],
+      "document_ids": [
+        "DOC-0016"
+      ],
+      "contexto_identico": false,
+      "respuesta_identica": false,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "c865a35eccc6bc7b8356b977168a0619be6566561e5975ab74355a5cef97b90f",
+            "056a9b8a1c19e75ed085c2a947d12738c0a9f879bc986f62af1c02953dc3312b",
+            "995234770482a9961d1b6ba6e5a6a700ad026ecc93844ff21e939f2b7d2fc560"
+          ],
+          "silos_recuperados": [
+            "contable",
+            "contable",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto incluye únicamente fragmentos de las notas a los estados financieros (datos sobre proveedores y pasivos por arrendamiento con partes relacionadas) y los párrafos de introducción y conclusión del informe de revisión de Price Waterhouse & Co. No se encuentra en el contexto el estado consolidado del resultado integral ni ningún detalle del resultado financiero neto (ingresos financieros, costos financieros, diferencias de cambio, resultados por instrumentos financieros, etc.) correspondiente al período de tres meses finalizado el 31 de marzo de 2026.\n\nPara responder esta pregunta sería necesario contar con el estado consolidado del resultado integral o la nota de resultados financieros del documento **TR-consolidado-03-2026_VF-Clean**.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "995234770482a9961d1b6ba6e5a6a700ad026ecc93844ff21e939f2b7d2fc560",
+            "c0430ee9f60a81a83bc96b24b388fa0953cb98630642f1eeb46b3ba6d023505f",
+            "95926cdd41822e7c42f335d8e5441db8e958d403bf7fc90636bd3aa7420f3c1f"
+          ],
+          "silos_recuperados": [
+            "financiero",
+            "financiero",
+            "financiero"
+          ],
+          "ancla_en_contexto": false,
+          "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene información sobre saldos de posiciones activas y pasivas con partes relacionadas (créditos por ventas, deudas comerciales, pasivos por arrendamiento) y transacciones con Pampa Energía S.A. en el período de tres meses finalizado el 31.03.2026, pero **no incluye el estado de resultados financieros consolidados** que permita determinar el resultado financiero neto de Pampa Energía S.A. como contraparte, ni el resultado financiero neto de TGS con Pampa en dicho trimestre de forma desagregada y completa.\n\nPara responder esta pregunta se necesitaría contar con:\n- El estado de resultados consolidado de TGS (o de Pampa Energía, según corresponda) para el período de tres meses finalizado el 31.03.2026, con el detalle de ingresos y egresos financieros.\n- O bien, una nota específica que consolide los resultados financieros netos con Pampa Energía S.A. para ese trimestre.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    },
+    {
+      "id": "G-P-037",
+      "pregunta": "¿Cómo se determina y paga el interés de las Obligaciones Negociables Clase IV de MSU Energy, y cuándo se amortiza su capital?",
+      "anclas": [
+        "a7f9ee400271a2fb4a94aeba2999eb1730b74f806e8cc01bbbdb05653bab4a12"
+      ],
+      "silos_oraculo": [
+        "impositivo"
+      ],
+      "document_ids": [
+        "DOC-0015"
+      ],
+      "contexto_identico": false,
+      "respuesta_identica": false,
+      "brazos": {
+        "B0": {
+          "chunk_uids": [
+            "a7f9ee400271a2fb4a94aeba2999eb1730b74f806e8cc01bbbdb05653bab4a12",
+            "c0da91a938d0394d541ba193a9d35933ad53a2ed48abb6f8e780bd342df041ae",
+            "7cc47c683713c2ec73d0b3f16e35755aaaac5eefae898fc5118fe25b612daaa6"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "financiero",
+            "contable"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Interés y Amortización – ON Clase IV MSU Energy\n\n### Tasa de Interés\n\nLa tasa de interés es **fija**, y su nivel específico se determina mediante un **proceso de licitación**, conforme al procedimiento descripto en la sección \"Plan de Distribución\" del Suplemento. No se establece en el documento un valor porcentual predefinido, sino que surge del resultado de dicha licitación.\n(Condiciones generales, MSU_ON_ClaseIV)\n\n### Pago de Intereses\n\nLos intereses se pagan:\n- **En forma semestral**\n- **Por período vencido**\n- En las respectivas **Fechas de Pago de Intereses**\n- Si una fecha de pago no fuera Día Hábil, el pago se realiza el **primer Día Hábil posterior**\n\n(Condiciones generales, MSU_ON_ClaseIV)\n\n### Amortización del Capital\n\nEl capital se amortiza **íntegramente al vencimiento**, a los **24 meses** contados desde la **Fecha de Emisión y Liquidación**. No hay amortizaciones parciales anticipadas previstas en el contexto disponible.\n(Condiciones generales y carátula, MSU_ON_ClaseIV)\n\n---\n\n**Nota sobre límite de evidencia:** El contexto no especifica el valor porcentual exacto de la tasa fija resultante de la licitación, ya que ese dato se comunica mediante el **Aviso de Resultados** publicado con posterioridad al cierre del Período de Licitación Pública.",
+          "veto": false,
+          "faithfulness": 1.0
+        },
+        "B1": {
+          "chunk_uids": [
+            "a7f9ee400271a2fb4a94aeba2999eb1730b74f806e8cc01bbbdb05653bab4a12",
+            "185ebb974274dd3cb384d2aa6606e333b55992ed6a52dc8365f08eef6d53bdd6",
+            "1146cc65041a1660f475b5763e512b029640aa007416e839c91c595d2cc48690"
+          ],
+          "silos_recuperados": [
+            "impositivo",
+            "impositivo",
+            "impositivo"
+          ],
+          "ancla_en_contexto": true,
+          "respuesta": "## Intereses y Amortización – ON Clase IV MSU Energy\n\n### 1. Determinación de la Tasa de Interés\n\nLas ON Clase IV devengan intereses a una **tasa fija nominal anual** (la \"Tasa de Corte\"), truncada a dos decimales, que surge del proceso de licitación pública descripto en el Plan de Distribución del Suplemento. La tasa resultante es informada mediante el **Aviso de Resultados** publicado en la AIF de la CNV, la web de la Emisora, el micrositio SIOPEL del MAE y el Boletín Diario de la BCBA (Tasa de Interés y MSU ENERGY S.A. Emisora, MSU_ON_ClaseIV).\n\n### 2. Pago de Intereses\n\n| Aspecto | Detalle |\n|---|---|\n| **Periodicidad** | Semestral, por período vencido |\n| **Fechas de Pago** | Día idéntico a la Fecha de Emisión y Liquidación, en los meses **7, 12 y 18** desde dicha fecha, y en la **Fecha de Vencimiento** |\n| **Día no hábil** | Se paga el primer Día Hábil posterior |\n| **Base de cálculo** | Días reales transcurridos / 365 |\n\n(Fechas de Pago de Intereses y Base de cálculo, MSU_ON_ClaseIV)\n\n### 3. Amortización del Capital\n\nEl capital es amortizado **íntegramente en un único pago** en la Fecha de Vencimiento, que opera a los **24 meses** contados desde la Fecha de Emisión y Liquidación. El precio de emisión es del **100% del valor nominal**. La fecha exacta de vencimiento se informa mediante el Aviso de Resultados (Amortización, Fecha de Vencimiento y Precio de Emisión, MSU_ON_ClaseIV).\n\n---\n\n**En síntesis:** estructura de *bullet bond* con tasa fija licitada, cuatro pagos de interés (meses 7, 12, 18 y vencimiento) y devolución total del capital al mes 24.",
+          "veto": false,
+          "faithfulness": 1.0
+        }
+      }
+    }
+  ]
+}

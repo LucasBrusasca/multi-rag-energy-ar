@@ -1,0 +1,532 @@
+[
+ {
+  "caso": 1,
+  "pregunta": "¿Qué ocurre si una empresa del sector eléctrico incumple las obligaciones que le impone el marco regulatorio?",
+  "dosis": 0,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [],
+  "respuesta": "## Consecuencias del incumplimiento del marco regulatorio eléctrico\n\nCon base en el contexto provisto, puedo responder **parcialmente** esta pregunta.\n\n---\n\n### Lo que el contexto sustenta\n\nRespecto a una categoría específica de incumplimiento —**conductas anticompetitivas y abuso de posición dominante**—, el artículo 19 establece el siguiente mecanismo de respuesta:\n\n1. **Intervención regulatoria inicial**: ante cualquier situación que pueda calificarse como competencia desleal, abuso de posición dominante o práctica prohibida por el artículo 1° de la Ley N° 27.442, el **ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD** (ENRE) debe dar intervención a la **Autoridad Nacional de Defensa de la Competencia** (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n2. **Proceso decisorio con informes técnicos**: antes de resolver, la Autoridad de Defensa de la Competencia debe requerir y considerar fundadamente informes del **Organismo Encargado del Despacho** y del **ENRE**, conforme al artículo 17 de la Ley N° 27.442 (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n3. **Facultad cautelar del ENRE**: sin perjuicio de lo anterior, el ENRE puede **adoptar medidas propias** para asegurar el cumplimiento de las disposiciones del artículo 19 y del Capítulo VII de la ley, en tutela de los derechos de los usuarios (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n---\n\n### Lo que el contexto **no** permite responder\n\nEl contexto provisto **no contiene** información sobre:\n\n- El **régimen general de sanciones** (multas, suspensiones, revocación de licencias u otras penalidades) aplicable a incumplimientos distintos de las conductas anticompetitivas.\n- El **Capítulo VII** de la ley, al que el artículo 19 remite expresamente, no fue incluido en el contexto.\n- Los **artículos 56 y 57**, referenciados en el artículo 20 para la fijación de la tasa de inspección y control, tampoco están disponibles.\n\nPara una respuesta completa sobre el régimen sancionatorio general, sería necesario contar con el **Capítulo VII de la Ley 24.065** y las disposiciones reglamentarias del ENRE en materia de infracciones y sanciones.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 1,
+  "pregunta": "¿Qué ocurre si una empresa del sector eléctrico incumple las obligaciones que le impone el marco regulatorio?",
+  "dosis": 1,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Consecuencias del incumplimiento regulatorio en el sector eléctrico\n\nEl contexto provisto permite identificar **dos planos de consecuencias**, según el tipo de incumplimiento:\n\n---\n\n### 1. Incumplimientos en materia de competencia (Ley 24.065)\n\nSi un actor del mercado eléctrico (generador, transportista o distribuidor) incurre en **competencia desleal, abuso de posición dominante o prácticas prohibidas** por el artículo 1° de la Ley N° 27.442, el procedimiento es el siguiente:\n\n- El **ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD** (ENRE) da intervención a la **Autoridad Nacional de Defensa de la Competencia** (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n- Antes de decidir, dicha Autoridad **requerirá y considerará fundadamente** informes del Organismo Encargado del Despacho y del ENRE, conforme al artículo 17 de la Ley N° 27.442 (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n- Adicionalmente, el ENRE **podrá adoptar medidas propias** para asegurar el cumplimiento de las disposiciones del artículo 19 y del Capítulo VII de la ley, **en tutela de los derechos de los usuarios** (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n---\n\n### 2. Incumplimientos de obligaciones formales tributarias (Ley 11.683)\n\nSi la empresa incumple obligaciones formales ante la AFIP, queda sujeta a sanciones por conductas tales como:\n\n- No emitir facturas o comprobantes equivalentes (Inciso a, Decreto_821_1998_TO_Ley_11683).\n- No llevar registraciones o llevarlas de forma incompleta o defectuosa (Inciso b, Decreto_821_1998_TO_Ley_11683).\n- Transportar mercaderías sin respaldo documental exigido por AFIP (Inciso c, Decreto_821_1998_TO_Ley_11683).\n- No estar inscripta como contribuyente o responsable cuando estuviere obligada (Inciso d, Decreto_821_1998_TO_Ley_11683).\n- No poseer o no conservar facturas o comprobantes que acrediten la adquisición o tenencia de bienes y/o servicios necesarios para su actividad (Inciso e, Decreto_821_1998_TO_Ley_11683).\n\n---\n\n### Límite de la respuesta\n\nEl contexto **no especifica** el tipo ni la graduación de las sanciones concretas aplicables (multas, clausuras, inhabilitaciones, etc.) en ninguno de los dos planos. Para responder sobre la cuantía o naturaleza exacta de las penalidades, sería necesario contar con los artículos sancionatorios específicos de la Ley 24.065 (Capítulo VII) y de la Ley 11.683 que regulan dichas consecuencias.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 1,
+  "pregunta": "¿Qué ocurre si una empresa del sector eléctrico incumple las obligaciones que le impone el marco regulatorio?",
+  "dosis": 2,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Consecuencias del incumplimiento regulatorio en el sector eléctrico\n\nEl contexto provisto permite identificar dos planos de consecuencias, según la naturaleza del incumplimiento:\n\n---\n\n### 1. Incumplimientos en materia de competencia y conducta de mercado\n\nSi un actor del mercado eléctrico (generador, transportista o distribuidor) incurre en **competencia desleal, abuso de posición dominante o prácticas prohibidas**, el procedimiento es el siguiente:\n\n- El **ENRE dará intervención a la Autoridad Nacional de Defensa de la Competencia** (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n- Antes de decidir, dicha Autoridad **requerirá y considerará fundadamente informes** del Organismo Encargado del Despacho y del ENRE, conforme al artículo 17 de la Ley N° 27.442 (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n- Adicionalmente, el **ENRE podrá adoptar medidas propias** para asegurar el cumplimiento de las disposiciones del artículo 19 y del Capítulo VII de la ley, **en tutela de los derechos de los usuarios** (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n---\n\n### 2. Incumplimientos de obligaciones formales tributarias\n\nSi la empresa incumple obligaciones formales ante la AFIP, queda expuesta a sanciones por conductas tales como:\n\n- No emitir facturas o comprobantes equivalentes (inciso a, Decreto_821_1998_TO_Ley_11683).\n- No llevar registraciones o llevarlas en forma incompleta o defectuosa (inciso b, Decreto_821_1998_TO_Ley_11683).\n- No conservar facturas o comprobantes que acrediten adquisición o tenencia de bienes y servicios necesarios para la actividad (inciso e, Decreto_821_1998_TO_Ley_11683).\n- No poseer o no mantener operativos los **instrumentos de medición y control de la producción** dispuestos por normas de cumplimiento obligatorio (inciso f, Decreto_821_1998_TO_Ley_11683).\n- Tener el **50% o más del personal sin registrar** en establecimientos de al menos 10 empleados (inciso g, Decreto_821_1998_TO_Ley_11683).\n\n---\n\n### Límite de la respuesta\n\nEl contexto **no especifica el tipo ni la cuantía de las sanciones concretas** (multas, clausuras, inhabilitaciones) aplicables en cada caso. Para responder esa dimensión sería necesario contar con los artículos sancionatorios específicos de la Ley 24.065 (Capítulo VII) y de la Ley 11.683, que no están incluidos en el contexto provisto.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 1,
+  "pregunta": "¿Qué ocurre si una empresa del sector eléctrico incumple las obligaciones que le impone el marco regulatorio?",
+  "dosis": 3,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683",
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "## Consecuencias del incumplimiento regulatorio para empresas del sector eléctrico\n\nEl contexto provisto permite responder esta pregunta de forma **parcial**, distinguiendo dos planos normativos:\n\n---\n\n### 1. Marco regulatorio eléctrico (Ley 24.065)\n\nEl contexto no contiene disposiciones específicas sobre sanciones generales por incumplimiento del marco regulatorio eléctrico. Sin embargo, sí establece dos mecanismos concretos:\n\n- **Ante conductas anticompetitivas o abuso de posición dominante**: el ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD (ENRE) debe dar intervención a la Autoridad Nacional de Defensa de la Competencia, la cual requerirá informes del Organismo Encargado del Despacho y del propio ENRE antes de decidir. Adicionalmente, el ENRE **podrá adoptar medidas propias** para asegurar el cumplimiento, en tutela de los derechos de los usuarios (ARTÍCULO 19, Ley_24065_Energia_Electrica_TO).\n\n- **Obligación de pago de tasa de inspección y control**: generadores, transportistas y distribuidores deben abonarla conforme lo fijen los artículos 56 y 57 de la misma ley, aunque el contenido de esos artículos no obra en el contexto provisto (ARTÍCULO 20, Ley_24065_Energia_Electrica_TO).\n\n---\n\n### 2. Plano tributario-formal (Ley 11.683)\n\nSi la empresa del sector eléctrico incurre en incumplimientos de naturaleza fiscal-formal, el régimen aplicable prevé:\n\n- **Sanciones** por conductas como: no emitir facturas, no llevar registraciones o llevarlas en forma deficiente, no inscribirse ante la AFIP, no conservar comprobantes de adquisición de bienes/servicios, o no mantener operativos los instrumentos de medición y control exigidos por normas obligatorias (Artículo de sanciones, Decreto_821_1998_TO_Ley_11683, incisos a) a f)).\n\n- **Clausura del establecimiento**: durante la cual cesa totalmente la actividad, salvo la necesaria para conservación de bienes o continuidad de procesos productivos que no puedan interrumpirse por su naturaleza. No puede suspenderse el pago de salarios ni obligaciones previsionales (ARTÍCULO 43, Ley_11683_Procedimiento_Fiscal_TO).\n\n- **Quebrantamiento de clausura**: quien viole la clausura o los sellos utilizados para hacerla efectiva será sancionado con **arresto de 10 a 30 días y nueva clausura por el doble del tiempo original**, siendo competentes los jueces en lo penal económico (Capital Federal) o jueces federales (resto del país) (ARTÍCULO 44, Ley_11683_Procedimiento_Fiscal_TO).\n\n---\n\n### Límite de la respuesta\n\n**No puedo responder** con la evidencia disponible sobre:\n- El régimen general de sanciones del ENRE por incumplimientos técnicos u operativos (arts. 56 y 57 de la Ley 24.065 no están en el contexto).\n- Sanciones específicas por calidad de servicio, seguridad o incumplimiento de obligaciones de inversión.\n\nPara una respuesta completa en esos aspectos, sería necesario contar con los artículos 56 y 57 de la Ley 24.065 y la normativa reglamentaria del ENRE aplicable.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 2,
+  "pregunta": "¿Desde cuándo empieza a correr el término para que el fisco reclame un tributo?",
+  "dosis": 0,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto (Artículo 82, Ley 11.683) regula exclusivamente la **demanda contenciosa del contribuyente contra el Fisco Nacional**: sus supuestos de procedencia, el umbral de cuantía y el plazo de 15 días para interponerla en los casos de los incisos a) y b).\n\nNo contiene disposición alguna sobre el inicio del cómputo del plazo de prescripción o de la acción del Fisco para reclamar tributos.\n\nPara responder adecuadamente, sería necesario contar con las normas de la misma ley que regulan la **prescripción de la acción fiscal** (típicamente los artículos referidos a prescripción, como los arts. 56 y siguientes de la Ley 11.683), los cuales no fueron incluidos en el contexto provisto.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 2,
+  "pregunta": "¿Desde cuándo empieza a correr el término para que el fisco reclame un tributo?",
+  "dosis": 1,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Decreto_1738_1992_Reglamentario_Gas"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto contiene únicamente disposiciones del **Artículo 82 de la Ley 11.683** referidas a la interposición de demanda contenciosa contra el Fisco Nacional, y artículos del **Decreto 1738/1992** reglamentario de la Ley de Gas, ninguno de los cuales regula el inicio del cómputo del plazo para que el Fisco reclame tributos (materia de prescripción o determinación de oficio).\n\nPara responder adecuadamente sería necesario contar con las disposiciones de la Ley 11.683 relativas a **prescripción de la acción del Fisco** (típicamente arts. 56 y siguientes del texto ordenado) o las normas sobre **determinación de oficio**, que no obran en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": true
+ },
+ {
+  "caso": 2,
+  "pregunta": "¿Desde cuándo empieza a correr el término para que el fisco reclame un tributo?",
+  "dosis": 2,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Decreto_1738_1992_Reglamentario_Gas",
+   "ENRE_Resolucion_544_2024"
+  ],
+  "respuesta": "__ERROR__ litellm.InternalServerError: AnthropicException - Server disconnected without sending a response.. Handle with `litellm.InternalServerError`.",
+  "cita_correcta": false,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 2,
+  "pregunta": "¿Desde cuándo empieza a correr el término para que el fisco reclame un tributo?",
+  "dosis": 3,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Decreto_1738_1992_Reglamentario_Gas",
+   "ENRE_Resolucion_544_2024",
+   "Decreto_1738_1992_Reglamentario_Gas"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto no contiene disposiciones sobre el inicio del cómputo del plazo para que el Fisco reclame tributos (prescripción de la acción del Fisco). El Artículo 82 de la Ley 11.683 que figura en el contexto regula exclusivamente la **demanda contenciosa del contribuyente contra el Fisco** (plazos y supuestos para recurrir resoluciones en materia de multas y repetición de tributos), no el plazo de prescripción de la acción fiscal.\n\nPara responder adecuadamente sería necesario contar con los artículos pertinentes de la Ley 11.683 referidos a prescripción (típicamente los artículos 56 y siguientes del texto ordenado), los cuales no están incluidos en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 3,
+  "pregunta": "¿Qué facultades tiene el organismo de control del servicio eléctrico?",
+  "dosis": 0,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [],
+  "respuesta": "## Facultades del organismo de control del servicio eléctrico\n\nCon base en el contexto provisto, el **Ente Nacional Regulador del Gas y la Electricidad** (creado por el artículo 161 de la Ley N° 27.742) es el organismo de control del sector eléctrico, y el texto disponible le asigna las siguientes funciones y obligaciones dentro de su ámbito de competencia:\n\n1. **Regular el transporte y la distribución** de electricidad, asegurando que las tarifas sean justas y razonables sobre la base de costos reales, a fin de cubrir necesidades de inversión y garantizar la prestación continua y regular del servicio (inciso d, Ley 24.065 T.O.).\n\n2. **Incentivar el uso eficiente** de la electricidad mediante la fijación de metodologías tarifarias apropiadas (inciso e, Ley 24.065 T.O.).\n\n3. **Controlar que la actividad del sector eléctrico** se ajuste a los principios y disposiciones de la ley, sujetando su propio accionar a dichos principios (párrafo final, Ley 24.065 T.O.).\n\n---\n\n### Limitación de la respuesta\n\nEl contexto provisto contiene únicamente una **porción** de la Ley 24.065 (incisos d a k y el párrafo final del artículo citado). Las facultades específicas y detalladas del organismo de control —tales como potestades sancionatorias, de fiscalización, de habilitación o de resolución de conflictos— **no están presentes en el fragmento disponible**. Para una respuesta exhaustiva sería necesario contar con los artículos de la ley que regulan específicamente las atribuciones del ente regulador (típicamente los artículos referidos a su creación y competencias).",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 3,
+  "pregunta": "¿Qué facultades tiene el organismo de control del servicio eléctrico?",
+  "dosis": 1,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Facultades del organismo de control del servicio eléctrico\n\nCon base en el contexto provisto, el organismo de control del servicio eléctrico es el **Ente Nacional Regulador del Gas y la Electricidad** (creado por el artículo 161 de la Ley N° 27.742), el cual —junto con la Secretaría de Energía del Ministerio de Economía— debe sujetar su accionar a los siguientes principios y funciones:\n\n- **Regular el transporte y la distribución** de electricidad, asegurando tarifas justas y razonables basadas en costos reales, a fin de cubrir necesidades de inversión y garantizar la prestación continua y regular de los servicios públicos. (Ley_24065_Energia_Electrica_TO)\n- **Incentivar el abastecimiento, transporte, distribución y uso eficiente** de la electricidad mediante metodologías tarifarias apropiadas. (Ley_24065_Energia_Electrica_TO)\n- **Alentar la realización de inversiones privadas** en producción, transporte y distribución, asegurando la competitividad de los mercados donde sea posible. (Ley_24065_Energia_Electrica_TO)\n- **Asegurar la libertad de elección** de los consumidores de energía eléctrica. (Ley_24065_Energia_Electrica_TO)\n- **Establecer procedimientos ágiles** para la operatividad inmediata de señales económicas que vinculen calidad con precio. (Ley_24065_Energia_Electrica_TO)\n- **Promover la eficiente diversificación de la matriz energética**, la incorporación de nuevas tecnologías, la medición inteligente y la gestión de demanda. (Ley_24065_Energia_Electrica_TO)\n- **Propiciar el comercio internacional de energía eléctrica** y la integración de los sistemas regionales en condiciones de seguridad y confiabilidad. (Ley_24065_Energia_Electrica_TO)\n- **Adoptar los recaudos necesarios** para alcanzar la autosuficiencia económico-financiera del sistema eléctrico argentino. (Ley_24065_Energia_Electrica_TO)\n- **Controlar que la actividad del sector eléctrico** se ajuste a los principios y disposiciones de la ley. (Ley_24065_Energia_Electrica_TO)\n\n---\n\n**Limitación:** El contexto provisto enuncia los **principios rectores** a los que debe sujetarse el organismo, pero no detalla el catálogo exhaustivo de facultades específicas (p. ej., potestades sancionatorias, de fiscalización o de habilitación). Para una descripción completa de las atribuciones del ente, sería necesario contar con el articulado específico de la Ley N° 24.065 referido al organismo regulador y/o la Ley N° 27.742, los cuales no obran en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 3,
+  "pregunta": "¿Qué facultades tiene el organismo de control del servicio eléctrico?",
+  "dosis": 2,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "## Facultades del organismo de control del servicio eléctrico\n\nSegún el contexto disponible, la Ley 24.065 (Régimen de la Energía Eléctrica) establece que la **Secretaría de Energía del Ministerio de Economía** y el **Ente Nacional Regulador del Gas y la Electricidad** (creado por el artículo 161 de la Ley N° 27.742) son los organismos de control del sector eléctrico, cada uno dentro de sus respectivos ámbitos de competencia.\n\nSus funciones y principios rectores incluyen:\n\n- **Regular** las actividades de transporte y distribución, asegurando tarifas justas y razonables basadas en costos reales, que cubran necesidades de inversión y garanticen la prestación continua y regular del servicio (Ley_24065_Energia_Electrica_TO, inc. d)\n- **Incentivar** el abastecimiento, transporte, distribución y uso eficiente de la electricidad mediante metodologías tarifarias apropiadas (Ley_24065_Energia_Electrica_TO, inc. e)\n- **Alentar** la realización de inversiones privadas en producción, transporte y distribución, asegurando la competitividad de los mercados (Ley_24065_Energia_Electrica_TO, inc. f)\n- **Asegurar** la libertad de elección de los consumidores (Ley_24065_Energia_Electrica_TO, inc. g)\n- **Establecer** procedimientos ágiles para la operatividad inmediata de señales económicas que vinculen calidad con precio (Ley_24065_Energia_Electrica_TO, inc. h)\n- **Promover** la eficiente diversificación de la matriz energética, la incorporación de nuevas tecnologías, la medición inteligente y la gestión de demanda (Ley_24065_Energia_Electrica_TO, inc. i)\n- **Propiciar** el comercio internacional de energía eléctrica y la integración de sistemas regionales en condiciones de seguridad y confiabilidad (Ley_24065_Energia_Electrica_TO, inc. j)\n- **Adoptar** los recaudos necesarios para alcanzar la autosuficiencia económico-financiera del sistema eléctrico argentino (Ley_24065_Energia_Electrica_TO, inc. k)\n- **Controlar** que la actividad del sector eléctrico se ajuste a los principios y disposiciones de la ley (Ley_24065_Energia_Electrica_TO, párrafo final)\n\n---\n\n**Limitación:** El contexto provisto contiene únicamente los principios y objetivos generales que rigen la actuación de estos organismos. Las facultades específicas, procedimientos y atribuciones detalladas del ente regulador (p. ej., potestad sancionatoria, habilitación de licencias, fiscalización técnica) no están incluidas en el fragmento disponible, por lo que no puedo responder sobre esos aspectos.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 3,
+  "pregunta": "¿Qué facultades tiene el organismo de control del servicio eléctrico?",
+  "dosis": 3,
+  "doc_correcto": "Ley_24065_Energia_Electrica_TO",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Ley_11683_Procedimiento_Fiscal_TO",
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "## Facultades del organismo de control del servicio eléctrico\n\nSegún el contexto disponible, la Ley 24.065 (Régimen de la Energía Eléctrica) establece que el **ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD** —creado por el artículo 161 de la Ley N° 27.742— es el organismo de control del sector eléctrico, actuando junto a la **Secretaría de Energía del Ministerio de Economía**, cada uno dentro de sus respectivos ámbitos de competencia.\n\nEl contexto provisto establece que ambos organismos deben:\n\n- **Sujetar su accionar** a los principios y disposiciones de la Ley 24.065 (REGIMEN DE LA ENERGIA ELECTRICA, Ley_24065_Energia_Electrica_TO).\n- **Controlar que la actividad del sector eléctrico se ajuste** a dichos principios y disposiciones (REGIMEN DE LA ENERGIA ELECTRICA, Ley_24065_Energia_Electrica_TO).\n\nLos principios que enmarcan ese control incluyen, entre otros: regular tarifas justas y razonables, incentivar el uso eficiente de la electricidad, alentar inversiones privadas, asegurar la libertad de elección de los consumidores, promover la diversificación de la matriz energética y adoptar recaudos para la autosuficiencia económico-financiera del sistema eléctrico (REGIMEN DE LA ENERGIA ELECTRICA, Ley_24065_Energia_Electrica_TO).\n\n---\n\n**Limitación:** El contexto provisto no incluye el articulado específico que detalla las facultades concretas del organismo regulador (p. ej., potestades sancionatorias, de fiscalización, de audiencia pública, etc.). Para una respuesta exhaustiva sobre sus atribuciones específicas, sería necesario contar con el texto completo de la Ley 24.065 y/o la Ley 27.742 en sus secciones pertinentes.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 4,
+  "pregunta": "¿Cómo se determina de oficio la materia imponible cuando el contribuyente no presenta la declaración?",
+  "dosis": 0,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [],
+  "respuesta": "## Determinación de Oficio ante Falta de Declaración Jurada\n\n### Procedimiento y modalidades\n\nCuando el contribuyente **no presenta declaraciones juradas**, la AFIP procede a determinar de oficio la materia imponible (o el quebranto impositivo, en su caso) y a liquidar el gravamen correspondiente, mediante **dos modalidades posibles**:\n\n1. **Forma directa**: cuando existe conocimiento cierto de la materia imponible.\n2. **Estimación**: cuando los elementos conocidos solo permiten *presumir* la existencia y magnitud de dicha materia.\n\n(ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Competencia para determinar\n\nLas liquidaciones y actuaciones practicadas por **inspectores y demás empleados** intervinientes en la fiscalización **no constituyen determinación administrativa**. Dicha facultad compete exclusivamente a los **funcionarios que ejercen atribuciones de jueces administrativos**, conforme a los artículos 9°, punto 1, inciso b) y 10 del Decreto N° 618/97.\n\n(ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Instancia previa opcional: acuerdo conclusivo voluntario\n\nAntes del dictado de la resolución determinativa, el Fisco **podrá habilitar** una instancia de acuerdo conclusivo voluntario en los siguientes supuestos:\n\n- Cuando sea necesaria para la **apreciación de los hechos** y la correcta aplicación de la norma al caso concreto.\n- Cuando se requieran **estimaciones, valoraciones o mediciones** de datos que dificulten la cuantificación de la obligación.\n- Cuando se trate de situaciones de **novedad, complejidad o trascendencia** que requieran solución conciliatoria.\n\n(Artículo s/n incorporado a continuación del Art. 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n> **Nota de alcance**: El contexto provisto no incluye el detalle del procedimiento del artículo 17 (vista al contribuyente, plazos de descargo, etc.). Para una descripción completa del trámite determinativo, sería necesario contar con dicho artículo.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 4,
+  "pregunta": "¿Cómo se determina de oficio la materia imponible cuando el contribuyente no presenta la declaración?",
+  "dosis": 1,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Ley_24065_Energia_Electrica_TO"
+  ],
+  "respuesta": "## Determinación de Oficio ante Falta de Declaración Jurada\n\n### Procedencia\n\nCuando el contribuyente **no presenta declaraciones juradas**, o las presentadas resultan impugnables, la AFIP procede a determinar de oficio la materia imponible o el quebranto impositivo, y a liquidar el gravamen correspondiente. (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Modalidades de determinación\n\nEl organismo puede actuar mediante **dos vías alternativas**, según la información disponible:\n\n| Modalidad | Condición de aplicación |\n|---|---|\n| **Directa** | Cuando existe conocimiento cierto de la materia imponible |\n| **Estimación** | Cuando los elementos conocidos solo permiten *presumir* la existencia y magnitud de aquélla |\n\n(ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Competencia para determinar\n\nLas liquidaciones y actuaciones practicadas por **inspectores y demás empleados** intervinientes en la fiscalización **no constituyen determinación administrativa**. Dicha facultad compete exclusivamente a los **funcionarios que ejercen atribuciones de jueces administrativos**, conforme a los artículos 9°, punto 1, inciso b) y 10 del Decreto N° 618/97. (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Instancia previa opcional: Acuerdo Conclusivo Voluntario\n\nAntes del dictado de la resolución determinativa (segundo párrafo del artículo 17), el Fisco **podrá habilitar** una instancia de acuerdo conclusivo voluntario en los siguientes supuestos:\n\n- Cuando sea necesaria para la **apreciación de los hechos determinantes** y la correcta aplicación de la norma al caso concreto.\n- Cuando se requieran **estimaciones, valoraciones o mediciones** de datos o elementos relevantes que dificulten la cuantificación de la obligación.\n- Cuando se trate de situaciones de **novedad, complejidad o trascendencia** que requieran una solución conciliatoria.\n\n(Artículo s/n incorporado a continuación del ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n> **Nota de alcance:** El contexto provisto no incluye el artículo 17 ni el artículo 11 de la Ley 11683 en su texto completo, por lo que no es posible detallar el procedimiento específico del acto resolutivo determinativo ni las liquidaciones del último párrafo del artículo 11.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 4,
+  "pregunta": "¿Cómo se determina de oficio la materia imponible cuando el contribuyente no presenta la declaración?",
+  "dosis": 2,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Ley_24065_Energia_Electrica_TO",
+   "Decreto_1738_1992_Reglamentario_Gas"
+  ],
+  "respuesta": "## Determinación de Oficio ante Falta de Declaración Jurada\n\n### Procedencia\n\nCuando el contribuyente **no presenta declaraciones juradas**, o las presentadas resultan impugnables, la AFIP procede a determinar de oficio la materia imponible o el quebranto impositivo (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n---\n\n### Modalidades de determinación\n\nEl organismo puede actuar mediante **dos vías alternativas**:\n\n| Modalidad | Condición de aplicación |\n|---|---|\n| **Directa** | Cuando existe conocimiento cierto de la materia imponible |\n| **Estimación** | Cuando los elementos conocidos solo permiten *presumir* la existencia y magnitud de aquélla |\n\n(ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n### Competencia para determinar\n\nLas liquidaciones y actuaciones practicadas por **inspectores y demás empleados** intervinientes en la fiscalización **no constituyen determinación administrativa**. Dicha facultad compete exclusivamente a los **funcionarios que ejercen atribuciones de jueces administrativos**, conforme a los artículos 9°, punto 1, inciso b) y 10 del Decreto N° 618/97 (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n---\n\n### Instancia previa opcional: Acuerdo Conclusivo Voluntario\n\nAntes del dictado de la resolución determinativa, el Fisco **podrá habilitar** una instancia de acuerdo conclusivo voluntario cuando concurra alguna de estas situaciones:\n\n- Sea necesaria para la **apreciación de los hechos** determinantes y la correcta aplicación de la norma al caso concreto.\n- Se requieran **estimaciones, valoraciones o mediciones** de datos o elementos que dificulten la cuantificación de la obligación.\n- Se trate de situaciones de **novedad, complejidad o trascendencia** que requieran solución conciliatoria.\n\n(Artículo s/n incorporado a continuación del Art. 16, Ley_11683_Procedimiento_Fiscal_TO)\n\n---\n\n> **Nota de alcance:** El contexto provisto cubre el marco procedimental general del artículo 16. Los pasos específicos del procedimiento de vista y descargo regulados en el artículo 17 de la misma ley no están incluidos en el contexto disponible, por lo que no pueden ser desarrollados en esta respuesta.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 4,
+  "pregunta": "¿Cómo se determina de oficio la materia imponible cuando el contribuyente no presenta la declaración?",
+  "dosis": 3,
+  "doc_correcto": "Ley_11683_Procedimiento_Fiscal_TO",
+  "intrusos": [
+   "Ley_24065_Energia_Electrica_TO",
+   "Decreto_1738_1992_Reglamentario_Gas",
+   "Ley_24065_Energia_Electrica_TO"
+  ],
+  "respuesta": "## Determinación de Oficio por Falta de Declaración Jurada\n\n### Procedencia\n\nCuando el contribuyente **no presenta declaraciones juradas**, o las presentadas resultan impugnables, la AFIP procede a determinar de oficio la materia imponible o el quebranto impositivo, y a liquidar el gravamen correspondiente (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n### Modalidades de determinación\n\nLa determinación puede realizarse por dos vías:\n\n1. **Forma directa**: por conocimiento cierto de la materia imponible.\n2. **Estimación**: cuando los elementos conocidos solo permiten *presumir* la existencia y magnitud de la materia imponible (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n### Competencia para determinar\n\nLas liquidaciones y actuaciones practicadas por **inspectores y demás empleados** intervinientes en la fiscalización **no constituyen determinación administrativa**. Dicha competencia corresponde exclusivamente a los **funcionarios que ejercen atribuciones de jueces administrativos**, conforme a los artículos 9°, punto 1, inciso b) y 10 del Decreto N° 618/97 (ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n### Instancia de acuerdo conclusivo voluntario\n\nCon carácter previo al dictado de la resolución determinativa, el Fisco **podrá habilitar** una instancia de acuerdo conclusivo voluntario en los siguientes supuestos:\n\n- Cuando sea necesaria para la **apreciación de los hechos determinantes** y la correcta aplicación de la norma al caso concreto.\n- Cuando se requieran **estimaciones, valoraciones o mediciones** de datos, elementos o características relevantes que dificulten la cuantificación de la obligación.\n- Cuando se trate de situaciones de **novedad, complejidad o trascendencia** que requieran una solución conciliatoria (Artículo s/n° a continuación del ARTÍCULO 16, Ley_11683_Procedimiento_Fiscal_TO).\n\n---\n\n> **Nota de alcance**: La respuesta se circunscribe íntegramente al régimen procedimental de la Ley 11.683. Los aspectos sustantivos del tributo aplicable (base imponible, alícuotas, etc.) no están cubiertos por el contexto provisto.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 5,
+  "pregunta": "¿Qué porcentaje corresponde retener sobre los pagos alcanzados por el régimen?",
+  "dosis": 0,
+  "doc_correcto": "RG_AFIP_830",
+  "intrusos": [],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl ARTÍCULO 25 de la RG_AFIP_830 hace referencia a que las alícuotas y la escala aplicables se encuentran establecidas en el **Anexo VIII** de la misma norma, pero dicho Anexo no fue incluido en el contexto provisto. Por lo tanto, los porcentajes concretos de retención no pueden determinarse a partir de la evidencia disponible.\n\nPara responder esta pregunta sería necesario contar con el contenido del **Anexo VIII de la RG_AFIP_830**, que contiene las alícuotas, la escala y los montos no sujetos a retención según el concepto y el carácter del beneficiario frente al impuesto a las ganancias (ARTÍCULO 25, RG_AFIP_830).",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 5,
+  "pregunta": "¿Qué porcentaje corresponde retener sobre los pagos alcanzados por el régimen?",
+  "dosis": 1,
+  "doc_correcto": "RG_AFIP_830",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto menciona la existencia de alícuotas y una escala establecidas en el **Anexo VIII** de la RG AFIP 830 (ARTÍCULO 25, RG_AFIP_830), pero dicho Anexo VIII no fue incluido en el contexto disponible. Por lo tanto, los valores concretos de las alícuotas y la escala aplicables no pueden determinarse a partir de la evidencia provista.\n\n**Información faltante:** contenido del Anexo VIII de la RG AFIP 830, que es donde se establecen los porcentajes de retención según concepto sujeto a retención y carácter del beneficiario frente al impuesto a las ganancias.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": true
+ },
+ {
+  "caso": 5,
+  "pregunta": "¿Qué porcentaje corresponde retener sobre los pagos alcanzados por el régimen?",
+  "dosis": 2,
+  "doc_correcto": "RG_AFIP_830",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos",
+   "Res_SE_61_1992_Los_Procedimientos"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder con precisión.\n\nEl contexto disponible menciona la existencia de alícuotas y una escala establecidas en el **Anexo VIII** de la RG AFIP 830 (ARTÍCULO 25, RG_AFIP_830), y que la retención se practica conforme al concepto sujeto a retención y al carácter del beneficiario frente al impuesto a las ganancias. Sin embargo, **el contenido del Anexo VIII no fue provisto en el contexto**, por lo que los porcentajes concretos de retención no están disponibles para ser citados.\n\n**Para responder esta pregunta sería necesario contar con:** el texto del Anexo VIII de la RG AFIP 830, que contiene las alícuotas y la escala aplicables.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": true
+ },
+ {
+  "caso": 5,
+  "pregunta": "¿Qué porcentaje corresponde retener sobre los pagos alcanzados por el régimen?",
+  "dosis": 3,
+  "doc_correcto": "RG_AFIP_830",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos",
+   "Res_SE_61_1992_Los_Procedimientos",
+   "ENRE_Resolucion_544_2024"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto provisto incluye el **Artículo 25 de la RG AFIP 830**, que menciona la existencia de alícuotas y escala aplicables a las retenciones, pero remite expresamente al **Anexo VIII** de esa resolución para su determinación concreta:\n\n> *\"conforme al concepto sujeto a retención y al carácter que reviste el beneficiario frente al impuesto a las ganancias\"* (ARTÍCULO 25, RG_AFIP_830)\n\nDicho **Anexo VIII no fue incluido en el contexto disponible**, por lo que los porcentajes específicos de retención no pueden ser informados sin riesgo de error.\n\n**Para responder esta pregunta sería necesario contar con:** el texto del Anexo VIII de la RG AFIP 830, que contiene los montos no sujetos a retención, las alícuotas y la escala según concepto y carácter del beneficiario.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": true
+ },
+ {
+  "caso": 6,
+  "pregunta": "¿Cómo se remunera la energía en el mercado mayorista?",
+  "dosis": 0,
+  "doc_correcto": "Res_SE_61_1992_Los_Procedimientos",
+  "intrusos": [],
+  "respuesta": "## Remuneración de la Energía en el Mercado Mayorista\n\n### Precio de la Energía en el Nodo\n\nLa remuneración depende de si el nodo se encuentra en un **área vinculada o desvinculada** del Mercado (Sección 3.5.1, Res_SE_61_1992_Los_Procedimientos):\n\n- **Área vinculada:** el precio de nodo de la energía se calcula con el **Precio de Mercado (PM)**, transferido hasta el nodo mediante el **factor de nodo (FN)**.\n- **Área desvinculada:** el precio de nodo se calcula con el **Precio Local (PL)** del área correspondiente, transferido igualmente a través del **factor de nodo**.\n\n### Remuneración por Venta al Mercado Spot\n\nCada intervalo Spot, la energía vendida por una máquina al MEM se remunera al **precio de la energía en el nodo correspondiente** (Sección 3.5.1, Res_SE_61_1992_Los_Procedimientos).\n\n### Generación Forzada\n\nEn caso de **generación forzada** —ya sea por Acuerdos de Generación Obligada o imprevista— el generador recibe adicionalmente:\n- el precio establecido en el Acuerdo, **o**\n- el sobrecosto correspondiente,\n\nsegún lo establecido en el **Anexo 14 de Los Procedimientos** (Sección 3.5.1, Res_SE_61_1992_Los_Procedimientos).\n\n### Reserva para Regulación\n\nEl precio de la energía **incluye la reserva asignada para regulación**, por lo que la remuneración total ya contempla una remuneración adicional por dicho concepto (Sección 3.5.1, Res_SE_61_1992_Los_Procedimientos).\n\n### Liquidación Mensual\n\nEl **OED** calcula para cada intervalo Spot la remuneración correspondiente a cada Generador por su venta de energía al Mercado Spot. La integración de estos valores determina la **remuneración mensual** del Generador por venta de energía al MEM (Sección 3.5.1, Res_SE_61_1992_Los_Procedimientos).\n\n---\n\n> **Nota:** Las fórmulas matemáticas específicas que definen el cálculo del precio de nodo no pudieron ser procesadas del documento fuente (`formula-not-decoded`), por lo que no es posible detallar la expresión algebraica exacta con la evidencia disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 6,
+  "pregunta": "¿Cómo se remunera la energía en el mercado mayorista?",
+  "dosis": 1,
+  "doc_correcto": "Res_SE_61_1992_Los_Procedimientos",
+  "intrusos": [
+   "Transener_Calificacion_FIX"
+  ],
+  "respuesta": "## Remuneración de la Energía en el Mercado Mayorista\n\n### Precio de la Energía en Nodo\n\nLa remuneración depende de si el nodo se encuentra en un área vinculada o desvinculada del mercado (REMUNERACIÓN DE LA ENERGÍA, Res_SE_61_1992_Los_Procedimientos):\n\n- **Área vinculada:** el precio de nodo de la energía se calcula con el **Precio de Mercado (PM)**, transferido hasta el nodo a través del **factor de nodo (FN)**.\n- **Área desvinculada:** el precio de nodo se calcula con el **Precio Local (PL)** del área, transferido igualmente a través del correspondiente factor de nodo.\n\n### Remuneración por Intervalo Spot\n\nCada intervalo Spot, la energía vendida por una máquina al MEM se remunera al **precio de la energía en el nodo correspondiente**. El OED calcula para cada intervalo la remuneración que corresponde a cada Generador, y de la integración de esos valores se obtiene la **remuneración mensual** por venta de energía al MEM (REMUNERACIÓN DE LA ENERGÍA, Res_SE_61_1992_Los_Procedimientos).\n\n### Casos Especiales\n\n- **Generación forzada** (por Acuerdos de Generación Obligada o imprevista): recibe adicionalmente el precio establecido en el Acuerdo o el sobrecosto correspondiente, conforme al Anexo 14 de Los Procedimientos (REMUNERACIÓN DE LA ENERGÍA, Res_SE_61_1992_Los_Procedimientos).\n- **Reserva para regulación:** el precio de la energía ya incluye una remuneración adicional por la reserva asignada para regulación con que opera el MEM (REMUNERACIÓN DE LA ENERGÍA, Res_SE_61_1992_Los_Procedimientos).\n\n### Marco Vigente del Mercado Spot\n\nEn el nuevo marco regulatorio, el Mercado Spot opera como el **ámbito de liquidación de saldos de energía**, regido principalmente por el **Costo Marginal Horario (CMh)** (Riesgo del Sector, Transener_Calificacion_FIX).\n\n---\n\n> **Nota de alcance:** El contexto provisto no incluye los valores numéricos de los factores de nodo ni las fórmulas completas (indicadas como no decodificadas en la fuente), por lo que no es posible detallar el cálculo matemático preciso de dichos factores.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 6,
+  "pregunta": "¿Cómo se remunera la energía en el mercado mayorista?",
+  "dosis": 2,
+  "doc_correcto": "Res_SE_61_1992_Los_Procedimientos",
+  "intrusos": [
+   "Transener_Calificacion_FIX",
+   "MSU_ON_ClaseIV"
+  ],
+  "respuesta": "## Remuneración de la Energía en el Mercado Mayorista\n\n### Precio de la Energía por Nodo\n\nLa remuneración depende de si el nodo se encuentra en un **área vinculada o desvinculada** del mercado:\n\n- **Área vinculada:** el precio de nodo de la energía se calcula con el **Precio de Mercado (PM)**, transferido hasta el nodo a través del **factor de nodo (FN)**.\n- **Área desvinculada:** el precio de nodo se calcula con el **Precio Local (PL)** del área, transferido hasta el nodo a través del correspondiente factor de nodo.\n\n(Sección 3.5.1 - Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Remuneración por Venta al Mercado Spot\n\nCada intervalo Spot, la energía vendida por una máquina al MEM se remunera al **precio de la energía en el nodo correspondiente**.\n\nEn el caso de **generación forzada** —ya sea por Acuerdos de Generación Obligada o imprevista— el generador recibe adicionalmente el precio establecido en el Acuerdo o el sobrecosto correspondiente, conforme al Anexo 14 de Los Procedimientos.\n\n(Sección 3.5.1 - Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Inclusión de la Reserva para Regulación\n\nEl precio de la energía **ya incorpora** la reserva asignada para regulación, por lo que la remuneración total a los Generadores incluye una remuneración adicional por dicha reserva.\n\n(Sección 3.5.1 - Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Liquidación Mensual\n\nEl OED calcula para cada intervalo Spot la remuneración correspondiente a cada Generador por su venta de energía al Mercado Spot. La **integración mensual** de estos valores determina la remuneración mensual del Generador por venta de energía al MEM.\n\n(Sección 3.5.1 - Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Contexto del Nuevo Marco Regulatorio\n\nComplementariamente, el nuevo marco regulatorio segmenta el MEM en tres ámbitos con lógicas de remuneración diferenciadas: el **Mercado Spot** (regido principalmente por el Costo Marginal Horario), la **Demanda Estacionalizada** (abastecida con Generación Asignada) y el **Mercado a Término (MAT)** (contratación bilateral a largo plazo). En este esquema, las centrales térmicas que asuman la gestión integral de combustible acceden a la **renta plena**, mientras que las unidades sin gestión propia se adecuan a una **renta adaptada** correlacionada con su eficiencia operativa.\n\n(Riesgo del Sector, Transener_Calificacion_FIX)",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 6,
+  "pregunta": "¿Cómo se remunera la energía en el mercado mayorista?",
+  "dosis": 3,
+  "doc_correcto": "Res_SE_61_1992_Los_Procedimientos",
+  "intrusos": [
+   "Transener_Calificacion_FIX",
+   "MSU_ON_ClaseIV",
+   "Transener-Company-Presentation-April-2026"
+  ],
+  "respuesta": "## Remuneración de la Energía en el Mercado Mayorista\n\n### Precio de la Energía por Nodo\n\nLa remuneración depende de si el nodo se encuentra en un **área vinculada o desvinculada** del mercado:\n\n- **Área vinculada:** el precio de nodo de la energía se calcula con el **Precio de Mercado (PM)**, transferido hasta el nodo a través del **factor de nodo (FN)**.\n- **Área desvinculada:** el precio de nodo se calcula con el **Precio Local (PL)** del área, transferido hasta el nodo a través del correspondiente factor de nodo.\n\n(Sección 3.5.1 – Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Remuneración por Venta de Energía al Mercado Spot\n\nCada intervalo Spot, la energía vendida por una máquina al MEM se remunera al **precio de la energía en el nodo correspondiente**. El OED calcula para cada intervalo la remuneración que corresponde a cada Generador, y de la integración de estos valores se obtiene la **remuneración mensual** del Generador por venta de energía al MEM.\n\n(Sección 3.5.1 – Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Casos Especiales: Generación Forzada\n\nEn el caso de **generación forzada** —ya sea por Acuerdos de Generación Obligada o imprevista— el Generador recibe adicionalmente el precio establecido en el Acuerdo o el sobrecosto correspondiente, conforme al **Anexo 14 de Los Procedimientos**.\n\n(Sección 3.5.1 – Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Reserva para Regulación\n\nEl precio de la energía **incluye la reserva asignada para regulación**, por lo que en la remuneración total a los Generadores ya está incorporada una remuneración adicional por dicha reserva.\n\n(Sección 3.5.1 – Remuneración de la Energía, Res_SE_61_1992_Los_Procedimientos)\n\n---\n\n### Marco Vigente del Mercado Spot\n\nEn el contexto del nuevo marco regulatorio, el **Mercado Spot** opera como el ámbito de liquidación de saldos de energía, regido principalmente por el **Costo Marginal Horario (CMh)**. La facturación y los pagos a los agentes del MEM son gestionados por **CAMMESA**.\n\n(Riesgo del Sector, Transener_Calificacion_FIX; Argentine Electricity Market Players, Transener-Company-Presentation-April-2026)",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 7,
+  "pregunta": "¿Qué obligaciones tiene el transportista respecto del sistema de transporte?",
+  "dosis": 0,
+  "doc_correcto": "Res_SE_137_1992",
+  "intrusos": [],
+  "respuesta": "## Respuesta\n\n**No tengo evidencia suficiente para responder** la pregunta tal como está formulada.\n\n### Fundamento\n\nEl contexto provisto (Res. SE N° 137/1992) regula aspectos específicos del sistema de transporte, pero sus artículos disponibles **no establecen obligaciones del transportista** como sujeto regulado. El contenido accesible refiere a:\n\n- **Usuarios del Sistema de Transporte**: obligación de pago del sobrecosto generado por incumplimiento de las reglamentaciones (Art. 3°, Res_SE_137_1992).\n- **Agentes del MEM**: obligación de pago calculado en función del CENS ante incumplimiento de órdenes de corte de carga impartidas por CAMMESA (Art. 4°, Res_SE_137_1992).\n- La sustitución del Anexo 16 de Los Procedimientos y la aprobación del Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión (Arts. 1° y 2°, Res_SE_137_1992), cuyo texto **no está incluido** en el contexto provisto.\n\n### Qué información faltaría\n\nPara responder adecuadamente sería necesario contar con:\n1. El texto del **Anexo I** (\"Reglamentaciones de los Servicios Públicos de Transporte\") incorporado por el Art. 1°.\n2. El texto del **Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión** aprobado por el Art. 2°.\n\nAmbos documentos, referenciados en la resolución pero ausentes del contexto, serían las fuentes pertinentes para responder sobre las obligaciones específicas del transportista.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 7,
+  "pregunta": "¿Qué obligaciones tiene el transportista respecto del sistema de transporte?",
+  "dosis": 1,
+  "doc_correcto": "Res_SE_137_1992",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Obligaciones del transportista respecto del sistema de transporte\n\nEl contexto provisto contiene las **Reglamentaciones del Sistema de Transporte de Energía Eléctrica (Res. SE 137/1992)**, sin embargo, las disposiciones incluidas no regulan directamente las obligaciones del **transportista**, sino que abordan las siguientes materias:\n\n- **Obligaciones de los Usuarios del Sistema de Transporte** ante incumplimientos de las reglamentaciones del servicio público de transporte, incluyendo el pago del sobrecosto generado en el MEM (Artículo 3°, Res_SE_137_1992).\n- **Obligaciones de los agentes del MEM** ante incumplimiento de órdenes de operación de CAMMESA para alivio de carga (Artículo 4°, Res_SE_137_1992).\n- La aprobación del **Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión** (Artículo 2°, Res_SE_137_1992), cuyo contenido sustantivo **no está incluido** en el fragmento provisto.\n\n---\n\n## Conclusión\n\n**No tengo evidencia suficiente para responder** la pregunta tal como está formulada.\n\nPara responderla adecuadamente sería necesario contar con:\n- El texto del **Anexo I (\"Reglamentaciones de los Servicios Públicos de Transporte\")** aprobado por la Res. SE 137/1992.\n- El texto del **Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión** (Anexo I, Artículo 2°).\n- Eventualmente, el **Anexo 16 de Los Procedimientos** (Res. SEE 61/92) en su versión sustituida.\n\nNinguno de esos documentos está disponible en el contexto provisto.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 7,
+  "pregunta": "¿Qué obligaciones tiene el transportista respecto del sistema de transporte?",
+  "dosis": 2,
+  "doc_correcto": "Res_SE_137_1992",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Obligaciones del Transportista respecto del Sistema de Transporte\n\nA partir del contexto provisto, la información específica sobre obligaciones del transportista se encuentra en la **Resolución SE 137/1992**, que aprueba las \"Reglamentaciones de los Servicios Públicos de Transporte\" y el \"Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión\".\n\nSin embargo, el contexto disponible **no transcribe el contenido sustantivo** de dichos reglamentos (Anexo I), sino únicamente los artículos dispositivos de la resolución. Lo que sí puede afirmarse con respaldo documental es:\n\n- Existe un marco reglamentario específico denominado **\"Reglamentaciones de los Servicios Públicos de Transporte\"** que rige las obligaciones de los Usuarios del Sistema de Transporte (Artículo 1°, Res_SE_137_1992).\n- El **incumplimiento** de dichas reglamentaciones por parte de los Usuarios genera la **obligación de pago del sobrecosto** producido en el Mercado Eléctrico Mayorista, sin perjuicio de las sanciones adicionales que pudieren corresponder (Artículo 3°, Res_SE_137_1992).\n- El incumplimiento de **órdenes de operación** (manual o automática) de alivio de carga impartidas por CAMMESA genera la **obligación de pago de la carga no cortada**, calculada en función del Costo de Energía No Suministrada (CENS), también sin perjuicio de sanciones adicionales (Artículo 4°, Res_SE_137_1992).\n\n---\n\n**Lo que no puedo responder:** El detalle de las obligaciones técnicas, operativas y de diseño del transportista, dado que el texto del Anexo I (Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión) **no fue incluido en el contexto provisto**. Para una respuesta completa sería necesario contar con dicho Anexo.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 7,
+  "pregunta": "¿Qué obligaciones tiene el transportista respecto del sistema de transporte?",
+  "dosis": 3,
+  "doc_correcto": "Res_SE_137_1992",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683",
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "## Obligaciones del transportista respecto del sistema de transporte\n\nEl contexto provisto contiene las **Reglamentaciones de los Servicios Públicos de Transporte** (Res. SE 137/1992), sin embargo, el texto disponible no desarrolla artículos específicos que detallen las obligaciones del transportista respecto del sistema de transporte. El articulado transcripto regula principalmente:\n\n- La sustitución del Anexo 16 de Los Procedimientos (Art. 1°)\n- La aprobación del Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión (Art. 2°)\n- Las consecuencias del **incumplimiento de los Usuarios** del sistema (Arts. 3° y 4°), no las obligaciones del transportista\n\nEl resto del contexto corresponde exclusivamente a normativa tributaria (Ley 11.683 / Decreto 821/1998), que es ajena a la materia consultada.\n\n---\n\n**No tengo evidencia suficiente para responder** en forma completa a la pregunta formulada.\n\nPara responderla adecuadamente sería necesario contar con:\n- El texto del **Anexo I \"Reglamentaciones de los Servicios Públicos de Transporte\"** aprobado por la Res. SE 137/1992\n- El **Reglamento de Diseño y Calidad del Sistema de Transporte en Alta Tensión** (Anexo I, Art. 2°)\n- Eventualmente, las disposiciones pertinentes de la **Ley 24.065** y el contrato de concesión del transportista",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": true
+ },
+ {
+  "caso": 8,
+  "pregunta": "¿Cómo se compone el patrimonio neto al cierre del ejercicio?",
+  "dosis": 0,
+  "doc_correcto": "Estados_Contables_Neuquen",
+  "intrusos": [],
+  "respuesta": "## Composición del Patrimonio Neto al Cierre del Ejercicio\n\n**No tengo evidencia suficiente para responder.**\n\nEl contexto provisto lista los documentos examinados de los Estados Contables de Neuquén al 31 de diciembre de 2014 (Estado de Situación Patrimonial, Estado de Evolución del Patrimonio Neto, Notas y Anexos, entre otros), pero **no incluye el contenido numérico ni textual de dichos documentos**.\n\n---\n\n### Qué información faltaría para responder:\n\nPara detallar la composición del patrimonio neto al cierre, sería necesario contar con el contenido efectivo de:\n\n- **Estado de Situación Patrimonial al 31/12/2014** → rubros del patrimonio neto (capital social, reservas, resultados acumulados, etc.)\n- **Estado de Evolución del Patrimonio Neto** → movimientos del ejercicio por cada componente\n- **Notas 1 a 7** → políticas contables y desagregaciones relevantes de los rubros patrimoniales\n\nSin el contenido de esos documentos, cualquier afirmación sobre los montos o la estructura del patrimonio neto carecería de respaldo en el contexto y estaría prohibida bajo el principio rector aplicable.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 8,
+  "pregunta": "¿Cómo se compone el patrimonio neto al cierre del ejercicio?",
+  "dosis": 1,
+  "doc_correcto": "Estados_Contables_Neuquen",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto lista los documentos examinados de los Estados Contables de Neuquén al 31 de diciembre de 2014 (Estado de Situación Patrimonial, Estado de Evolución del Patrimonio Neto, Estado de Resultados, Estado de Flujo de Efectivo, Notas y Anexos, y Memoria del Directorio), pero **no incluye el contenido numérico ni textual de ninguno de esos documentos**.\n\nPara responder sobre la composición del patrimonio neto al cierre del ejercicio sería necesario contar con los valores detallados del **Estado de Evolución del Patrimonio Neto** y/o del **Estado de Situación Patrimonial** al 31/12/2014, que incluyan rubros tales como capital social, aportes irrevocables, reservas, resultados no asignados y resultado del ejercicio, entre otros componentes relevantes.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 8,
+  "pregunta": "¿Cómo se compone el patrimonio neto al cierre del ejercicio?",
+  "dosis": 2,
+  "doc_correcto": "Estados_Contables_Neuquen",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Composición del Patrimonio Neto al Cierre del Ejercicio\n\nEl contexto provisto **menciona la existencia** del Estado de Situación Patrimonial al 31 de diciembre de 2014 y del Estado de Evolución del Patrimonio Neto por el ejercicio finalizado en esa fecha (documentos a) y b), Estados_Contables_Neuquen), pero **no incluye los valores ni el detalle de las partidas** que componen el patrimonio neto (capital social, reservas, resultados acumulados, etc.).\n\n---\n\n**No tengo evidencia suficiente para responder** en cuanto a la composición específica y los montos del patrimonio neto al cierre.\n\n**Información faltante:** El contenido numérico y analítico del Estado de Situación Patrimonial y del Estado de Evolución del Patrimonio Neto al 31/12/2014, incluyendo sus rubros desagregados (capital suscripto, ajuste de capital, reservas legales/facultativas, resultados no asignados, etc.) y las notas asociadas que los expliquen.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 8,
+  "pregunta": "¿Cómo se compone el patrimonio neto al cierre del ejercicio?",
+  "dosis": 3,
+  "doc_correcto": "Estados_Contables_Neuquen",
+  "intrusos": [
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683",
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "No tengo evidencia suficiente para responder.\n\nEl contexto menciona la existencia del **Estado de Situación Patrimonial al 31 de diciembre de 2014** y del **Estado de Evolución del Patrimonio Neto** como documentos examinados (I.-DOCUMENTOS EXAMINADOS, Estados_Contables_Neuquen), pero **no provee el contenido numérico ni las líneas de composición** de dichos estados (capital social, reservas, resultados acumulados, resultados del ejercicio, etc.).\n\n**Qué información faltaría:** el detalle de los rubros y montos que integran el patrimonio neto al 31/12/2014, tal como surge del Estado de Situación Patrimonial y del Estado de Evolución del Patrimonio Neto referenciados.",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": true
+ },
+ {
+  "caso": 9,
+  "pregunta": "¿Qué régimen se aplica a la distribución y comercialización de gas natural?",
+  "dosis": 0,
+  "doc_correcto": "Ley_24076_Gas_Natural_TO",
+  "intrusos": [],
+  "respuesta": "## Régimen aplicable al transporte y distribución de gas natural\n\n### Principio general: habilitación previa mediante licitación pública\n\nEl transporte y la distribución de gas natural **deben ser realizados exclusivamente por personas jurídicas de derecho privado**, a quienes el Poder Ejecutivo Nacional habilite mediante el otorgamiento de una **concesión, licencia o permiso**, obtenida a través de un **procedimiento de licitación pública** (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n> El término **\"habilitación\"** comprende la concesión, la licencia y el permiso; el término **\"prestador\"** comprende al concesionario, al licenciatario y al permisionario (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n---\n\n### Excepción: participación estatal subsidiaria\n\nEl Estado Nacional, las provincias y la Ciudad Autónoma de Buenos Aires —por sí o a través de organismos o empresas dependientes— **solo podrán prestar estos servicios** en dos supuestos taxativos:\n\n1. Que, cumplido el procedimiento licitatorio, **no hubiere oferentes** a quienes adjudicar la prestación; o\n2. Que, habiéndose adjudicado el servicio, **se extinguiere la habilitación** por alguna de las causas previstas en la ley y se diera la situación anterior.\n\n(ARTÍCULO 4°, Ley_24076_Gas_Natural_TO)\n\n---\n\n### Plazo de las habilitaciones\n\nLas habilitaciones se otorgan por un plazo de **35 años**, contados desde la fecha de adjudicación (ARTÍCULO 5°, Ley_24076_Gas_Natural_TO).\n\n---\n\n### Límite de esta respuesta\n\nEl contexto provisto no contiene disposiciones específicas sobre la **comercialización** de gas natural. Por lo tanto, no puedo responder sobre el régimen aplicable a esa actividad con la evidencia disponible. Para ello sería necesario contar con las normas que regulan específicamente la figura del comercializador (p. ej., otras secciones de la Ley 24.076 o normativa del ENARGAS).",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 9,
+  "pregunta": "¿Qué régimen se aplica a la distribución y comercialización de gas natural?",
+  "dosis": 1,
+  "doc_correcto": "Ley_24076_Gas_Natural_TO",
+  "intrusos": [
+   "Ley_11683_Procedimiento_Fiscal_TO"
+  ],
+  "respuesta": "## Régimen aplicable a la distribución de gas natural\n\n### Habilitación y marco de acceso\n\nLa distribución de gas natural debe ser realizada por **personas jurídicas de derecho privado** habilitadas por el Poder Ejecutivo Nacional mediante **concesión, licencia o permiso**, otorgados previa **licitación pública**. El término \"habilitación\" comprende las tres modalidades, y el término \"prestador\" abarca al concesionario, licenciatario y permisionario. (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO)\n\n### Rol subsidiario del Estado\n\nEl Estado Nacional, las provincias y la Ciudad Autónoma de Buenos Aires —por sí o a través de organismos o empresas dependientes— **solo podrán** proveer servicios de distribución en dos supuestos excepcionales:\n\n1. Que, cumplidos los procedimientos de licitación, **no existieren oferentes** a quienes adjudicar la prestación; o\n2. Que, habiéndose adjudicado el servicio, **se extinguiere la habilitación** por alguna causa prevista en la ley y se diere la situación anterior.\n\n(ARTÍCULO 4°, Ley_24076_Gas_Natural_TO)\n\n### Plazo de las habilitaciones\n\nLas habilitaciones se otorgan por un plazo de **35 años**, contados desde la fecha de adjudicación. (ARTÍCULO 5°, Ley_24076_Gas_Natural_TO)\n\n---\n\n### Límite de la respuesta\n\nEl contexto provisto **no contiene información sobre el régimen aplicable a la comercialización de gas natural** (actividad distinta a la distribución). Para responder esa parte de la pregunta sería necesario contar con las disposiciones específicas de la Ley 24.076 relativas a la comercialización, o normativa complementaria no incluida en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 9,
+  "pregunta": "¿Qué régimen se aplica a la distribución y comercialización de gas natural?",
+  "dosis": 2,
+  "doc_correcto": "Ley_24076_Gas_Natural_TO",
+  "intrusos": [
+   "Ley_11683_Procedimiento_Fiscal_TO",
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Régimen aplicable a la distribución de gas natural\n\n### Régimen habilitante / concesional\n\nLa distribución de gas natural está sujeta al régimen establecido por la **Ley 24.076**. Los aspectos centrales son:\n\n- **Sujetos habilitados:** Solo pueden prestar el servicio de distribución las **personas jurídicas de derecho privado** que cuenten con la correspondiente concesión, licencia o permiso otorgada por el Poder Ejecutivo Nacional (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n- **Mecanismo de selección:** La habilitación debe otorgarse mediante **licitación pública** previa, con excepción de los casos derivados del artículo 28 de la Ley N° 17.319 (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n- **Rol del Estado:** El Estado Nacional, las provincias y la CABA —por sí o a través de organismos o empresas dependientes— **solo pueden** prestar el servicio de distribución de manera subsidiaria: cuando no hubiere oferentes en la licitación, o cuando, habiéndose adjudicado el servicio, se extinguiere la habilitación y se diere esa misma situación (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n- **Plazo de la habilitación:** Las habilitaciones se otorgan por un plazo de **35 años** contados desde la fecha de adjudicación (ARTÍCULO 5°, Ley_24076_Gas_Natural_TO).\n\n---\n\n### Límite de la respuesta\n\nEl contexto provisto **no contiene disposiciones específicas sobre la comercialización de gas natural** (régimen tarifario, condiciones de acceso, obligaciones del distribuidor frente al usuario, etc.). Para responder sobre esos aspectos sería necesario contar con normativa adicional —por ejemplo, el resto articulado de la Ley 24.076, sus decretos reglamentarios o resoluciones del ENARGAS— que no obra en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 9,
+  "pregunta": "¿Qué régimen se aplica a la distribución y comercialización de gas natural?",
+  "dosis": 3,
+  "doc_correcto": "Ley_24076_Gas_Natural_TO",
+  "intrusos": [
+   "Ley_11683_Procedimiento_Fiscal_TO",
+   "Decreto_821_1998_TO_Ley_11683",
+   "Decreto_821_1998_TO_Ley_11683"
+  ],
+  "respuesta": "## Régimen aplicable a la distribución de gas natural\n\n### Habilitación y forma jurídica\n\nEl transporte y la distribución de gas natural deben ser realizados por **personas jurídicas de derecho privado** a las que el Poder Ejecutivo Nacional haya habilitado mediante el otorgamiento de la correspondiente **concesión, licencia o permiso**, previa selección por **licitación pública** (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\nEl término \"habilitación\" comprende la concesión, la licencia y el permiso; y el término \"prestador\" comprende al concesionario, al licenciatario y al permisionario. La modalidad específica a adoptar en cada caso es determinada por el Poder Ejecutivo Nacional (ARTÍCULO 4°, Ley_24076_Gas_Natural_TO).\n\n### Participación estatal\n\nEl Estado Nacional, las provincias y la Ciudad Autónoma de Buenos Aires —por sí o a través de organismos o empresas dependientes— **solo podrán** proveer servicios de transporte y distribución en dos supuestos excepcionales:\n1. Que, cumplidos los procedimientos de licitación, **no existieren oferentes** a quienes adjudicar la prestación; o\n2. Que, habiéndose adjudicado el servicio, **se extinguiere la habilitación** por alguna de las causas previstas en la ley y se diere aquella situación de ausencia de oferentes.\n\n(ARTÍCULO 4°, Ley_24076_Gas_Natural_TO)\n\n### Plazo de las habilitaciones\n\nLas habilitaciones son otorgadas por un plazo de **35 (treinta y cinco) años**, contados desde la fecha de su adjudicación (ARTÍCULO 5°, Ley_24076_Gas_Natural_TO).\n\n---\n\n**Límite de la respuesta:** El contexto provisto no contiene disposiciones sobre el régimen de **comercialización** de gas natural (tarifas, condiciones de acceso, ente regulador, etc.). Para responder sobre esos aspectos sería necesario contar con normativa adicional —por ejemplo, disposiciones del ENARGAS o el resto articulado de la Ley 24.076—, que no obra en el contexto disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 10,
+  "pregunta": "¿Qué sucede ante la falta de presentación de la declaración jurada en término?",
+  "dosis": 0,
+  "doc_correcto": "Decreto_821_1998_TO_Ley_11683",
+  "intrusos": [],
+  "respuesta": "## Consecuencias por omisión de presentación de declaración jurada en término\n\nConforme al contexto provisto, ante la falta de presentación de una declaración jurada dentro de los plazos generales establecidos por la AFIP, se aplica lo siguiente:\n\n### Sanción aplicable\n\nLa omisión es sancionada **sin necesidad de requerimiento previo** (es decir, opera de forma automática), con las siguientes multas:\n\n| Sujeto infractor | Monto de la multa |\n|---|---|\n| Personas físicas en general | **$220.000** |\n| Sociedades, asociaciones o entidades de cualquier clase constituidas en el país, o establecimientos organizados en forma de empresas estables pertenecientes a personas domiciliadas, constituidas o radicadas en el exterior | **$440.000** |\n\n### Extensión de la sanción\n\nLa misma multa se aplica cuando se **omitiere proporcionar los datos** referidos en el último párrafo del artículo 11.\n\n### Vigencia de los montos\n\nLos montos indicados fueron actualizados por el **artículo 15 de la Ley N° 27.799**, publicada en el Boletín Oficial el **2/1/2026**, con vigencia a partir de esa fecha, sustituyendo los valores anteriores de $200 y $400 respectivamente.\n\n(ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683)",
+  "cita_correcta": true,
+  "cita_intrusa": false,
+  "abstiene": false
+ },
+ {
+  "caso": 10,
+  "pregunta": "¿Qué sucede ante la falta de presentación de la declaración jurada en término?",
+  "dosis": 1,
+  "doc_correcto": "Decreto_821_1998_TO_Ley_11683",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos"
+  ],
+  "respuesta": "## Sanción por omisión de presentación de declaración jurada en término\n\nConforme al artículo 38 del Decreto 821/1998 (T.O. Ley 11.683), la omisión de presentar la declaración jurada dentro de los plazos generales establecidos por la AFIP genera las siguientes consecuencias:\n\n### Aplicación automática de la sanción\nLa multa se aplica **sin necesidad de requerimiento previo**, es decir, opera de pleno derecho ante el mero vencimiento del plazo.\n\n### Montos de la multa\n| Sujeto infractor | Monto de la multa |\n|---|---|\n| Personas físicas y demás sujetos no comprendidos en el caso siguiente | **$220.000** |\n| Sociedades, asociaciones o entidades de cualquier clase constituidas en el país, o establecimientos organizados como empresas estables pertenecientes a personas domiciliadas, constituidas o radicadas en el exterior | **$440.000** |\n\n### Supuesto equiparado\nLa misma sanción resulta aplicable cuando se omitiere proporcionar los datos a que se refiere el último párrafo del artículo 11 de la ley.\n\n### Vigencia de los montos\nLos valores indicados fueron establecidos por el **artículo 15 de la Ley N° 27.799** (B.O. 2/1/2026), con vigencia a partir de su publicación en el Boletín Oficial, sustituyendo los montos anteriores de $200 y $400 respectivamente.\n\n(ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683)",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 10,
+  "pregunta": "¿Qué sucede ante la falta de presentación de la declaración jurada en término?",
+  "dosis": 2,
+  "doc_correcto": "Decreto_821_1998_TO_Ley_11683",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos",
+   "Res_SE_61_1992_Los_Procedimientos"
+  ],
+  "respuesta": "## Consecuencias por omisión de presentación de declaración jurada en término\n\nConforme al marco normativo aplicable, la omisión de presentar la declaración jurada dentro de los plazos generales establecidos por la AFIP genera las siguientes consecuencias:\n\n### Aplicación automática de multa\n\nLa sanción se aplica **sin necesidad de requerimiento previo** (ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683), lo que implica que no es necesaria ninguna intimación administrativa previa para que la multa resulte exigible.\n\n### Montos de la sanción\n\n| Sujeto infractor | Monto de multa |\n|---|---|\n| Personas físicas y demás obligados en general | **$220.000** |\n| Sociedades, asociaciones o entidades de cualquier clase constituidas en el país, o establecimientos organizados como empresas estables pertenecientes a personas domiciliadas/constituidas/radicadas en el exterior | **$440.000** |\n\n(ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683, con valores actualizados por art. 15 de la Ley N° 27.799, vigente desde su publicación en el B.O. el 2/1/2026)\n\n### Extensión de la sanción\n\nLas mismas multas se aplican cuando se omitiere **proporcionar los datos** a que refiere el último párrafo del artículo 11 de la norma (ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683).\n\n---\n\n> **Nota de alcance:** La respuesta se circunscribe exclusivamente a la evidencia disponible en el contexto provisto. Aspectos como el procedimiento de impugnación de la multa, la reducción por regularización espontánea u otras consecuencias accesorias no están contenidos en el contexto suministrado y no pueden ser respondidos con la evidencia disponible.",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ },
+ {
+  "caso": 10,
+  "pregunta": "¿Qué sucede ante la falta de presentación de la declaración jurada en término?",
+  "dosis": 3,
+  "doc_correcto": "Decreto_821_1998_TO_Ley_11683",
+  "intrusos": [
+   "Res_SE_61_1992_Los_Procedimientos",
+   "Res_SE_61_1992_Los_Procedimientos",
+   "Res_SE_61_1992_Los_Procedimientos"
+  ],
+  "respuesta": "## Consecuencias por omisión de presentación de declaración jurada en término\n\nDe acuerdo con el artículo 38 del Decreto 821/1998 (T.O. Ley 11.683), la omisión de presentar la declaración jurada dentro de los plazos generales establecidos por la AFIP genera las siguientes consecuencias:\n\n### Sanción aplicable\n\nLa infracción es sancionada **sin necesidad de requerimiento previo**, con las siguientes multas:\n\n| Sujeto infractor | Multa |\n|---|---|\n| Personas físicas y demás obligados en general | **$220.000** |\n| Sociedades, asociaciones o entidades de cualquier clase constituidas en el país, o establecimientos organizados como empresas estables pertenecientes a personas domiciliadas/constituidas/radicadas en el exterior | **$440.000** |\n\n### Alcance de la sanción\n\nLa misma multa se aplica cuando se **omitiere proporcionar los datos** referidos en el último párrafo del artículo 11 de la ley.\n\n*(ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683)*\n\n---\n\n**Nota sobre vigencia:** Los montos citados fueron actualizados por el artículo 15 de la Ley N° 27.799, publicada en el Boletín Oficial el 2/1/2026, con vigencia a partir de esa fecha. *(ARTÍCULO 38, Decreto_821_1998_TO_Ley_11683)*",
+  "cita_correcta": true,
+  "cita_intrusa": true,
+  "abstiene": false
+ }
+]

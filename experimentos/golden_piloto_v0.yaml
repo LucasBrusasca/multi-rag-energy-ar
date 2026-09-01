@@ -1,0 +1,277 @@
+# Golden piloto v0 — BORRADOR EXPLORATORIO. NO ES EVIDENCIA.
+# Items propuestos, pendientes de verificacion humana y validacion del director.
+# Ver golden_piloto_borrador.md y PROTOCOLO_GOLDEN (en revision).
+- id: G-P-005
+  split: pilot
+  estrato: colision
+  pregunta: "¿Qué sanciones corresponden por violar la ley del sector eléctrico, cometidas por terceros no concesionarios?"
+
+  evidencia:
+    - fuente: Ley_24065_Energia_Electrica_TO
+      instrument_id: INS-0013
+      document_id: DOC-0013
+      artifact_id: ART-SHA256-75A9C644895FA266FFB53AD2CEDAC5C78ADA5C71A8AFE10CC32481F24A3C75AC
+      sha256: 75a9c644895fa266ffb53ad2cedac5c78ada5c71a8afe10cc32481f24a3c75ac
+      emisor_id: EMI-0006
+      origen_fuente: publica
+      norma: "Ley 24.065"
+      articulo_o_seccion: "Artículo 63"
+      modalidades_evidencia: [texto]
+      localizador_evidencia: "CAPÍTULO XIV, artículo 63"
+      chunk_uid_snapshot: d8cf1eae9a64b750ff39843f0bc076f33caab2de0ff9ef3e4a7aa5749e3e2641
+      dominios_chunk_referencia: [legal]
+      silo_persistido_snapshot: impositivo
+      version_catalogo_dominios_chunk: null
+      estado_representacion_indice: completa
+
+  document_ids: [DOC-0013]
+  n_documentos: 1
+
+  distractores_colision:
+    - chunk_uid_snapshot: 6c713d63135678d98718d3e87bcbfa18c058a1c4b2367488f5cc4175a6146b2e
+      document_id: DOC-0003
+      artifact_id: ART-SHA256-90138E3B1EC381059C326895674CD5A4FA09C4BE8861D42C4A83E787D56747F3
+      dominios_chunk_referencia: [impositivo]
+      silo_persistido_snapshot: impositivo
+      tipo_solapamiento: terminologia
+      verificacion_distractor: pendiente
+      anotador_distractor: Lucas
+      version_catalogo_dominios_chunk: null
+
+  document_ids_expuestos:
+    - DOC-0013
+    - DOC-0003
+
+  silos_necesarios: [legal]
+  silos_evidencia_persistida_snapshot: [impositivo]
+
+  respuesta_referencia: "Multa de $130.000 a $140.000.000; inhabilitación especial de 1 a 5 años; suspensión de hasta 90 días; decomiso."
+  conducta_esperada: responder
+  condicion_abstencion: null
+  verificacion_ausencia: null
+  nivel_riesgo: alto
+  overlap_lexico: "multa; sanción; violaciones"
+  redaccion: asistida
+  verificacion_lectura: pendiente
+  anotador: Lucas
+  version_protocolo: "0.7"
+
+- id: G-P-007
+  split: pilot
+  estrato: colision
+  pregunta: "Para cobrar deudas por suministro eléctrico, ¿qué procedimiento se aplica y qué constituye título hábil?"
+
+  evidencia:
+    - fuente: Ley_24065_Energia_Electrica_TO
+      instrument_id: INS-0013
+      document_id: DOC-0013
+      artifact_id: ART-SHA256-75A9C644895FA266FFB53AD2CEDAC5C78ADA5C71A8AFE10CC32481F24A3C75AC
+      sha256: 75a9c644895fa266ffb53ad2cedac5c78ada5c71a8afe10cc32481f24a3c75ac
+      emisor_id: EMI-0006
+      origen_fuente: publica
+      norma: "Ley 24.065"
+      articulo_o_seccion: "Artículo 70"
+      modalidades_evidencia: [texto]
+      localizador_evidencia: "Disposiciones varias, artículo 70"
+      chunk_uid_snapshot: f7c2c295d134b53060f1f15d238ce98a6d738fe17edd131a8ef2976553564a75
+      dominios_chunk_referencia: [legal]
+      silo_persistido_snapshot: legal
+      version_catalogo_dominios_chunk: null
+      estado_representacion_indice: completa
+
+  document_ids: [DOC-0013]
+  n_documentos: 1
+
+  distractores_colision:
+    - chunk_uid_snapshot: d54ea66e96989cea46b5ca41c84036ad3a261d0ccfea062d354855fd5a421341
+      document_id: DOC-0003
+      artifact_id: ART-SHA256-90138E3B1EC381059C326895674CD5A4FA09C4BE8861D42C4A83E787D56747F3
+      dominios_chunk_referencia: [impositivo]
+      silo_persistido_snapshot: impositivo
+      tipo_solapamiento: terminologia
+      verificacion_distractor: pendiente
+      anotador_distractor: Lucas
+      version_catalogo_dominios_chunk: null
+
+  document_ids_expuestos:
+    - DOC-0013
+    - DOC-0003
+
+  silos_necesarios: [legal]
+  silos_evidencia_persistida_snapshot: [legal]
+
+  respuesta_referencia: "Se aplica el procedimiento ejecutivo y constituye título hábil la constancia de deuda que determine la reglamentación."
+  conducta_esperada: responder
+  condicion_abstencion: null
+  verificacion_ausencia: null
+  nivel_riesgo: alto
+  overlap_lexico: "procedimiento ejecutivo; título; deuda"
+  redaccion: asistida
+  verificacion_lectura: pendiente
+  anotador: Lucas
+  version_protocolo: "0.7"
+
+- id: G-P-011
+  split: pilot
+  estrato: colision
+  pregunta: "Además de la multa, ¿qué se incluye en la determinación de oficio de un tributo cuando corresponde?"
+
+  evidencia:
+    - fuente: Decreto_821_1998_TO_Ley_11683
+      instrument_id: INS-0003
+      document_id: DOC-0003
+      artifact_id: ART-SHA256-90138E3B1EC381059C326895674CD5A4FA09C4BE8861D42C4A83E787D56747F3
+      sha256: 90138e3b1ec381059c326895674cd5a4fa09c4be8861d42c4a83e787d56747f3
+      emisor_id: EMI-0001
+      origen_fuente: publica
+      norma: "Ley 11.683, texto ordenado en 1998"
+      articulo_o_seccion: "Artículo 17"
+      modalidades_evidencia: [texto]
+      localizador_evidencia: "Determinación de oficio, artículo 17"
+      chunk_uid_snapshot: 58e038c5de56ab09562e330a97a4fd9d0ed967cad0212f4f32d7e460d4d61525
+      dominios_chunk_referencia: [impositivo]
+      silo_persistido_snapshot: impositivo
+      version_catalogo_dominios_chunk: null
+      estado_representacion_indice: completa
+
+  document_ids: [DOC-0003]
+  n_documentos: 1
+
+  distractores_colision:
+    - chunk_uid_snapshot: 63f86c962ffe8a5c4e12a66fb887fd44fdde803b66c3aa14d2af5d9552534603
+      document_id: DOC-0004
+      artifact_id: ART-SHA256-F940AA7DB1B72CA1B9D216296C7B047FF98815CEDA2F68FC7FA7FE0B5E151393
+      dominios_chunk_referencia: [financiero, contable]
+      silo_persistido_snapshot: financiero
+      tipo_solapamiento: terminologia
+      verificacion_distractor: pendiente
+      anotador_distractor: Lucas
+      version_catalogo_dominios_chunk: null
+
+  document_ids_expuestos:
+    - DOC-0003
+    - DOC-0004
+
+  silos_necesarios: [impositivo]
+  silos_evidencia_persistida_snapshot: [impositivo]
+
+  respuesta_referencia: "El interés resarcitorio y la actualización, cuando correspondan, calculados hasta la fecha indicada en la determinación."
+  conducta_esperada: responder
+  condicion_abstencion: null
+  verificacion_ausencia: null
+  nivel_riesgo: alto
+  overlap_lexico: "interés; actualización; multa"
+  redaccion: asistida
+  verificacion_lectura: pendiente
+  anotador: Lucas
+  version_protocolo: "0.7"
+
+- id: G-P-017
+  split: pilot
+  estrato: colision
+  pregunta: "¿Qué genera la falta total o parcial de pago de gravámenes, retenciones o anticipos, y desde cuándo?"
+
+  evidencia:
+    - fuente: Decreto_821_1998_TO_Ley_11683
+      instrument_id: INS-0003
+      document_id: DOC-0003
+      artifact_id: ART-SHA256-90138E3B1EC381059C326895674CD5A4FA09C4BE8861D42C4A83E787D56747F3
+      sha256: 90138e3b1ec381059c326895674cd5a4fa09c4be8861d42c4a83e787d56747f3
+      emisor_id: EMI-0001
+      origen_fuente: publica
+      norma: "Ley 11.683, texto ordenado en 1998"
+      articulo_o_seccion: "Artículo 37"
+      modalidades_evidencia: [texto]
+      localizador_evidencia: "Intereses, ilícitos y sanciones, artículo 37"
+      chunk_uid_snapshot: f83fc442427c82c8c31b329ad37ecc5351f4b30f67d6246bc299294b5aa06d8d
+      dominios_chunk_referencia: [impositivo]
+      silo_persistido_snapshot: impositivo
+      version_catalogo_dominios_chunk: null
+      estado_representacion_indice: completa
+
+  document_ids: [DOC-0003]
+  n_documentos: 1
+
+  distractores_colision:
+    - chunk_uid_snapshot: 63f86c962ffe8a5c4e12a66fb887fd44fdde803b66c3aa14d2af5d9552534603
+      document_id: DOC-0004
+      artifact_id: ART-SHA256-F940AA7DB1B72CA1B9D216296C7B047FF98815CEDA2F68FC7FA7FE0B5E151393
+      dominios_chunk_referencia: [financiero, contable]
+      silo_persistido_snapshot: financiero
+      tipo_solapamiento: terminologia
+      verificacion_distractor: pendiente
+      anotador_distractor: Lucas
+      version_catalogo_dominios_chunk: null
+
+  document_ids_expuestos:
+    - DOC-0003
+    - DOC-0004
+
+  silos_necesarios: [impositivo]
+  silos_evidencia_persistida_snapshot: [impositivo]
+
+  respuesta_referencia: "Genera un interés resarcitorio desde los respectivos vencimientos, sin necesidad de interpelación alguna."
+  conducta_esperada: responder
+  condicion_abstencion: null
+  verificacion_ausencia: null
+  nivel_riesgo: alto
+  overlap_lexico: "interés; vencimiento; pago"
+  redaccion: asistida
+  verificacion_lectura: pendiente
+  anotador: Lucas
+  version_protocolo: "0.7"
+
+- id: G-P-018
+  split: pilot
+  estrato: colision
+  pregunta: "¿Con qué multa se sanciona la omisión de presentar la declaración jurada dentro de los plazos generales?"
+
+  evidencia:
+    - fuente: Decreto_821_1998_TO_Ley_11683
+      instrument_id: INS-0003
+      document_id: DOC-0003
+      artifact_id: ART-SHA256-90138E3B1EC381059C326895674CD5A4FA09C4BE8861D42C4A83E787D56747F3
+      sha256: 90138e3b1ec381059c326895674cd5a4fa09c4be8861d42c4a83e787d56747f3
+      emisor_id: EMI-0001
+      origen_fuente: publica
+      norma: "Ley 11.683, texto ordenado en 1998"
+      articulo_o_seccion: "Artículo 38"
+      modalidades_evidencia: [texto]
+      localizador_evidencia: "Infracciones formales, artículo 38"
+      chunk_uid_snapshot: 6dff77847f543a9ba2c41b9294023533d01f27343584634a72db08787c9c23ab
+      dominios_chunk_referencia: [impositivo]
+      silo_persistido_snapshot: impositivo
+      version_catalogo_dominios_chunk: null
+      estado_representacion_indice: completa
+
+  document_ids: [DOC-0003]
+  n_documentos: 1
+
+  distractores_colision:
+    - chunk_uid_snapshot: d8cf1eae9a64b750ff39843f0bc076f33caab2de0ff9ef3e4a7aa5749e3e2641
+      document_id: DOC-0013
+      artifact_id: ART-SHA256-75A9C644895FA266FFB53AD2CEDAC5C78ADA5C71A8AFE10CC32481F24A3C75AC
+      dominios_chunk_referencia: [legal]
+      silo_persistido_snapshot: impositivo
+      tipo_solapamiento: terminologia
+      verificacion_distractor: pendiente
+      anotador_distractor: Lucas
+      version_catalogo_dominios_chunk: null
+
+  document_ids_expuestos:
+    - DOC-0003
+    - DOC-0013
+
+  silos_necesarios: [impositivo]
+  silos_evidencia_persistida_snapshot: [impositivo]
+
+  respuesta_referencia: "Multa de $220.000, que se eleva a $440.000 si se trata de sociedades, asociaciones o entidades constituidas en el país, o de establecimientos estables pertenecientes a sujetos del exterior."
+  conducta_esperada: responder
+  condicion_abstencion: null
+  verificacion_ausencia: null
+  nivel_riesgo: alto
+  overlap_lexico: "multa; sanción; omisión"
+  redaccion: asistida
+  verificacion_lectura: pendiente
+  anotador: Lucas
+  version_protocolo: "0.7"
