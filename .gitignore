@@ -151,6 +151,7 @@ activemq-data/
 .env
 .envrc
 .venv
+.venv-marker/
 env/
 venv/
 ENV/
@@ -227,3 +228,53 @@ docs/
 
 # Corpus: documentos de terceros (PDFs, procesados) — no van al repo público
 data/
+
+# ─────────────────────────────────────────────────────────────────────────
+# Experimentos
+#
+# NO se ignora experimentos/ entero: el material metodológico compacto
+# (README, lecciones, manifests, protocolos, conclusiones, casos de
+# regresión, resultados resumidos y revisiones humanas chicas) SÍ se
+# versiona. Se excluye por patrón lo pesado, lo regenerable, lo que
+# reproduce documentos de terceros y lo que lleva rutas absolutas
+# personales. Los archivos siguen existiendo en disco.
+# ─────────────────────────────────────────────────────────────────────────
+
+# Volcados íntegros de documentos de terceros (parseo completo de balances)
+experimentos/auditoria_tablas/docling/
+experimentos/auditoria_tablas/docling_export/
+experimentos/auditoria_tablas/marker/
+
+# Derivados grandes regenerables desde data/ con scripts/diagnostics/
+experimentos/prototipo_tablas/hechos.jsonl
+experimentos/a1_coseno_v1.sql
+experimentos/a1_coseno_v1.jsonl
+
+# Interfaces regenerables: embeben la ruta absoluta del corpus y citas
+# textuales de documentos de terceros. Se regeneran con
+# scripts/diagnostics/generar_revision_documental_v3.py
+experimentos/revision_corpus/*.html
+
+# Resultados y scripts con rutas absolutas personales (C:/Users/...)
+experimentos/2026-07-25_silos/
+experimentos/auditoria_tablas/comparacion_parsers/resultados.json
+experimentos/contexto_semantico_piloto_v1/comparacion_v1.json
+experimentos/prototipo_tablas/informe.md
+
+# Credenciales y material sensible (defensivo: hoy no existe ninguno)
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+*_secret*
+secrets.*
+
+# Modelos y pesos (defensivo)
+models/
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.pt
+*.pth
