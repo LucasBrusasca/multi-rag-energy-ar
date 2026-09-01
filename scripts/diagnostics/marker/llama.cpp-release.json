@@ -1,0 +1,9 @@
+{
+  "source": "https://github.com/ggml-org/llama.cpp/releases/tag/b10612",
+  "tag": "b10612",
+  "asset": "llama-b10612-bin-win-cpu-x64.zip",
+  "asset_url": "https://github.com/ggml-org/llama.cpp/releases/download/b10612/llama-b10612-bin-win-cpu-x64.zip",
+  "size_bytes": 18067753,
+  "sha256": "4481a3550d4b70132fb7e1f1973cc8c19e761a9c64d3f37fa78241dd3fcdf5b5",
+  "reason": "Surya 0.22.1 selects the llamacpp backend on CPU and requires LLAMA_CPP_BINARY."
+}

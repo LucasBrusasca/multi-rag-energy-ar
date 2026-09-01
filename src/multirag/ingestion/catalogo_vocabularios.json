@@ -1,0 +1,250 @@
+{
+    "schema_version": "1.0",
+    "taxonomia_version": "1.0",
+    "separador_multivalor": "|",
+
+
+    "alcance_experimental": {
+        "silos_evaluados_en_la_tesis": [
+            "legal",
+            "impositivo",
+            "financiero",
+            "contable"
+        ],
+        "los_silos_experimentales_no_limitan_el_catalogo": true,
+        "documentos_de_otros_dominios_se_conservan": true
+    },
+
+     "politica_clasificacion": {
+    "modo": "conjunto_abierto",
+    "vocabularios_son_semillas_no_listas_exhaustivas": true,
+    "generar_propuesta_para_todo_documento": true,
+
+    "permitir_tipo_no_conocido": true,
+    "valor_tipo_no_resuelto": "no_identificado",
+    "permitir_nuevo_tipo_candidato": true,
+
+    "permitir_dominio_no_conocido": true,
+    "valor_dominio_no_resuelto": "no_identificado",
+    "permitir_nuevo_dominio_candidato": true,
+
+    "permitir_jurisdiccion_no_conocida": true,
+    "valor_jurisdiccion_no_resuelta": "no_identificada",
+    "permitir_nueva_jurisdiccion_candidata": true,
+
+    "permitir_modalidad_no_conocida": true,
+    "valor_modalidad_no_resuelta": "no_identificada",
+    "permitir_nueva_modalidad_candidata": true,
+
+    "propuestas_pueden_contener_valores_nuevos": true,
+    "catalogo_canonico_requiere_valores_registrados": true,
+    "promocion_automatica_de_categoria_nueva": false,
+
+    "autoaceptacion_de_etiquetas_conocidas_habilitada": false,
+    "autoaceptacion_requiere_calibracion_previa": true,
+    "usar_predicciones_no_confirmadas_como_ground_truth": false,
+
+    "documento_fuera_de_los_silos_experimentales_se_conserva": true,
+    "documento_fuera_de_los_silos_experimentales_requiere_decision_de_mapeo_o_extension": true
+  },
+
+    "patrones_identidad": {
+        "instrument_id": "^INS-[0-9]{4}$",
+        "document_id": "^DOC-[0-9]{4}$",
+        "emisor_id": "^EMI-[0-9]{4}$"
+    },
+
+
+    "formatos_fecha_permitidos": [
+        "AAAA",
+        "AAAA-MM",
+        "AAAA-MM-DD"
+    ],
+
+    "campos_multivalor": [
+        "dominios_documentales",
+        "modalidades_esperadas"
+    ],
+
+    "tipos_documento_por_familia": {
+        "normativo_regulatorio": [
+            "ley",
+            "decreto",
+            "resolucion",
+            "resolucion_general",
+            "disposicion",
+            "circular",
+            "reglamento",
+            "texto_ordenado",
+            "anexo_normativo",
+            "procedimiento_regulatorio",
+            "cuadro_tarifario",
+            "dictamen",
+            "sentencia",
+            "consulta_vinculante"
+        ],
+
+        "contractual": [
+            "contrato",
+            "convenio",
+            "acuerdo",
+            "pliego",
+            "licencia",
+            "concesion"
+        ],
+
+        "contable_financiero": [
+            "estado_contable",
+            "nota_estado_contable",
+            "memoria_anual",
+            "informe_auditoria",
+            "prospecto_financiero",
+            "informe_calificacion",
+            "informe_financiero"
+        ],
+
+        "corporativo_gestion": [
+            "presentacion_corporativa",
+            "informe_gestion",
+            "politica_interna",
+            "procedimiento_interno"
+        ],
+
+        "tecnico_operativo": [
+            "informe_tecnico",
+            "manual",
+            "especificacion_tecnica",
+            "estudio_tecnico",
+            "reporte_operativo"
+        ],
+
+            "datos_estructurados": [
+      "planilla_datos",
+      "dataset"
+    ],
+
+    "multimedia": [
+      "grabacion_audio",
+      "grabacion_video",
+      "presentacion_multimedia"
+    ]
+  },
+
+    "vocabularios": {
+        "jurisdiccion": [
+            "argentina_nacional",
+            "argentina_provincial",
+            "argentina_neuquen",
+            "argentina_municipal",
+            "internacional",
+            "no_aplica",
+            "no_identificada"
+        ],
+
+        "dominios_documentales": [
+            "legal",
+            "impositivo",
+            "financiero",
+            "contable",
+            "regulatorio",
+            "tecnico",
+            "operativo",
+            "comercial",
+            "ambiental",
+            "laboral",
+            "corporativo",
+            "no_identificado"
+        ],
+
+        "origen_fuente": [
+            "publica",
+            "privada_autorizada",
+            "sintetica",
+            "anonimizada"
+        ],
+
+        "modalidades_esperadas": [
+            "texto",
+            "tabla",
+            "imagen",
+            "grafico",
+            "diagrama",
+            "formula",
+            "mapa",
+            "codigo",
+            "audio",
+            "video",
+            "estructura_visual",
+            "no_identificada"
+        ],
+
+        "estado_inclusion": [
+            "incluido",
+            "excluido",
+            "pendiente_revision"
+        ],
+
+        "estado_propuesta": [
+            "generada",
+            "requiere_revision",
+            "confirmada",
+            "corregida",
+            "autoaceptada_calibrada",
+            "rechazada"
+        ]
+    },
+
+    "campos_objetivos_requeridos": [
+        "artifact_id",
+        "archivo_referencia",
+        "fuente",
+        "sha256"
+    ],
+
+    "campos_propuesta_automatica": [
+        "artifact_id",
+        "tipo_documento_propuesto",
+        "familia_documental_propuesta",
+        "dominios_propuestos",
+        "modalidades_propuestas",
+        "emisor_nombre_propuesto",
+        "fecha_documento_propuesta",
+        "jurisdiccion_propuesta",
+        "score_clasificacion",
+        "metodo_score",
+        "es_tipo_nuevo",
+        "es_dominio_nuevo",
+        "es_jurisdiccion_nueva",
+        "es_modalidad_nueva",
+        "evidencias",
+        "modelo_etiquetador",
+        "version_modelo",
+        "taxonomia_version",
+        "estado_propuesta"
+    ],
+
+    "campos_canonicos_requeridos_si_incluido": [
+        "instrument_id",
+        "document_id",
+        "titulo_oficial",
+        "emisor_id",
+        "emisor_nombre",
+        "tipo_documento",
+        "fecha_documento",
+        "jurisdiccion",
+        "dominios_documentales",
+        "origen_fuente",
+        "modalidades_esperadas",
+        "estado_inclusion"
+    ],
+
+    "reglas_condicionales": {
+        "motivo_exclusion_requerido_si_estado": "excluido",
+        "tipo_nuevo_requiere_actualizar_taxonomia": true,
+        "dominio_nuevo_requiere_actualizar_taxonomia": true,
+        "jurisdiccion_nueva_requiere_actualizar_taxonomia": true,
+        "modalidad_nueva_requiere_actualizar_taxonomia": true,
+        "prediccion_no_confirmada_no_es_etiqueta_canonica": true,
+        "documento_no_identificado_se_conserva_en_catalogo": true
+    }
+}
