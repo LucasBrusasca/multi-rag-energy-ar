@@ -82,7 +82,7 @@ contenido, nunca del silo automático.
 
 ### Evidencia — dominio `financiero`
 
-**Transener_Calificacion_FIX** · informe_calificacion · FIX SCR S.A.  
+**Transener_Calificacion_FIX** · informe_calificacion · FIX SCR S.A.<br>
 `DOC-0024` · ubicación: Anexo I. Resumen Financiero
 
 > Flujo de Caja Operativo (FCO), (30.716) = 204.545. Flujo de Caja Operativo (FCO), (32.572) = 139.724. Flujo de Caja Operativo (FCO), (50.685) = 165.338. Flujo de Caja Operativo (FCO), (29.874) = 51.677. Flujo de Caja Operativo (FCO), (28.169) = 26.624. Flujo de Caja Operativo (FCO), 10.865 = 52.976. Flujo de Caja No Operativo / No Recurrente Total, (30.716) = (2). Flujo de Caja No Operativo / No Recurrente Total, (32.572) = (1). Flujo de Caja No Operativo / No Recurrente Total, (50.685) = (1). Flujo de Caja No Operativo / No Recurrente Total, (29.874) = 0. Flujo de Caja No Operativo / No Recurrente Total, (28.169) = 0. Flujo de Caja No Operativo / No Recurrente Total, 10.865 = 0. Inversiones de Capital, (30.716) = (76.223). Inversiones de Capital, (32.572) = (52.198). Inversiones de Capital, (50.685) = (58.424). Inversiones de Capital, (29.874) = (44.396). Inversiones de Capital, (28.169) = (27.195). Inversiones de Capital, 10.865 = (26.637). Dividendos, (30.716) = (134.200). Dividendos, (32.572) = (134.200). Dividendos, (50.685) = 0. Dividendos, (29.874) = 0. Dividendos, (28.169) = 0. Dividendos, 10.865 = 0. Flujo de Fondos Libre (FFL), (30.716) = (5.878). Flujo de Fondos Libre (F...
@@ -114,7 +114,7 @@ distractor_valido:
 
 ### Evidencia — dominio `financiero`
 
-**Transener_Calificacion_FIX** · informe_calificacion · FIX SCR S.A.  
+**Transener_Calificacion_FIX** · informe_calificacion · FIX SCR S.A.<br>
 `DOC-0024` · ubicación: Anexo I. Resumen Financiero
 
 > Caja, Moneda Constante(*) = . Flujo de Caja, Moneda Constante(*) = . Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 235.261. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 172.296. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 216.024. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 81.551. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 54.793. Flujo Generado por las Operaciones (FGO), Moneda Constante(*) = 42.111
@@ -146,7 +146,7 @@ distractor_valido:
 
 ### Evidencia — dominio `financiero`
 
-**Transener-Company-Presentation-April-2026** · presentacion_corporativa · Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.  
+**Transener-Company-Presentation-April-2026** · presentacion_corporativa · Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A.<br>
 `DOC-0023` · ubicación: RQT Tariff Schedule- Five year Projection in US$ MM
 
 > Revenues, Year 1 = 123. Revenues, Year 2 = 122. Revenues, Year 3 = 121. Revenues, Year 4 = 119. Revenues, Year 5 = 118. Revenues, Average = 121. Revenues, % = 100%. Penalties, Year 1 = 1. Penalties, Year 2 = 1. Penalties, Year 3 = 1. Penalties, Year 4 = 1. Penalties, Year 5 = 1. Penalties, Average = 1. Penalties, % = 1%. Operating Costs, Year 1 = 45. Operating Costs, Year 2 = 44. Operating Costs, Year 3 = 43. Operating Costs, Year 4 = 42. Operating Costs, Year 5 = 42. Operating Costs, Average = 43. Operating Costs, % = 36%. Capex, Year 1 = 24. Capex, Year 2 = 24. Capex, Year 3 = 24. Capex, Year 4 = 24. Capex, Year 5 = 24. Capex, Average = 24. Capex, % = 20%. Income Tax, Year 1 = 24. Income Tax, Year 2 = 24. Income Tax, Year 3 = 23. Income Tax, Year 4 = 23. Income Tax, Year 5 = 22. Income Tax, Average = 23. Income Tax, % = 19%. Net Income, Year 1 = 30. Net Income, Year 2 = 30. Net Income, Year 3 = 30. Net Income, Year 4 = 30. Net Income, Year 5 = 30. Net Income, Average = 30. Net Income, % = 25%
@@ -176,7 +176,7 @@ distractor_valido:
 
 ### Evidencia — dominio `impositivo`
 
-**Ley_20628_Impuesto_Ganancias_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina  
+**Ley_20628_Impuesto_Ganancias_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina<br>
 `DOC-0010` · ubicación: Art. 79 - Constituyen ganancias de cuarta categoría las provenientes:
 
 > a) Del desempeño de cargos públicos nacionales, provinciales, municipales y de la Ciudad Autónoma de Buenos Aires, sin excepción, incluidos los cargos electivos de los Poderes Ejecutivos y Legislativos. En el caso de los Magistrados, Funcionarios y Empleados del Poder Judicial de la Nación y de las provincias y del Ministerio Público de la Nación cuando su nombramiento hubiera ocurrido a partir del año 2017, inclusive. (Inciso sustituido por art. 1° pto. 5 de la Ley N° 27.346 B.O. 27/12/2016. Vigencia: a partir de su publicación en el Boletín Oficial y surtirá efecto a partir del año fiscal 2017, inclusive). b) Del trabajo personal ejecutado en relación de dependencia. c) De las jubilaciones, pensiones, retiros o subsidios de cualquier especie en cuanto tengan su origen en el trabajo personal y en la medida que hayan estado sujeto al pago del impuesto , y de los consejeros de las sociedades cooperativas. (Inciso sustituido por art. 1° pto. 5 de la Ley N° 27.346 B.O. 27/12/2016. Vigencia: a partir de su publicación en el Boletín Oficial y surtirá efecto a partir del año fiscal 2017, inclusive). d) De los beneficios netos de aportes no deducibles, derivados del cumplimiento de los re...
@@ -206,7 +206,7 @@ distractor_valido:
 
 ### Evidencia — dominio `impositivo`
 
-**Ley_11683_Procedimiento_Fiscal_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina  
+**Ley_11683_Procedimiento_Fiscal_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina<br>
 `DOC-0009` · ubicación: Demanda por repetición
 
 > ARTICULO 83 — En la demanda contenciosa por repetición de tributos no podrá el actor fundar sus pretensiones en hechos no alegados en la instancia administrativa ni ofrecer prueba que no hubiera sido ofrecida en dicha instancia , con excepción de los hechos nuevos y de la prueba sobre los mismos . (Párrafo sustituido por Título XV art . 18 inciso 4) de la Ley N º 25. 5. 239 (/normativa/nacional/norma -61784) B . O . 31/12/1999) Incumbe al mismo demostrar en qué medida el impuesto abonado es excesivo con relación al gravamen que según la ley le correspondía pagar , y no podrá , por tanto , limitar su reclamación a la mera impugnación de los fundamentos que sirvieron de base a la estimación de oficio administrativa cuando ésta hubiera tenido lugar . Sólo procederá la repetición por los períodos fiscales con relación a los cuales se haya satisfecho el impuesto hasta ese momento determinado por la ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS .
@@ -238,7 +238,7 @@ distractor_valido:
 
 ### Evidencia — dominio `contable`
 
-**Pampa_EEFF_Consolidado_1Q2026** · estado_contable · Pampa Energía S.A.  
+**Pampa_EEFF_Consolidado_1Q2026** · estado_contable · Pampa Energía S.A.<br>
 `DOC-0016` · ubicación: NOTA 5: (Continuación)
 
 > Asociadas, Información sobre el emisor.Actividad principal = . Asociadas, Información sobre el emisor.Fecha = . Asociadas, Información sobre el emisor.Capital social = . Asociadas, Información sobre el emisor.Resultado del período = . Asociadas, Información sobre el emisor.Patrimonio = . Asociadas, Información sobre el emisor.% de participación directo e indirecto = . SESA, Información sobre el emisor.Actividad principal = Tratamiento de gas. SESA, Información sobre el emisor.Fecha = 31.03.2026. SESA, Información sobre el emisor.Capital social = 1.203. SESA, Información sobre el emisor.Resultado del período = 889. SESA, Información sobre el emisor.Patrimonio = 132.254. SESA, Información sobre el emisor.% de participación directo e indirecto = 20,00%. VMOS, Información sobre el emisor.Actividad principal = Transporte de hidrocarburos. VMOS, Información sobre el emisor.Fecha = 31.03.2026. VMOS, Información sobre el emisor.Capital social = 159.133. VMOS, Información sobre el emisor.Resultado del período = (50.292). VMOS, Información sobre el emisor.Patrimonio = 527.382. VMOS, Información sobre el emisor.% de participación directo e indirecto = 10,20%. Negocios conjuntos, Información s...
@@ -268,7 +268,7 @@ distractor_valido:
 
 ### Evidencia — dominio `impositivo`
 
-**Decreto_821_1998_TO_Ley_11683** · texto_ordenado · Poder Ejecutivo Nacional  
+**Decreto_821_1998_TO_Ley_11683** · texto_ordenado · Poder Ejecutivo Nacional<br>
 `DOC-0003` · ubicación: DE LA SENTENCIA DEL TRIBUNAL
 
 > Cuando en función de las facultades del artículo 164 el Tribunal Fiscal de la Nación recalifique o reduzca la sanción a aplicar, r, las costas se impondrán por el orden causado . No obstante, el Tribunal podrá imponer las costas al Fisco Nacional, cuando la tipificación o la cuantía de la sanción recurrida se demuestre temeraria o carente de justificación. (Párrafo sustituido por art. 241 de la Ley N° 27430 B.O. 29/12/2017. Vigencia: el día siguiente al de su publicación en el Boletín Oficial y surtirán efecto de conformidad con lo previsto en cada uno de los Títulos que la componen. Ver art. 247 de la Ley de referencia) (Artículo sustituido por art. 1° pto. XXIX de la Ley N° 26.044 B.O. 6/7/2005) ARTICULO 185 — La sentencia no podrá contener pronunciamiento respecto de la falta de validez constitucional de las leyes tributarias o aduaneras y sus reglamentaciones, a no ser que la Jurisprudencia de la Corte Suprema de Justicia de la Nación haya declarado la inconstitucionalidad de las mismas, en cuyo caso podrá seguirse la interpretación efectuada por ese TRIBUNAL de la NACION. ARTICULO 186 — El TRIBUNAL FISCAL DE LA NACION podrá declarar en el caso concreto , que la interpretación ...
@@ -298,7 +298,7 @@ distractor_valido:
 
 ### Evidencia — dominio `legal`
 
-**Ley_24065_Energia_Electrica_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina  
+**Ley_24065_Energia_Electrica_TO** · texto_ordenado · Honorable Congreso de la Nación Argentina<br>
 `DOC-0013` · ubicación: CAPÍTULO VI
 
 > Provisión de servicios ARTÍCULO 22 ARTÍCULO 23 ARTÍCULO 24 pedido ARTÍCULO 25 ARTÍCULO 26 ARTÍCULO 28 monto de sus inversiones conforme lo dispuesto en el artículo 41 de esta ley . ARTÍCULO 28 bis . -Si una obra de transporte no estuviera contemplada en los contratos de concesión de transporte en curso de ejecución , pero su ejecución resultara esencial técnica y económicamente para hacer frente a las necesidades del servicio público correspondiente en el Sistema Argentino de Interconexión (SADI) , previa consulta al OED , la SECRETARÍA DE ENERGÍA del MINISTERIO DE ECONOMÍA podrá resolver su inclusión , a cuyo fin podrá considerar la utilización de los recursos previstos en el segundo párrafo del artículo 31 de la Ley N ° 15 . 336 y sus modificatorias . Las condiciones económico -financieras asociadas a la obligación de la ampliación no pueden afectar el normal funcionamiento de la concesión . El ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD seguirá los procedimientos habituales para aprobar la construcción de la obra , estableciendo su forma de financiación y , en su caso , incorporar el importe correspondiente a la recuperación de los costos de la ampliación en el respectivo ...
@@ -328,7 +328,7 @@ distractor_valido:
 
 ### Evidencia — dominio `legal`
 
-**Decreto_1738_1992_Reglamentario_Gas** · decreto · Poder Ejecutivo Nacional  
+**Decreto_1738_1992_Reglamentario_Gas** · decreto · Poder Ejecutivo Nacional<br>
 `DOC-0002` · ubicación: IV -Transporte y Distribución
 
 > - a) Objeto . - b) Término de duración . - c) Régimen de prestación del servicio . - d) Régimen de los activos afectados al servicio . - e) Régimen de ocupación del dominio público . - f) Servidumbres y restricciones al dominio . - g) Régimen de ampliaciones y mejoras . - h) Reglamento del Servicio y Tarifas . - i) Régimen de penalidades . - j) Terminación de la licencia y consecuencias jurídicas de la misma . - k) Tratamiento de las quejas de los usuarios . - l) Régimen impositivo . - m) Régimen de suministros . - n) Relaciones con la Autoridad Regulatoria . - o) Ley aplicable y jurisdicción . - p) Causales de caducidad por inobservancia de la Licencia . Las licencias otorgadas no podrán ser objeto de rescate por la Administración , ni serán modificadas durante su vigencia sin el consentimiento de los licenciatarios . No se considerarán modificaciones a la licencia (i) las modificaciones que el Ente introduzca en el Reglamento del Servicio , sin perjuicio del derecho del Ente o del licenciatario a requerir el correspondiente ajuste de las tarifas si el efecto neto de tal modificación alterase en sentido favorable o desfavorable , respectivamente , el equilibrio económico -financie...
@@ -360,7 +360,7 @@ distractor_valido:
 
 ### Evidencia — dominio `contable`
 
-**TGS_EEFF_2024_4T** · memoria_anual · Transportadora de Gas del Sur S.A.  
+**TGS_EEFF_2024_4T** · memoria_anual · Transportadora de Gas del Sur S.A.<br>
 `DOC-0020` · ubicación: Ejercicio terminado el 31 de diciembre de 2023
 
 > Por mercado, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Por mercado, = . Mercado externo - 207.725.378 - 207.725.378, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Mercado externo - 207.725.378 - 207.725.378, = . Mercado local 215.700.088 351.693.053 187.380.086 754.773.227, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Mercado local 215.700.088 351.693.053 187.380.086 754.773.227, = . , Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = Total 215.700.088 559.418.431 187.380.086 962.498.605. , = . Por oportunidad:, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . Por oportunidad:, = . A lo largo del tiempo 215.700.088 32.098.542 187.380.086 435.178.716, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . A lo largo del tiempo 215.700.088 32.098.542 187.380.086 435.178.716, = . En un determinado momento - 527.319.889 - 527.319.889, Transporte de Gas Natural Producción y comercialización de Líquidos Midstream Total = . En un determinado momento - 52...

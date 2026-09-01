@@ -1,0 +1,31 @@
+# Fin de linea normalizado.
+#
+# Sin esto, los archivos creados en Windows entran al repositorio con CRLF y
+# `git diff --check` marca cada `\r` como "trailing whitespace", aunque nadie
+# haya escrito un espacio. Con `text=auto` git guarda LF en el repositorio y
+# entrega el fin de linea nativo en cada checkout.
+* text=auto
+
+# Binarios: no tocar nunca.
+*.pdf   binary
+*.xlsx  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.zip   binary
+*.parquet binary
+*.bin   binary
+*.safetensors binary
+
+# Formatos donde el fin de linea es parte del contrato o del formato.
+*.svg   text eol=lf
+*.sql   text eol=lf
+*.py    text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.md    text eol=lf
+*.html  text eol=lf
+*.csv   text eol=lf
